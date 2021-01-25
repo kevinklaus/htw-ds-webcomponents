@@ -6,56 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface HtwTopMenu {
         /**
-          * The first name
+          * use dark mode if true
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "dark": boolean;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLHtwTopMenuElement extends Components.HtwTopMenu, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLHtwTopMenuElement: {
+        prototype: HTMLHtwTopMenuElement;
+        new (): HTMLHtwTopMenuElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "htw-top-menu": HTMLHtwTopMenuElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface HtwTopMenu {
         /**
-          * The first name
+          * use dark mode if true
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "dark"?: boolean;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "htw-top-menu": HtwTopMenu;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "htw-top-menu": LocalJSX.HtwTopMenu & JSXBase.HTMLAttributes<HTMLHtwTopMenuElement>;
         }
     }
 }

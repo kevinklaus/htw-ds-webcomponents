@@ -6,6 +6,24 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HtwLink {
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * href property
+         */
+        "href": string;
+        /**
+          * text to be displayed in link
+         */
+        "text": string;
+        /**
+          * alternative title
+         */
+        "title": string;
+    }
     interface HtwTopMenu {
         /**
           * use dark mode if true
@@ -14,6 +32,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLHtwLinkElement extends Components.HtwLink, HTMLStencilElement {
+    }
+    var HTMLHtwLinkElement: {
+        prototype: HTMLHtwLinkElement;
+        new (): HTMLHtwLinkElement;
+    };
     interface HTMLHtwTopMenuElement extends Components.HtwTopMenu, HTMLStencilElement {
     }
     var HTMLHtwTopMenuElement: {
@@ -21,10 +45,29 @@ declare global {
         new (): HTMLHtwTopMenuElement;
     };
     interface HTMLElementTagNameMap {
+        "htw-link": HTMLHtwLinkElement;
         "htw-top-menu": HTMLHtwTopMenuElement;
     }
 }
 declare namespace LocalJSX {
+    interface HtwLink {
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * href property
+         */
+        "href"?: string;
+        /**
+          * text to be displayed in link
+         */
+        "text"?: string;
+        /**
+          * alternative title
+         */
+        "title"?: string;
+    }
     interface HtwTopMenu {
         /**
           * use dark mode if true
@@ -32,6 +75,7 @@ declare namespace LocalJSX {
         "dark"?: boolean;
     }
     interface IntrinsicElements {
+        "htw-link": HtwLink;
         "htw-top-menu": HtwTopMenu;
     }
 }
@@ -39,6 +83,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "htw-link": LocalJSX.HtwLink & JSXBase.HTMLAttributes<HTMLHtwLinkElement>;
             "htw-top-menu": LocalJSX.HtwTopMenu & JSXBase.HTMLAttributes<HTMLHtwTopMenuElement>;
         }
     }

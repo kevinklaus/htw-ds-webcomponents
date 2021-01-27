@@ -12,10 +12,17 @@ export class HTWTopMenu {
   @Prop() dark: boolean = false;
 
   render() {
-    return <div class="htw-top-menu {this.dark}">
-      <ul>
-        <li></li>
-      </ul>
+    return <div class={this.dark ? "htw-top-menu dark" : "htw-top-menu"}>
+      <htw-link dark={this.dark} 
+        title="Nothing will happen if you click." 
+        href="#"
+        text="Click me.">
+      </htw-link>
+      <htw-link dark={this.dark} 
+        title="Nothing will happen if you click." 
+        href="#"
+        text="Click me.">
+      </htw-link>
     </div>;
   }
 }

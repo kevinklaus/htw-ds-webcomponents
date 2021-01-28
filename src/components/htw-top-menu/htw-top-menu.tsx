@@ -26,6 +26,8 @@ export class HTWTopMenu {
 
   render() {
     return <div class={"htw-top-menu " + this.getVariantClasses()}>
+      <htw-logo dark={this.dark} orange={this.orange}></htw-logo>
+      <span class="spacer"></span>
       <htw-link dark={this.dark} orange={this.orange} 
         title="Nothing will happen if you click." 
         href="#"

@@ -3,28 +3,28 @@
 */
 @font-face {
     font-family: 'HTWBerlin Office';
-    src: url('fonts/HTWBerlinOffice-Regular.ttf') format('ttf');
+    src: url('./fonts/HTWBerlinOffice-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'HTWBerlin Office';
-    src: url('fonts/HTWBerlinOffice-Italic.ttf') format('ttf');
+    src: url('./fonts/HTWBerlinOffice-Italic.ttf') format('ttf');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'HTWBerlin Office';
-    src: url('fonts/HTWBerlinOffice-BoldItalic.ttf') format('ttf');
+    src: url('./fonts/HTWBerlinOffice-BoldItalic.ttf') format('ttf');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'HTWBerlin Office';
-    src: url('fonts/HTWBerlinOffice-Bold.ttf') format('ttf');
+    src: url('./fonts/HTWBerlinOffice-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 }
@@ -41,7 +41,7 @@ body {
     --secondary-orange: #FF5F00;
     --secondary-blue: #2C72DC;
     --secondary-grey: #AFAFAF;
-    
+
     --background-grey: #EBEBEB;
     --copy: #333333;
     --dark-grey: #575757;

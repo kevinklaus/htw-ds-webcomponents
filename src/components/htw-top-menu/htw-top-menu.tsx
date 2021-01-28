@@ -11,17 +11,40 @@ export class HTWTopMenu {
    */
   @Prop() dark: boolean = false;
 
+  /**
+   * use orange color scheme if true
+   */
+  @Prop() orange: boolean = false;
+
+
+  @Function()  getVariantClasses() {
+    var classList = []
+    if (this.dark) classList.push("dark")
+    if (this.orange) classList.push("orange")
+    return classList.join(" ")
+  }
+
   render() {
-    return <div class={this.dark ? "htw-top-menu dark" : "htw-top-menu"}>
-      <htw-link dark={this.dark} 
+    return <div class={"htw-top-menu " + this.getVariantClasses()}>
+      <htw-link dark={this.dark} orange={this.orange} 
         title="Nothing will happen if you click." 
         href="#"
         text="Click me.">
       </htw-link>
-      <htw-link dark={this.dark} 
+      <htw-link dark={this.dark} orange={this.orange} 
         title="Nothing will happen if you click." 
         href="#"
-        text="Click me.">
+        text="Second link">
+      </htw-link>
+      <htw-link dark={this.dark} orange={this.orange} 
+        title="Nothing will happen if you click." 
+        href="#"
+        text="Third very long link">
+      </htw-link>
+      <htw-link dark={this.dark} orange={this.orange} 
+        title="Nothing will happen if you click." 
+        href="#"
+        text="Last link">
       </htw-link>
     </div>;
   }

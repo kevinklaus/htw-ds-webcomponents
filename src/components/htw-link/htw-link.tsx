@@ -11,6 +11,11 @@ export class HTWLink {
    */
   @Prop() dark: boolean = false;
 
+    /**
+   * use orange color scheme if true
+   */
+  @Prop() orange: boolean = false;
+
   /**
    * text to be displayed in link
    */
@@ -26,9 +31,16 @@ export class HTWLink {
    */
   @Prop() href: string;
 
+    @Function()  getVariantClasses() {
+      var classList = []
+      if (this.dark) classList.push("dark")
+      if (this.orange) classList.push("orange")
+      return classList.join(" ")
+  }
+
   render() {
     return <a 
-        class={this.dark ? "htw-link dark" : "htw-link"} 
+        class={"htw-link " + this.getVariantClasses() }
         title={this.title} 
         href={this.href}
       >

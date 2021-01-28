@@ -16,6 +16,10 @@ export namespace Components {
          */
         "href": string;
         /**
+          * use orange color scheme if true
+         */
+        "orange": boolean;
+        /**
           * text to be displayed in link
          */
         "text": string;
@@ -29,6 +33,10 @@ export namespace Components {
           * use dark mode if true
          */
         "dark": boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange": boolean;
     }
 }
 declare global {
@@ -60,6 +68,10 @@ declare namespace LocalJSX {
          */
         "href"?: string;
         /**
+          * use orange color scheme if true
+         */
+        "orange"?: boolean;
+        /**
           * text to be displayed in link
          */
         "text"?: string;
@@ -73,6 +85,10 @@ declare namespace LocalJSX {
           * use dark mode if true
          */
         "dark"?: boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange"?: boolean;
     }
     interface IntrinsicElements {
         "htw-link": HtwLink;

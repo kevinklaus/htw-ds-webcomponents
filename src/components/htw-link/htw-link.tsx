@@ -24,7 +24,7 @@ export class HTWLink {
     /**
    * alternative title
    */
-  @Prop() title: string;
+  @Prop() altTitle: string;
 
   /**
    * href property
@@ -41,7 +41,7 @@ export class HTWLink {
   render() {
     return <a 
         class={"htw-link " + this.getVariantClasses() }
-        title={this.title} 
+        title={this.altTitle} 
         href={this.href}
       >
         {this.text}

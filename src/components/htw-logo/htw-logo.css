@@ -1,0 +1,12 @@
+:host {
+  display: inline-block;
+}
+
+.htw-logo.orange path {
+  fill: #FF5F00;
+}
+
+.htw-logo.dark path,
+.htw-logo.dark.orange path {
+  fill: #ffffff;
+}

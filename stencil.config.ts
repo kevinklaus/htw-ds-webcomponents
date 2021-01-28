@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'htw-ds-webcomponents',
+  globalStyle: 'src/global/global.css',
   outputTargets: [
     {
       type: 'dist',

@@ -3,10 +3,10 @@
 }
 
 .htw-logo.orange path {
-  fill: #FF5F00;
+  fill: var(--secondary-orange);
 }
 
 .htw-logo.dark path,
 .htw-logo.dark.orange path {
-  fill: #ffffff;
+  fill: var(--white);
 }

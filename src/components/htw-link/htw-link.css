@@ -5,20 +5,20 @@
 a.htw-link {
   border-bottom: 4px solid transparent;
   padding: 10px 15px 5px 15px;
-  color: #333;
+  color: var(--copy);
   text-decoration: none;
   font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
   transition: border 0.3s ease-in-out;
 }
 
 a.htw-link.dark {
-  color: #fff;
+  color: var(--white);
 }
 
 a.htw-link:hover {
-  border-bottom: 4px solid #76B900;
+  border-bottom: 4px solid var(--primary-green);
 }
 
 a.htw-link.orange:hover {
-  border-bottom: 4px solid #FF5F00;
+  border-bottom: 4px solid var(--secondary-orange);
 }

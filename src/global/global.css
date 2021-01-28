@@ -1,0 +1,60 @@
+/* HTW fonts 
+* Schrift: HTWBerlin by Jürgen Huber/Malte Herok
+*/
+@font-face {
+    font-family: 'HTWBerlin Office';
+    src: url('fonts/HTWBerlinOffice-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HTWBerlin Office';
+    src: url('fonts/HTWBerlinOffice-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HTWBerlin Office';
+    src: url('fonts/HTWBerlinOffice-BoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HTWBerlin Office';
+    src: url('fonts/HTWBerlinOffice-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+  font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
+}
+
+/* CSS variables */
+
+:root {
+    /* HTW colors */
+    --primary-green: #76B900;
+    --secondary-orange: #FF5F00;
+    --secondary-blue: #2C72DC;
+    --secondary-grey: #AFAFAF;
+    
+    --background-grey: #EBEBEB;
+    --copy: #333333;
+    --dark-grey: #575757;
+    --white: #ffffff;
+    --black: #000000;
+
+    --primary-green10: #F3F8E9;
+    --primary-green20: #E7F2D3;
+    --primary-green30: #DBEBBD;
+    --primary-green40: #CFE5A8;
+    --primary-green50: #C2DD91;
+    --primary-green60: #B7D77C;
+    --primary-green70: #AAD065;
+    --primary-green80: #9FC951;
+    --primary-green90: #93C33A;
+}

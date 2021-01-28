@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HtwLink {
         /**
+          * alternative title
+         */
+        "altTitle": string;
+        /**
           * use dark mode if true
          */
         "dark": boolean;
@@ -23,10 +27,24 @@ export namespace Components {
           * text to be displayed in link
          */
         "text": string;
+    }
+    interface HtwLogo {
         /**
-          * alternative title
+          * use dark mode if true
          */
-        "title": string;
+        "dark": boolean;
+        /**
+          * href property
+         */
+        "href": string;
+        /**
+          * use orange color scheme if true
+         */
+        "orange": boolean;
+        /**
+          * render logo in different sizes
+         */
+        "size": "s" | "m" | "l";
     }
     interface HtwTopMenu {
         /**
@@ -46,6 +64,12 @@ declare global {
         prototype: HTMLHtwLinkElement;
         new (): HTMLHtwLinkElement;
     };
+    interface HTMLHtwLogoElement extends Components.HtwLogo, HTMLStencilElement {
+    }
+    var HTMLHtwLogoElement: {
+        prototype: HTMLHtwLogoElement;
+        new (): HTMLHtwLogoElement;
+    };
     interface HTMLHtwTopMenuElement extends Components.HtwTopMenu, HTMLStencilElement {
     }
     var HTMLHtwTopMenuElement: {
@@ -54,11 +78,16 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "htw-link": HTMLHtwLinkElement;
+        "htw-logo": HTMLHtwLogoElement;
         "htw-top-menu": HTMLHtwTopMenuElement;
     }
 }
 declare namespace LocalJSX {
     interface HtwLink {
+        /**
+          * alternative title
+         */
+        "altTitle"?: string;
         /**
           * use dark mode if true
          */
@@ -75,10 +104,24 @@ declare namespace LocalJSX {
           * text to be displayed in link
          */
         "text"?: string;
+    }
+    interface HtwLogo {
         /**
-          * alternative title
+          * use dark mode if true
          */
-        "title"?: string;
+        "dark"?: boolean;
+        /**
+          * href property
+         */
+        "href"?: string;
+        /**
+          * use orange color scheme if true
+         */
+        "orange"?: boolean;
+        /**
+          * render logo in different sizes
+         */
+        "size"?: "s" | "m" | "l";
     }
     interface HtwTopMenu {
         /**
@@ -92,6 +135,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "htw-link": HtwLink;
+        "htw-logo": HtwLogo;
         "htw-top-menu": HtwTopMenu;
     }
 }
@@ -100,6 +144,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "htw-link": LocalJSX.HtwLink & JSXBase.HTMLAttributes<HTMLHtwLinkElement>;
+            "htw-logo": LocalJSX.HtwLogo & JSXBase.HTMLAttributes<HTMLHtwLogoElement>;
             "htw-top-menu": LocalJSX.HtwTopMenu & JSXBase.HTMLAttributes<HTMLHtwTopMenuElement>;
         }
     }

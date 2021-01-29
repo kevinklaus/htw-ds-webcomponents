@@ -1,15 +1,33 @@
 # htw-top-menu
 
+
+
 <!-- Auto Generated Below -->
+
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+| Property | Attribute | Description                     | Type      | Default |
+| -------- | --------- | ------------------------------- | --------- | ------- |
+| `dark`   | `dark`    | use dark mode if true           | `boolean` | `false` |
+| `orange` | `orange`  | use orange color scheme if true | `boolean` | `false` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+## Dependencies
+
+### Depends on
+
+- [htw-logo](../htw-logo)
+- [htw-link](../htw-link)
+
+### Graph
+```mermaid
+graph TD;
+  htw-top-menu --> htw-logo
+  htw-top-menu --> htw-link
+  style htw-top-menu fill:#f9f,stroke:#333,stroke-width:4px
+```
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

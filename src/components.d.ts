@@ -6,6 +6,28 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HtwButton {
+        /**
+          * alternative title
+         */
+        "altTitle": string;
+        /**
+          * button color
+         */
+        "color": "green" | "orange" | "blue" | "grey";
+        /**
+          * href property
+         */
+        "href": string;
+        /**
+          * text to be displayed in button
+         */
+        "text": string;
+        /**
+          * button variant
+         */
+        "variant": "filled" | "outlined" | "text";
+    }
     interface HtwLink {
         /**
           * alternative title
@@ -58,6 +80,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLHtwButtonElement extends Components.HtwButton, HTMLStencilElement {
+    }
+    var HTMLHtwButtonElement: {
+        prototype: HTMLHtwButtonElement;
+        new (): HTMLHtwButtonElement;
+    };
     interface HTMLHtwLinkElement extends Components.HtwLink, HTMLStencilElement {
     }
     var HTMLHtwLinkElement: {
@@ -77,12 +105,35 @@ declare global {
         new (): HTMLHtwTopMenuElement;
     };
     interface HTMLElementTagNameMap {
+        "htw-button": HTMLHtwButtonElement;
         "htw-link": HTMLHtwLinkElement;
         "htw-logo": HTMLHtwLogoElement;
         "htw-top-menu": HTMLHtwTopMenuElement;
     }
 }
 declare namespace LocalJSX {
+    interface HtwButton {
+        /**
+          * alternative title
+         */
+        "altTitle"?: string;
+        /**
+          * button color
+         */
+        "color"?: "green" | "orange" | "blue" | "grey";
+        /**
+          * href property
+         */
+        "href"?: string;
+        /**
+          * text to be displayed in button
+         */
+        "text"?: string;
+        /**
+          * button variant
+         */
+        "variant"?: "filled" | "outlined" | "text";
+    }
     interface HtwLink {
         /**
           * alternative title
@@ -134,6 +185,7 @@ declare namespace LocalJSX {
         "orange"?: boolean;
     }
     interface IntrinsicElements {
+        "htw-button": HtwButton;
         "htw-link": HtwLink;
         "htw-logo": HtwLogo;
         "htw-top-menu": HtwTopMenu;
@@ -143,6 +195,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "htw-button": LocalJSX.HtwButton & JSXBase.HTMLAttributes<HTMLHtwButtonElement>;
             "htw-link": LocalJSX.HtwLink & JSXBase.HTMLAttributes<HTMLHtwLinkElement>;
             "htw-logo": LocalJSX.HtwLogo & JSXBase.HTMLAttributes<HTMLHtwLogoElement>;
             "htw-top-menu": LocalJSX.HtwTopMenu & JSXBase.HTMLAttributes<HTMLHtwTopMenuElement>;

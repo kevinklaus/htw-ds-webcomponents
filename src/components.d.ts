@@ -46,6 +46,10 @@ export namespace Components {
          */
         "orange": boolean;
         /**
+          * use side-menu styling if true
+         */
+        "sideMenu": boolean;
+        /**
           * text to be displayed in link
          */
         "text": string;
@@ -67,6 +71,16 @@ export namespace Components {
           * render logo in different sizes
          */
         "size": "s" | "m" | "l";
+    }
+    interface HtwSideMenu {
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange": boolean;
     }
     interface HtwTopMenu {
         /**
@@ -98,6 +112,12 @@ declare global {
         prototype: HTMLHtwLogoElement;
         new (): HTMLHtwLogoElement;
     };
+    interface HTMLHtwSideMenuElement extends Components.HtwSideMenu, HTMLStencilElement {
+    }
+    var HTMLHtwSideMenuElement: {
+        prototype: HTMLHtwSideMenuElement;
+        new (): HTMLHtwSideMenuElement;
+    };
     interface HTMLHtwTopMenuElement extends Components.HtwTopMenu, HTMLStencilElement {
     }
     var HTMLHtwTopMenuElement: {
@@ -108,6 +128,7 @@ declare global {
         "htw-button": HTMLHtwButtonElement;
         "htw-link": HTMLHtwLinkElement;
         "htw-logo": HTMLHtwLogoElement;
+        "htw-side-menu": HTMLHtwSideMenuElement;
         "htw-top-menu": HTMLHtwTopMenuElement;
     }
 }
@@ -152,6 +173,10 @@ declare namespace LocalJSX {
          */
         "orange"?: boolean;
         /**
+          * use side-menu styling if true
+         */
+        "sideMenu"?: boolean;
+        /**
           * text to be displayed in link
          */
         "text"?: string;
@@ -174,6 +199,16 @@ declare namespace LocalJSX {
          */
         "size"?: "s" | "m" | "l";
     }
+    interface HtwSideMenu {
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange"?: boolean;
+    }
     interface HtwTopMenu {
         /**
           * use dark mode if true
@@ -188,6 +223,7 @@ declare namespace LocalJSX {
         "htw-button": HtwButton;
         "htw-link": HtwLink;
         "htw-logo": HtwLogo;
+        "htw-side-menu": HtwSideMenu;
         "htw-top-menu": HtwTopMenu;
     }
 }
@@ -198,6 +234,7 @@ declare module "@stencil/core" {
             "htw-button": LocalJSX.HtwButton & JSXBase.HTMLAttributes<HTMLHtwButtonElement>;
             "htw-link": LocalJSX.HtwLink & JSXBase.HTMLAttributes<HTMLHtwLinkElement>;
             "htw-logo": LocalJSX.HtwLogo & JSXBase.HTMLAttributes<HTMLHtwLogoElement>;
+            "htw-side-menu": LocalJSX.HtwSideMenu & JSXBase.HTMLAttributes<HTMLHtwSideMenuElement>;
             "htw-top-menu": LocalJSX.HtwTopMenu & JSXBase.HTMLAttributes<HTMLHtwTopMenuElement>;
         }
     }

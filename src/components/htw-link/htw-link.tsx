@@ -11,10 +11,15 @@ export class HTWLink {
    */
   @Prop() dark: boolean = false;
 
-    /**
+  /**
    * use orange color scheme if true
    */
   @Prop() orange: boolean = false;
+
+  /**
+   * use side-menu styling if true
+   */
+  @Prop() sideMenu: boolean = false;
 
   /**
    * text to be displayed in link
@@ -35,6 +40,7 @@ export class HTWLink {
       var classList = []
       if (this.dark) classList.push("dark")
       if (this.orange) classList.push("orange")
+      if (this.sideMenu) classList.push("side-menu")
       return classList.join(" ")
   }
 

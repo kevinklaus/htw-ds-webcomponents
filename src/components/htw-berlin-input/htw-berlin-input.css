@@ -1,0 +1,118 @@
+:host {
+  display: inline-block;
+}
+
+/* generic button styles */
+
+input.htw-berlin-input {
+  text-decoration: none;
+  font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+  line-height: 20px;
+  border: 2px solid var(--primary-green);
+  padding: 10px 18px;
+  margin: 5px;
+  transition: border 0.2s ease-in-out,
+  background 0.2s ease-in-out,
+  color 0.2s ease-in-out;
+}
+
+/* filled */
+
+input.htw-berlin-input:hover {
+  color: var(--primary-green);
+  display: inline-block;
+}
+
+label {
+  display: block;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+input.htw-berlin-input.filled.green {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+input.htw-berlin-input.filled.orange {
+  background-color: var(--secondary-orange);
+  border-color: var(--secondary-orange);
+}
+
+input.htw-berlin-input.filled.blue {
+  background-color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+input.htw-berlin-input.filled.grey {
+  background-color: var(--secondary-grey);
+  border-color: var(--secondary-grey);
+}
+
+input.htw-berlin-input.filled:hover {
+  background-color: var(--dark-grey) !important;
+  border-color: var(--dark-grey) !important;
+  color: var(--white) !important;
+}
+
+/* outlined */
+
+input.htw-berlin-input.outlined {
+  display: inline-block;
+}
+
+input.htw-berlin-input.outlined.green {
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+input.htw-berlin-input.outlined.orange {
+  color: var(--secondary-orange);
+  border-color: var(--secondary-orange);
+}
+
+input.htw-berlin-input.outlined.blue {
+  color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+input.htw-berlin-input.outlined.grey {
+  color: var(--secondary-grey);
+  border-color: var(--secondary-grey);
+}
+
+input.htw-berlin-input.outlined:hover {
+  border-color: var(--dark-grey) !important;
+  color: var(--dark-grey) !important;
+}
+
+
+/* text */
+
+input.htw-berlin-input.text {
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  margin: 0 3px;
+}
+
+input.htw-berlin-input.text.green {
+  color: var(--primary-green);
+}
+
+input.htw-berlin-input.text.orange {
+  color: var(--secondary-orange);
+}
+
+input.htw-berlin-input.text.blue {
+  color: var(--secondary-blue);
+}
+
+input.htw-berlin-input.text.grey {
+  color: var(--secondary-grey);
+}
+
+input.htw-berlin-input.text:hover {
+  color: var(--dark-grey) !important;
+}

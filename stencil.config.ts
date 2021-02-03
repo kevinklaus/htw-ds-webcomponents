@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'htw-ds-webcomponents',
+  namespace: 'htw-berlin-ds-webcomponents',
   globalStyle: 'src/global/global.css',
   outputTargets: [
     {

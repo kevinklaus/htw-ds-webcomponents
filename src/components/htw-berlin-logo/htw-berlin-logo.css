@@ -1,0 +1,12 @@
+:host {
+  display: inline-block;
+}
+
+.htw-berlin-logo.orange path {
+  fill: var(--secondary-orange);
+}
+
+.htw-berlin-logo.dark path,
+.htw-berlin-logo.dark.orange path {
+  fill: var(--white);
+}

@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+div.htw-berlin-side-menu {
+  padding: 49px 37px 49px 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25vw;
+  max-width: 300px;
+  min-width: 155px;
+}
+
+div.htw-berlin-side-menu.dark {
+  background-color: var(--dark-grey);
+}

@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface HtwButton {
+    interface HtwBerlinButton {
         /**
           * alternative title
          */
@@ -28,7 +28,29 @@ export namespace Components {
          */
         "variant": "filled" | "outlined" | "text";
     }
-    interface HtwLink {
+    interface HtwBerlinInput {
+        /**
+          * alternative title
+         */
+        "altTitle": string;
+        /**
+          * text to be displayed in button
+         */
+        "dark": boolean;
+        /**
+          * text to be displayed in button
+         */
+        "label": string;
+        /**
+          * text to be displayed in button
+         */
+        "type": string;
+        /**
+          * text to be displayed in button
+         */
+        "value": string;
+    }
+    interface HtwBerlinLink {
         /**
           * alternative title
          */
@@ -54,7 +76,7 @@ export namespace Components {
          */
         "text": string;
     }
-    interface HtwLogo {
+    interface HtwBerlinLogo {
         /**
           * use dark mode if true
          */
@@ -72,7 +94,7 @@ export namespace Components {
          */
         "size": "s" | "m" | "l";
     }
-    interface HtwSideMenu {
+    interface HtwBerlinSideMenu {
         /**
           * use dark mode if true
          */
@@ -82,7 +104,7 @@ export namespace Components {
          */
         "orange": boolean;
     }
-    interface HtwTopMenu {
+    interface HtwBerlinTopMenu {
         /**
           * use dark mode if true
          */
@@ -94,46 +116,53 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLHtwButtonElement extends Components.HtwButton, HTMLStencilElement {
+    interface HTMLHtwBerlinButtonElement extends Components.HtwBerlinButton, HTMLStencilElement {
     }
-    var HTMLHtwButtonElement: {
-        prototype: HTMLHtwButtonElement;
-        new (): HTMLHtwButtonElement;
+    var HTMLHtwBerlinButtonElement: {
+        prototype: HTMLHtwBerlinButtonElement;
+        new (): HTMLHtwBerlinButtonElement;
     };
-    interface HTMLHtwLinkElement extends Components.HtwLink, HTMLStencilElement {
+    interface HTMLHtwBerlinInputElement extends Components.HtwBerlinInput, HTMLStencilElement {
     }
-    var HTMLHtwLinkElement: {
-        prototype: HTMLHtwLinkElement;
-        new (): HTMLHtwLinkElement;
+    var HTMLHtwBerlinInputElement: {
+        prototype: HTMLHtwBerlinInputElement;
+        new (): HTMLHtwBerlinInputElement;
     };
-    interface HTMLHtwLogoElement extends Components.HtwLogo, HTMLStencilElement {
+    interface HTMLHtwBerlinLinkElement extends Components.HtwBerlinLink, HTMLStencilElement {
     }
-    var HTMLHtwLogoElement: {
-        prototype: HTMLHtwLogoElement;
-        new (): HTMLHtwLogoElement;
+    var HTMLHtwBerlinLinkElement: {
+        prototype: HTMLHtwBerlinLinkElement;
+        new (): HTMLHtwBerlinLinkElement;
     };
-    interface HTMLHtwSideMenuElement extends Components.HtwSideMenu, HTMLStencilElement {
+    interface HTMLHtwBerlinLogoElement extends Components.HtwBerlinLogo, HTMLStencilElement {
     }
-    var HTMLHtwSideMenuElement: {
-        prototype: HTMLHtwSideMenuElement;
-        new (): HTMLHtwSideMenuElement;
+    var HTMLHtwBerlinLogoElement: {
+        prototype: HTMLHtwBerlinLogoElement;
+        new (): HTMLHtwBerlinLogoElement;
     };
-    interface HTMLHtwTopMenuElement extends Components.HtwTopMenu, HTMLStencilElement {
+    interface HTMLHtwBerlinSideMenuElement extends Components.HtwBerlinSideMenu, HTMLStencilElement {
     }
-    var HTMLHtwTopMenuElement: {
-        prototype: HTMLHtwTopMenuElement;
-        new (): HTMLHtwTopMenuElement;
+    var HTMLHtwBerlinSideMenuElement: {
+        prototype: HTMLHtwBerlinSideMenuElement;
+        new (): HTMLHtwBerlinSideMenuElement;
+    };
+    interface HTMLHtwBerlinTopMenuElement extends Components.HtwBerlinTopMenu, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinTopMenuElement: {
+        prototype: HTMLHtwBerlinTopMenuElement;
+        new (): HTMLHtwBerlinTopMenuElement;
     };
     interface HTMLElementTagNameMap {
-        "htw-button": HTMLHtwButtonElement;
-        "htw-link": HTMLHtwLinkElement;
-        "htw-logo": HTMLHtwLogoElement;
-        "htw-side-menu": HTMLHtwSideMenuElement;
-        "htw-top-menu": HTMLHtwTopMenuElement;
+        "htw-berlin-button": HTMLHtwBerlinButtonElement;
+        "htw-berlin-input": HTMLHtwBerlinInputElement;
+        "htw-berlin-link": HTMLHtwBerlinLinkElement;
+        "htw-berlin-logo": HTMLHtwBerlinLogoElement;
+        "htw-berlin-side-menu": HTMLHtwBerlinSideMenuElement;
+        "htw-berlin-top-menu": HTMLHtwBerlinTopMenuElement;
     }
 }
 declare namespace LocalJSX {
-    interface HtwButton {
+    interface HtwBerlinButton {
         /**
           * alternative title
          */
@@ -155,7 +184,29 @@ declare namespace LocalJSX {
          */
         "variant"?: "filled" | "outlined" | "text";
     }
-    interface HtwLink {
+    interface HtwBerlinInput {
+        /**
+          * alternative title
+         */
+        "altTitle"?: string;
+        /**
+          * text to be displayed in button
+         */
+        "dark"?: boolean;
+        /**
+          * text to be displayed in button
+         */
+        "label"?: string;
+        /**
+          * text to be displayed in button
+         */
+        "type"?: string;
+        /**
+          * text to be displayed in button
+         */
+        "value"?: string;
+    }
+    interface HtwBerlinLink {
         /**
           * alternative title
          */
@@ -181,7 +232,7 @@ declare namespace LocalJSX {
          */
         "text"?: string;
     }
-    interface HtwLogo {
+    interface HtwBerlinLogo {
         /**
           * use dark mode if true
          */
@@ -199,7 +250,7 @@ declare namespace LocalJSX {
          */
         "size"?: "s" | "m" | "l";
     }
-    interface HtwSideMenu {
+    interface HtwBerlinSideMenu {
         /**
           * use dark mode if true
          */
@@ -209,7 +260,7 @@ declare namespace LocalJSX {
          */
         "orange"?: boolean;
     }
-    interface HtwTopMenu {
+    interface HtwBerlinTopMenu {
         /**
           * use dark mode if true
          */
@@ -220,22 +271,24 @@ declare namespace LocalJSX {
         "orange"?: boolean;
     }
     interface IntrinsicElements {
-        "htw-button": HtwButton;
-        "htw-link": HtwLink;
-        "htw-logo": HtwLogo;
-        "htw-side-menu": HtwSideMenu;
-        "htw-top-menu": HtwTopMenu;
+        "htw-berlin-button": HtwBerlinButton;
+        "htw-berlin-input": HtwBerlinInput;
+        "htw-berlin-link": HtwBerlinLink;
+        "htw-berlin-logo": HtwBerlinLogo;
+        "htw-berlin-side-menu": HtwBerlinSideMenu;
+        "htw-berlin-top-menu": HtwBerlinTopMenu;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "htw-button": LocalJSX.HtwButton & JSXBase.HTMLAttributes<HTMLHtwButtonElement>;
-            "htw-link": LocalJSX.HtwLink & JSXBase.HTMLAttributes<HTMLHtwLinkElement>;
-            "htw-logo": LocalJSX.HtwLogo & JSXBase.HTMLAttributes<HTMLHtwLogoElement>;
-            "htw-side-menu": LocalJSX.HtwSideMenu & JSXBase.HTMLAttributes<HTMLHtwSideMenuElement>;
-            "htw-top-menu": LocalJSX.HtwTopMenu & JSXBase.HTMLAttributes<HTMLHtwTopMenuElement>;
+            "htw-berlin-button": LocalJSX.HtwBerlinButton & JSXBase.HTMLAttributes<HTMLHtwBerlinButtonElement>;
+            "htw-berlin-input": LocalJSX.HtwBerlinInput & JSXBase.HTMLAttributes<HTMLHtwBerlinInputElement>;
+            "htw-berlin-link": LocalJSX.HtwBerlinLink & JSXBase.HTMLAttributes<HTMLHtwBerlinLinkElement>;
+            "htw-berlin-logo": LocalJSX.HtwBerlinLogo & JSXBase.HTMLAttributes<HTMLHtwBerlinLogoElement>;
+            "htw-berlin-side-menu": LocalJSX.HtwBerlinSideMenu & JSXBase.HTMLAttributes<HTMLHtwBerlinSideMenuElement>;
+            "htw-berlin-top-menu": LocalJSX.HtwBerlinTopMenu & JSXBase.HTMLAttributes<HTMLHtwBerlinTopMenuElement>;
         }
     }
 }

@@ -1,0 +1,33 @@
+:host {
+  display: inline-block;
+}
+
+a.htw-berlin-link {
+  border-bottom: 4px solid transparent;
+  padding: 10px 15px 5px 15px;
+  color: var(--copy);
+  text-decoration: none;
+  font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
+  transition: border 0.3s ease-in-out;
+}
+
+a.htw-berlin-link.side-menu {
+  display: block;
+  padding: 10px 5px 5px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+a.htw-berlin-link.dark {
+  color: var(--white);
+}
+
+a.htw-berlin-link:hover {
+  border-bottom: 4px solid var(--primary-green);
+}
+
+a.htw-berlin-link.orange:hover {
+  border-bottom: 4px solid var(--secondary-orange);
+}

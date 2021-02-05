@@ -9,42 +9,76 @@ import { Component, Prop, h } from '@stencil/core';
 export class HTWInput {
 
   /**
-   * text to be displayed in button
+   * use dark color theme if true
    */
   @Prop() dark: boolean;
 
   /**
-   * text to be displayed in button
+   * color applied to the input field
+   */
+  @Prop() color: "green" | "orange" | "blue" = "green";
+
+  /**
+   * color applied to the input field
+   */
+  @Prop() state: "normal" | "active" | "disabled" = "normal";
+
+  /**
+   * value to be saved by input
    */
   @Prop() value: string;
 
   /**
-   * text to be displayed in button
+   * placeholder text to be displayed in input
    */
-  @Prop() label: string;
+  @Prop() placeholder: string = "Type...";
 
   /**
-   * text to be displayed in button
+   * label text to be displayed above input field
+   */
+  @Prop() label: string = "";
+
+  /**
+   * type of input
    */
   @Prop() type: string = "text";
 
   /**
-   * alternative title
+   * alternative title shown on hover
    */
-  @Prop() altTitle: string;
+  @Prop() altTitle: string = "Enter information here";
 
 
   render() {    
-    var classes = this.dark ? "dark" : ""
+    var classes = this.color + " " + this.state
+    classes += this.dark ? " dark" : "" 
+    var disabled = false
+    if (this.state == "disabled") {
+      disabled = true
+    } 
 
-    return <div class="htw-berlin-input-wrapper">
-      <label>{this.label}</label>
-      <input
+    if (this.label === "") { 
+      return <input
         class={"htw-berlin-input " + classes}
         title={this.altTitle} 
         value={this.value}
         type={this.type}
-      />
-    </div>;
+        placeholder={this.placeholder}
+        disabled={disabled}
+      />; 
+    }
+    else { 
+      return <div>
+        <label class={this.dark? "dark" : ""}>{this.label}</label> 
+        <input
+          class={"htw-berlin-input " + classes}
+          title={this.altTitle} 
+          value={this.value}
+          type={this.type}
+          placeholder={this.placeholder}
+          disabled={disabled}
+        />
+      </div>; 
+    }
   }
 }

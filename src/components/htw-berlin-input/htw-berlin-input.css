@@ -2,117 +2,97 @@
   display: inline-block;
 }
 
-/* generic button styles */
+/* generic input styles */
 
 input.htw-berlin-input {
   text-decoration: none;
   font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  transition: color 0.2s ease-in-out;
   line-height: 20px;
-  border: 2px solid var(--primary-green);
-  padding: 10px 18px;
-  margin: 5px;
+  color: var(--copy);
+  border: 2px solid var(--secondary-grey);
+  padding: 9px 14px;
+  margin: 2px 5px 5px 5px;
   transition: border 0.2s ease-in-out,
   background 0.2s ease-in-out,
   color 0.2s ease-in-out;
+  display: inline-block;
 }
 
-/* filled */
+input.htw-berlin-input::placeholder {
+  color: var(--dark-grey);
+}
 
-input.htw-berlin-input:hover {
-  color: var(--primary-green);
-  display: inline-block;
+input.htw-berlin-input:focus::placeholder {
+  color: var(--secondary-grey);
 }
 
 label {
+  color: var(--copy);
   display: block;
-  margin: 0 5px;
-  font-weight: bold;
+  margin: 5px 5px 0 6px;
 }
 
-input.htw-berlin-input.filled.green {
-  background-color: var(--primary-green);
-  border-color: var(--primary-green);
+/* dark generic input styles */
+
+input.htw-berlin-input.dark {
+  color: var(--white);
+  border-color: var(--white);
+  background-color: transparent;
 }
 
-input.htw-berlin-input.filled.orange {
-  background-color: var(--secondary-orange);
-  border-color: var(--secondary-orange);
+input.htw-berlin-input.dark::placeholder {
+  color: var(--white);
 }
 
-input.htw-berlin-input.filled.blue {
-  background-color: var(--secondary-blue);
-  border-color: var(--secondary-blue);
+input.htw-berlin-input.dark:focus::placeholder {
+  color: var(--white);
 }
 
-input.htw-berlin-input.filled.grey {
-  background-color: var(--secondary-grey);
-  border-color: var(--secondary-grey);
+label.dark {
+  color: var(--white);
 }
 
-input.htw-berlin-input.filled:hover {
-  background-color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-  color: var(--white) !important;
-}
+/* active */
 
-/* outlined */
-
-input.htw-berlin-input.outlined {
-  display: inline-block;
-}
-
-input.htw-berlin-input.outlined.green {
+input.htw-berlin-input.green:hover,
+input.htw-berlin-input.green:focus,
+input.htw-berlin-input.green.active {
   color: var(--primary-green);
-  border-color: var(--primary-green);
+  border-color:  var(--primary-green);
 }
 
-input.htw-berlin-input.outlined.orange {
-  color: var(--secondary-orange);
-  border-color: var(--secondary-orange);
-}
-
-input.htw-berlin-input.outlined.blue {
+input.htw-berlin-input.blue:hover,
+input.htw-berlin-input.blue:focus,
+input.htw-berlin-input.blue.active {
   color: var(--secondary-blue);
-  border-color: var(--secondary-blue);
+  border-color:  var(--secondary-blue);
 }
 
-input.htw-berlin-input.outlined.grey {
+input.htw-berlin-input.orange:hover,
+input.htw-berlin-input.orange:focus,
+input.htw-berlin-input.orange.active {
+  color: var(--secondary-orange);
+  border-color:  var(--secondary-orange);
+}
+
+/* disabled */
+
+input.htw-berlin-input.disabled,
+input.htw-berlin-input.disabled:hover,
+input.htw-berlin-input.disabled:focus,
+input.htw-berlin-input.disabled.active {
+  cursor: not-allowed;
   color: var(--secondary-grey);
+  border-color: var(--background-grey);
+  background-color: var(--background-grey);
+}
+
+input.htw-berlin-input.disabled.dark,
+input.htw-berlin-input.disabled.dark:hover,
+input.htw-berlin-input.disabled.dark:focus,
+input.htw-berlin-input.disabled.dark.active {
   border-color: var(--secondary-grey);
+  background-color: var(--dark-grey);
 }
 
-input.htw-berlin-input.outlined:hover {
-  border-color: var(--dark-grey) !important;
-  color: var(--dark-grey) !important;
-}
-
-
-/* text */
-
-input.htw-berlin-input.text {
-  font-weight: bold;
-  letter-spacing: 0.3px;
-  margin: 0 3px;
-}
-
-input.htw-berlin-input.text.green {
-  color: var(--primary-green);
-}
-
-input.htw-berlin-input.text.orange {
-  color: var(--secondary-orange);
-}
-
-input.htw-berlin-input.text.blue {
-  color: var(--secondary-blue);
-}
-
-input.htw-berlin-input.text.grey {
-  color: var(--secondary-grey);
-}
-
-input.htw-berlin-input.text:hover {
-  color: var(--dark-grey) !important;
-}

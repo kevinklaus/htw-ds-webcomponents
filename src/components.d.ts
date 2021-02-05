@@ -30,23 +30,35 @@ export namespace Components {
     }
     interface HtwBerlinInput {
         /**
-          * alternative title
+          * alternative title shown on hover
          */
         "altTitle": string;
         /**
-          * text to be displayed in button
+          * color applied to the input field
+         */
+        "color": "green" | "orange" | "blue";
+        /**
+          * use dark color theme if true
          */
         "dark": boolean;
         /**
-          * text to be displayed in button
+          * label text to be displayed above input field
          */
         "label": string;
         /**
-          * text to be displayed in button
+          * placeholder text to be displayed in input
+         */
+        "placeholder": string;
+        /**
+          * color applied to the input field
+         */
+        "state": "normal" | "active" | "disabled";
+        /**
+          * type of input
          */
         "type": string;
         /**
-          * text to be displayed in button
+          * value to be saved by input
          */
         "value": string;
     }
@@ -186,23 +198,35 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinInput {
         /**
-          * alternative title
+          * alternative title shown on hover
          */
         "altTitle"?: string;
         /**
-          * text to be displayed in button
+          * color applied to the input field
+         */
+        "color"?: "green" | "orange" | "blue";
+        /**
+          * use dark color theme if true
          */
         "dark"?: boolean;
         /**
-          * text to be displayed in button
+          * label text to be displayed above input field
          */
         "label"?: string;
         /**
-          * text to be displayed in button
+          * placeholder text to be displayed in input
+         */
+        "placeholder"?: string;
+        /**
+          * color applied to the input field
+         */
+        "state"?: "normal" | "active" | "disabled";
+        /**
+          * type of input
          */
         "type"?: string;
         /**
-          * text to be displayed in button
+          * value to be saved by input
          */
         "value"?: string;
     }

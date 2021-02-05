@@ -47,7 +47,7 @@ Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-compone
 
 When creating new component tags, we recommend _not_ using `stencil` in the component name (ex: `<stencil-datepicker>`). This is because the generated component has little to nothing to do with Stencil; it's just a web component!
 
-Instead, use the prefix `htw`.
+Instead, use the prefix `htw-berlin-`.
 
 ## Using this component
 

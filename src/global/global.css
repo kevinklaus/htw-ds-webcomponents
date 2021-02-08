@@ -32,6 +32,11 @@
 body {
   font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
   background-color: var(--background-grey);
+  margin: 0;
+}
+
+body.dark {
+  background-color: var(--dark-grey);
 }
 
 /* CSS variables */

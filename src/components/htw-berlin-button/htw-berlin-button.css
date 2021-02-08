@@ -45,9 +45,10 @@ a.htw-berlin-button.filled.blue {
   border-color: var(--secondary-blue);
 }
 
-a.htw-berlin-button.filled.grey {
+a.htw-berlin-button.filled.disabled {
   background-color: var(--secondary-grey);
   border-color: var(--secondary-grey);
+  cursor: not-allowed;
 }
 
 a.htw-berlin-button.filled:hover {
@@ -77,14 +78,20 @@ a.htw-berlin-button.outlined.blue {
   border-color: var(--secondary-blue);
 }
 
-a.htw-berlin-button.outlined.grey {
+a.htw-berlin-button.outlined.disabled {
   color: var(--secondary-grey);
   border-color: var(--secondary-grey);
+  cursor: not-allowed;
 }
 
 a.htw-berlin-button.outlined:hover {
   border-color: var(--dark-grey) !important;
   color: var(--dark-grey) !important;
+}
+
+a.htw-berlin-button.outlined.dark:hover {
+  border-color: var(--white) !important;
+  color: var(--white) !important;
 }
 
 
@@ -108,10 +115,15 @@ a.htw-berlin-button.text.blue {
   color: var(--secondary-blue);
 }
 
-a.htw-berlin-button.text.grey {
+a.htw-berlin-button.text.disabled {
   color: var(--secondary-grey);
+  cursor: not-allowed;
 }
 
 a.htw-berlin-button.text:hover {
   color: var(--dark-grey) !important;
+}
+
+a.htw-berlin-button.text.dark:hover {
+  color: var(--white) !important;
 }

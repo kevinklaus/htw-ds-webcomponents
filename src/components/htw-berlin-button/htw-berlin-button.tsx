@@ -23,7 +23,7 @@ export class HTWButton {
   /**
    * button color
    */
-  @Prop() color: "green" | "orange" | "blue" | "grey" = "green";
+  @Prop() color: "green" | "orange" | "blue" | "disabled" = "green";
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue', 'grey'];
@@ -36,6 +36,11 @@ export class HTWButton {
    * text to be displayed in button
    */
   @Prop() text: string;
+
+  /**
+   * text to be displayed in button
+   */
+  @Prop() dark: boolean = false; 
 
   /**
    * alternative title
@@ -51,7 +56,7 @@ export class HTWButton {
     return <a
         class={"htw-berlin-button " + this.variant + " " + this.color}
         title={this.altTitle} 
-        href={this.href}
+        href={this.color === "disabled" ? 'javascript:void(0)': this.href}
       >
         {this.text}
       </a>;

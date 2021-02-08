@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+div.htw-berlin-content-box {
+  padding: 10px;
+  margin: 10px;
+}
+
+div.htw-berlin-content-box.default {
+  box-shadow: 2px 3px 27px -7px rgba(0, 0, 0, 0.22);
+  background-color: var(--white);
+}
+
+div.htw-berlin-content-box.dark {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+
+div.htw-berlin-content-box.green {
+  border: 3px solid var(--primary-green);
+}
+
+div.htw-berlin-content-box.grey {
+  border: 1px solid var(--secondary-grey);
+}

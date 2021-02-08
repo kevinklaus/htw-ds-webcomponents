@@ -6,6 +6,16 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HtwBerlinBreadcrumb {
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange": boolean;
+    }
     interface HtwBerlinButton {
         /**
           * alternative title
@@ -90,13 +100,17 @@ export namespace Components {
          */
         "orange": boolean;
         /**
-          * use side-menu styling if true
+          * uset link state if neccessary
          */
-        "sideMenu": boolean;
+        "state": "default" | "active" | "visited";
         /**
           * text to be displayed in link
          */
         "text": string;
+        /**
+          * use breadcrumb or side-menu styling if neccessary
+         */
+        "variant": "default" | "side-menu" | "breadcrumb";
     }
     interface HtwBerlinLogo {
         /**
@@ -138,6 +152,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLHtwBerlinBreadcrumbElement extends Components.HtwBerlinBreadcrumb, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinBreadcrumbElement: {
+        prototype: HTMLHtwBerlinBreadcrumbElement;
+        new (): HTMLHtwBerlinBreadcrumbElement;
+    };
     interface HTMLHtwBerlinButtonElement extends Components.HtwBerlinButton, HTMLStencilElement {
     }
     var HTMLHtwBerlinButtonElement: {
@@ -181,6 +201,7 @@ declare global {
         new (): HTMLHtwBerlinTopMenuElement;
     };
     interface HTMLElementTagNameMap {
+        "htw-berlin-breadcrumb": HTMLHtwBerlinBreadcrumbElement;
         "htw-berlin-button": HTMLHtwBerlinButtonElement;
         "htw-berlin-content-box": HTMLHtwBerlinContentBoxElement;
         "htw-berlin-input": HTMLHtwBerlinInputElement;
@@ -191,6 +212,16 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface HtwBerlinBreadcrumb {
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange"?: boolean;
+    }
     interface HtwBerlinButton {
         /**
           * alternative title
@@ -275,13 +306,17 @@ declare namespace LocalJSX {
          */
         "orange"?: boolean;
         /**
-          * use side-menu styling if true
+          * uset link state if neccessary
          */
-        "sideMenu"?: boolean;
+        "state"?: "default" | "active" | "visited";
         /**
           * text to be displayed in link
          */
         "text"?: string;
+        /**
+          * use breadcrumb or side-menu styling if neccessary
+         */
+        "variant"?: "default" | "side-menu" | "breadcrumb";
     }
     interface HtwBerlinLogo {
         /**
@@ -322,6 +357,7 @@ declare namespace LocalJSX {
         "orange"?: boolean;
     }
     interface IntrinsicElements {
+        "htw-berlin-breadcrumb": HtwBerlinBreadcrumb;
         "htw-berlin-button": HtwBerlinButton;
         "htw-berlin-content-box": HtwBerlinContentBox;
         "htw-berlin-input": HtwBerlinInput;
@@ -335,6 +371,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "htw-berlin-breadcrumb": LocalJSX.HtwBerlinBreadcrumb & JSXBase.HTMLAttributes<HTMLHtwBerlinBreadcrumbElement>;
             "htw-berlin-button": LocalJSX.HtwBerlinButton & JSXBase.HTMLAttributes<HTMLHtwBerlinButtonElement>;
             "htw-berlin-content-box": LocalJSX.HtwBerlinContentBox & JSXBase.HTMLAttributes<HTMLHtwBerlinContentBoxElement>;
             "htw-berlin-input": LocalJSX.HtwBerlinInput & JSXBase.HTMLAttributes<HTMLHtwBerlinInputElement>;

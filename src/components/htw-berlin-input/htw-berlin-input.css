@@ -93,6 +93,6 @@ input.htw-berlin-input.disabled.dark:hover,
 input.htw-berlin-input.disabled.dark:focus,
 input.htw-berlin-input.disabled.dark.active {
   border-color: var(--secondary-grey);
-  background-color: var(--dark-grey);
+  background-color: var(--secondary-grey);
 }
 

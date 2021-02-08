@@ -11,15 +11,6 @@ a.htw-berlin-link {
   transition: border 0.3s ease-in-out;
 }
 
-a.htw-berlin-link.side-menu {
-  display: block;
-  padding: 10px 5px 5px 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 160px;
-}
-
 a.htw-berlin-link.dark {
   color: var(--white);
 }
@@ -30,4 +21,54 @@ a.htw-berlin-link:hover {
 
 a.htw-berlin-link.orange:hover {
   border-bottom: 4px solid var(--secondary-orange);
+}
+
+
+/* side-menu styles */
+
+a.htw-berlin-link.side-menu {
+  display: block;
+  padding: 10px 5px 5px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+
+/* breadcrumb styles */
+
+a.htw-berlin-link.breadcrumb {
+  padding: 10px 5px 5px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+  border: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a.htw-berlin-link.breadcrumb span.icon {
+  padding: 3px 5px 0 5px;
+}
+
+a.htw-berlin-link.breadcrumb span.icon svg {
+  height: 15px;
+}
+
+a.htw-berlin-link.breadcrumb.visited {
+  color: var(--secondary-grey);
+}
+
+a.htw-berlin-link.breadcrumb.active {
+  font-weight: bold;
+}
+
+a.htw-berlin-link.breadcrumb:hover {
+  color: var(--primary-green);
+  border: none;
+}
+
+a.htw-berlin-link.orange.breadcrumb:hover {
+  color: var(--secondary-orange);
 }

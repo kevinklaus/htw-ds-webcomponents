@@ -36,14 +36,14 @@ export class HTWBreadcrumb {
         variant="breadcrumb"
         title="Nothing will happen if you click." 
         href="#"
-        text="FB 4">
+        text="Fachbereich 4">
       </htw-berlin-link>
       <htw-berlin-link dark={this.dark} 
         variant="breadcrumb"
         state="active"
         title="Nothing will happen if you click." 
         href="#"
-        text="IMI (B)">
+        text="Internationaler Studiengang Medieninformatik (B)">
       </htw-berlin-link>
     </div>;
   }

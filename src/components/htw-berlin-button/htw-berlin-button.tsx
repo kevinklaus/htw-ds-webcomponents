@@ -29,7 +29,7 @@ export class HTWButton {
     const colors = ['green', 'orange', 'blue', 'grey'];
     const colorIsValid = colors.indexOf(newValue) > -1;
     
-    if (!colorIsValid) { throw new Error('color: not a valid color (filled, outlined, text)') }
+    if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
   }
 
   /**

@@ -33,26 +33,7 @@ export class HTWDropdown {
         </span>
       </a>
       <div class="content">
-        <htw-berlin-link dark={!this.dark} orange={this.orange} variant="dropdown" 
-          title="Nothing will happen if you click." 
-          href="#"
-          text="Click me.">
-        </htw-berlin-link>
-        <htw-berlin-link dark={!this.dark} orange={this.orange} variant="dropdown" 
-          title="Nothing will happen if you click." 
-          href="#"
-          text="Second link">
-        </htw-berlin-link>
-        <htw-berlin-link dark={!this.dark} orange={this.orange} variant="dropdown" 
-          title="Nothing will happen if you click." 
-          href="#"
-          text="Third very long link">
-        </htw-berlin-link>
-        <htw-berlin-link dark={!this.dark} orange={this.orange} variant="dropdown" 
-          title="Nothing will happen if you click." 
-          href="#"
-          text="Last link">
-        </htw-berlin-link>
+        <slot></slot>
       </div>
     </div>;
   }

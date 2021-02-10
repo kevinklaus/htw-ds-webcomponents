@@ -11,7 +11,8 @@ a.htw-berlin-link {
   transition: border 0.3s ease-in-out;
 }
 
-a.htw-berlin-link.dark {
+a.htw-berlin-link.dark,
+a.htw-berlin-link.dropdown {
   color: var(--white);
 }
 
@@ -47,6 +48,9 @@ a.htw-berlin-link.dropdown {
   max-width: 160px;
 }
 
+a.htw-berlin-link.dropdown.dark {
+  color: var(--copy);
+}
 
 /* breadcrumb styles */
 

@@ -10,7 +10,7 @@ input.htw-berlin-input {
   font-size: 1rem;
   line-height: 20px;
   color: var(--copy);
-  border: 2px solid var(--secondary-grey);
+  border: 1px solid var(--secondary-grey);
   padding: 9px 14px;
   margin: 2px 5px 5px 5px;
   transition: border 0.2s ease-in-out,
@@ -54,6 +54,12 @@ label.dark {
 }
 
 /* active */
+
+input.htw-berlin-input:hover,
+input.htw-berlin-input:focus,
+input.htw-berlin-input.active {
+  border-width: 2px;
+}
 
 input.htw-berlin-input.green:hover,
 input.htw-berlin-input.green:focus,

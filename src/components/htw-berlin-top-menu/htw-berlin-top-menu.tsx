@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'htw-berlin-top-menu',
@@ -12,9 +12,16 @@ export class HTWTopMenu {
   @Prop() dark: boolean = false;
 
   /**
-   * use orange color scheme if true
+   *  color scheme of menu
    */
-  @Prop() orange: boolean = false;
+  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Watch('color')
+  validateColor(newValue: string) {
+    const colors = ['green', 'orange', 'blue', 'disabled'];
+    const colorIsValid = colors.indexOf(newValue) > -1;
+    
+    if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue)') }
+  }
 
   /**
    * hide htw logo if true
@@ -25,14 +32,14 @@ export class HTWTopMenu {
   @Function()  getVariantClasses() {
     var classList = []
     if (this.dark) classList.push("dark")
-    if (this.orange) classList.push("orange")
+    classList.push(this.color)
     return classList.join(" ")
   }
 
   render() {
     if (this.logo) {
       return <div class={"htw-berlin-top-menu " + this.getVariantClasses()}>
-        <htw-berlin-logo dark={this.dark} orange={this.orange}></htw-berlin-logo>
+        <htw-berlin-logo dark={this.dark} color={this.color}></htw-berlin-logo>
         <span class="spacer"></span>
         <slot></slot>
       </div>;

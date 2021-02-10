@@ -12,9 +12,16 @@ export class HTWLogo {
   @Prop() dark: boolean = false;
 
   /**
-   * use orange color scheme if true
+   * color scheme
    */
-  @Prop() orange: boolean = false;
+  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Watch('color')
+  validateColor(newValue: string) {
+    const colors = ['green', 'orange', 'blue'];
+    const colorIsValid = colors.indexOf(newValue) > -1;
+    
+    if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue)') }
+  }
 
   /**
    * render logo in different sizes
@@ -35,11 +42,12 @@ export class HTWLogo {
 
   @Function()  getVariantClasses() {
     var classList = []
-    if (this.dark) classList.push("dark")
-    if (this.orange) classList.push("orange")
+    if (this.dark) { 
+      classList.push("dark") 
+    }
+    else classList.push(this.color)
     if (this.size) classList.push(this.size)
     return classList.join(" ")
-
   }
 
   render() {

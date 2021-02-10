@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'htw-berlin-link',
@@ -12,9 +12,16 @@ export class HTWLink {
   @Prop() dark: boolean = false;
 
   /**
-   * use orange color scheme if true
+   * link color
    */
-  @Prop() orange: boolean = false;
+  @Prop() color: "green" | "orange" | "blue" | "disabled" = "green";
+  @Watch('color')
+  validateColor(newValue: string) {
+    const colors = ['green', 'orange', 'blue', 'disabled'];
+    const colorIsValid = colors.indexOf(newValue) > -1;
+    
+    if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
+  }
 
   /**
    * use breadcrumb, dropdown or side-menu styling if neccessary
@@ -44,7 +51,7 @@ export class HTWLink {
   @Function()  getStyleClasses() {
       var classList = []
       if (this.dark) classList.push("dark")
-      if (this.orange) classList.push("orange")
+      classList.push(this.color)
       if (["side-menu", "breadcrumb", "dropdown"].includes(this.variant)) classList.push(this.variant)
       if (this.state === "active" || this.state === "visited") classList.push(this.state)
       return classList.join(" ")

@@ -11,21 +11,8 @@ export class HTWSideMenu {
    */
   @Prop() dark: boolean = false;
 
-  /**
-   * use orange color scheme if true
-   */
-  @Prop() orange: boolean = false;
-
-
-  @Function()  getVariantClasses() {
-    var classList = []
-    if (this.dark) classList.push("dark")
-    if (this.orange) classList.push("orange")
-    return classList.join(" ")
-  }
-
   render() {
-    return <div class={"htw-berlin-side-menu " + this.getVariantClasses()}>
+    return <div class={this.dark ? "htw-berlin-side-menu dark" : "htw-berlin-side-menu"}>
       <slot></slot>
     </div>;
   }

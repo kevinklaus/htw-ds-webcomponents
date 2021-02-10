@@ -6,7 +6,10 @@
   fill: var(--secondary-orange);
 }
 
-.htw-berlin-logo.dark path,
-.htw-berlin-logo.dark.orange path {
+.htw-berlin-logo.blue path {
+  fill: var(--secondary-blue);
+}
+
+.htw-berlin-logo.dark path {
   fill: var(--white);
 }

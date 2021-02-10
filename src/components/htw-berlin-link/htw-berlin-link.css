@@ -24,6 +24,14 @@ a.htw-berlin-link.orange:hover {
   border-bottom: 4px solid var(--secondary-orange);
 }
 
+a.htw-berlin-link.blue:hover {
+  border-bottom: 4px solid var(--secondary-blue);
+}
+
+a.htw-berlin-link.disabled:hover {
+  border-bottom: 4px solid var(--secondary-grey);
+}
+
 
 /* side-menu styles */
 
@@ -70,7 +78,9 @@ a.htw-berlin-link.breadcrumb span.icon svg {
   top: 2px;
 }
 
-a.htw-berlin-link.breadcrumb.visited {
+a.htw-berlin-link.breadcrumb.visited,
+a.htw-berlin-link.disabled.breadcrumb:hover 
+{
   color: var(--secondary-grey);
 }
 
@@ -86,3 +96,8 @@ a.htw-berlin-link.breadcrumb:hover {
 a.htw-berlin-link.orange.breadcrumb:hover {
   color: var(--secondary-orange);
 }
+
+a.htw-berlin-link.blue.breadcrumb:hover {
+  color: var(--secondary-blue);
+}
+

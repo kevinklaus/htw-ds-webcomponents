@@ -27,6 +27,16 @@ div.htw-berlin-dropdown.orange a.anker:hover {
   color: var(--secondary-orange);
 }
 
+div.htw-berlin-dropdown.blue a.anker:hover {
+  color: var(--secondary-blue);
+}
+
+div.htw-berlin-dropdown.disabled a.anker:hover {
+  color: var(--secondary-grey);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 div.htw-berlin-dropdown a.anker span.icon {
   display: inline-block;
   width: 13px;

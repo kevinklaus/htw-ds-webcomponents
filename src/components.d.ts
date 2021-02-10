@@ -7,14 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface HtwBerlinBreadcrumb {
-        /**
-          * use dark mode if true
-         */
-        "dark": boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange": boolean;
     }
     interface HtwBerlinButton {
         /**
@@ -50,13 +42,13 @@ export namespace Components {
     }
     interface HtwBerlinDropdown {
         /**
+          * color scheme
+         */
+        "color": "green" | "orange" | "blue" | "disabled";
+        /**
           * use dark mode if true
          */
         "dark": boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange": boolean;
     }
     interface HtwBerlinInput {
         /**
@@ -98,6 +90,10 @@ export namespace Components {
          */
         "altTitle": string;
         /**
+          * link color
+         */
+        "color": "green" | "orange" | "blue" | "disabled";
+        /**
           * use dark mode if true
          */
         "dark": boolean;
@@ -105,10 +101,6 @@ export namespace Components {
           * href property
          */
         "href": string;
-        /**
-          * use orange color scheme if true
-         */
-        "orange": boolean;
         /**
           * uset link state if neccessary
          */
@@ -124,6 +116,10 @@ export namespace Components {
     }
     interface HtwBerlinLogo {
         /**
+          * color scheme
+         */
+        "color": "green" | "orange" | "blue";
+        /**
           * use dark mode if true
          */
         "dark": boolean;
@@ -131,10 +127,6 @@ export namespace Components {
           * href property
          */
         "href": string;
-        /**
-          * use orange color scheme if true
-         */
-        "orange": boolean;
         /**
           * render logo in different sizes
          */
@@ -145,12 +137,12 @@ export namespace Components {
           * use dark mode if true
          */
         "dark": boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange": boolean;
     }
     interface HtwBerlinTopMenu {
+        /**
+          * color scheme of menu
+         */
+        "color": "green" | "orange" | "blue";
         /**
           * use dark mode if true
          */
@@ -159,10 +151,6 @@ export namespace Components {
           * hide htw logo if true
          */
         "logo": boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange": boolean;
     }
 }
 declare global {
@@ -234,14 +222,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface HtwBerlinBreadcrumb {
-        /**
-          * use dark mode if true
-         */
-        "dark"?: boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange"?: boolean;
     }
     interface HtwBerlinButton {
         /**
@@ -277,13 +257,13 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinDropdown {
         /**
+          * color scheme
+         */
+        "color"?: "green" | "orange" | "blue" | "disabled";
+        /**
           * use dark mode if true
          */
         "dark"?: boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange"?: boolean;
     }
     interface HtwBerlinInput {
         /**
@@ -325,6 +305,10 @@ declare namespace LocalJSX {
          */
         "altTitle"?: string;
         /**
+          * link color
+         */
+        "color"?: "green" | "orange" | "blue" | "disabled";
+        /**
           * use dark mode if true
          */
         "dark"?: boolean;
@@ -332,10 +316,6 @@ declare namespace LocalJSX {
           * href property
          */
         "href"?: string;
-        /**
-          * use orange color scheme if true
-         */
-        "orange"?: boolean;
         /**
           * uset link state if neccessary
          */
@@ -351,6 +331,10 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinLogo {
         /**
+          * color scheme
+         */
+        "color"?: "green" | "orange" | "blue";
+        /**
           * use dark mode if true
          */
         "dark"?: boolean;
@@ -358,10 +342,6 @@ declare namespace LocalJSX {
           * href property
          */
         "href"?: string;
-        /**
-          * use orange color scheme if true
-         */
-        "orange"?: boolean;
         /**
           * render logo in different sizes
          */
@@ -372,12 +352,12 @@ declare namespace LocalJSX {
           * use dark mode if true
          */
         "dark"?: boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange"?: boolean;
     }
     interface HtwBerlinTopMenu {
+        /**
+          * color scheme of menu
+         */
+        "color"?: "green" | "orange" | "blue";
         /**
           * use dark mode if true
          */
@@ -386,10 +366,6 @@ declare namespace LocalJSX {
           * hide htw logo if true
          */
         "logo"?: boolean;
-        /**
-          * use orange color scheme if true
-         */
-        "orange"?: boolean;
     }
     interface IntrinsicElements {
         "htw-berlin-breadcrumb": HtwBerlinBreadcrumb;

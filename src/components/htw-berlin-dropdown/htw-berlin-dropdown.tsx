@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'htw-berlin-dropdown',
@@ -12,15 +12,22 @@ export class HTWDropdown {
   @Prop() dark: boolean = false;
 
   /**
-   * use orange color scheme if true
-   */
-  @Prop() orange: boolean = false;
+  *  color scheme
+  */
+  @Prop() color: "green" | "orange" | "blue" | "disabled" = "green";
+  @Watch('color')
+  validateColor(newValue: string) {
+    const colors = ['green', 'orange', 'blue', 'disabled'];
+    const colorIsValid = colors.indexOf(newValue) > -1;
+    
+    if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
+  }
 
 
-  @Function()  getVariantClasses() {
+  @Function() getVariantClasses() {
     var classList = []
     if (this.dark) classList.push("dark")
-    if (this.orange) classList.push("orange")
+    classList.push(this.color)
     return classList.join(" ")
   }
 

@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'htw-berlin-breadcrumb',
@@ -6,25 +6,8 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class HTWBreadcrumb {
-  /**
-   * use dark mode if true
-   */
-  @Prop() dark: boolean = false;
-
-  /**
-   * use orange color scheme if true
-   */
-  @Prop() orange: boolean = false;
-
-
-  @Function()  getVariantClasses() {
-    var classList = []
-    if (this.orange) classList.push("orange")
-    return classList.join(" ")
-  }
-
   render() {
-    return <div class={"htw-berlin-breadcrumb " + this.getVariantClasses()}>
+    return <div class={"htw-berlin-breadcrumb"}>
       <slot></slot>
     </div>;
   }

@@ -35,6 +35,18 @@ a.htw-berlin-link.side-menu {
   max-width: 160px;
 }
 
+/* dropdown styles */
+
+a.htw-berlin-link.dropdown {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 0 3px 3px 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
 
 /* breadcrumb styles */
 

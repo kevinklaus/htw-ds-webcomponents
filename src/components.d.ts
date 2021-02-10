@@ -48,6 +48,16 @@ export namespace Components {
          */
         "variant": "default" | "green" | "grey" | "dark";
     }
+    interface HtwBerlinDropdown {
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange": boolean;
+    }
     interface HtwBerlinInput {
         /**
           * alternative title shown on hover
@@ -108,9 +118,9 @@ export namespace Components {
          */
         "text": string;
         /**
-          * use breadcrumb or side-menu styling if neccessary
+          * use breadcrumb, dropdown or side-menu styling if neccessary
          */
-        "variant": "default" | "side-menu" | "breadcrumb";
+        "variant": "default" | "side-menu" | "breadcrumb" | "dropdown";
     }
     interface HtwBerlinLogo {
         /**
@@ -170,6 +180,12 @@ declare global {
         prototype: HTMLHtwBerlinContentBoxElement;
         new (): HTMLHtwBerlinContentBoxElement;
     };
+    interface HTMLHtwBerlinDropdownElement extends Components.HtwBerlinDropdown, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinDropdownElement: {
+        prototype: HTMLHtwBerlinDropdownElement;
+        new (): HTMLHtwBerlinDropdownElement;
+    };
     interface HTMLHtwBerlinInputElement extends Components.HtwBerlinInput, HTMLStencilElement {
     }
     var HTMLHtwBerlinInputElement: {
@@ -204,6 +220,7 @@ declare global {
         "htw-berlin-breadcrumb": HTMLHtwBerlinBreadcrumbElement;
         "htw-berlin-button": HTMLHtwBerlinButtonElement;
         "htw-berlin-content-box": HTMLHtwBerlinContentBoxElement;
+        "htw-berlin-dropdown": HTMLHtwBerlinDropdownElement;
         "htw-berlin-input": HTMLHtwBerlinInputElement;
         "htw-berlin-link": HTMLHtwBerlinLinkElement;
         "htw-berlin-logo": HTMLHtwBerlinLogoElement;
@@ -253,6 +270,16 @@ declare namespace LocalJSX {
           * pick style to apply to content box
          */
         "variant"?: "default" | "green" | "grey" | "dark";
+    }
+    interface HtwBerlinDropdown {
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * use orange color scheme if true
+         */
+        "orange"?: boolean;
     }
     interface HtwBerlinInput {
         /**
@@ -314,9 +341,9 @@ declare namespace LocalJSX {
          */
         "text"?: string;
         /**
-          * use breadcrumb or side-menu styling if neccessary
+          * use breadcrumb, dropdown or side-menu styling if neccessary
          */
-        "variant"?: "default" | "side-menu" | "breadcrumb";
+        "variant"?: "default" | "side-menu" | "breadcrumb" | "dropdown";
     }
     interface HtwBerlinLogo {
         /**
@@ -360,6 +387,7 @@ declare namespace LocalJSX {
         "htw-berlin-breadcrumb": HtwBerlinBreadcrumb;
         "htw-berlin-button": HtwBerlinButton;
         "htw-berlin-content-box": HtwBerlinContentBox;
+        "htw-berlin-dropdown": HtwBerlinDropdown;
         "htw-berlin-input": HtwBerlinInput;
         "htw-berlin-link": HtwBerlinLink;
         "htw-berlin-logo": HtwBerlinLogo;
@@ -374,6 +402,7 @@ declare module "@stencil/core" {
             "htw-berlin-breadcrumb": LocalJSX.HtwBerlinBreadcrumb & JSXBase.HTMLAttributes<HTMLHtwBerlinBreadcrumbElement>;
             "htw-berlin-button": LocalJSX.HtwBerlinButton & JSXBase.HTMLAttributes<HTMLHtwBerlinButtonElement>;
             "htw-berlin-content-box": LocalJSX.HtwBerlinContentBox & JSXBase.HTMLAttributes<HTMLHtwBerlinContentBoxElement>;
+            "htw-berlin-dropdown": LocalJSX.HtwBerlinDropdown & JSXBase.HTMLAttributes<HTMLHtwBerlinDropdownElement>;
             "htw-berlin-input": LocalJSX.HtwBerlinInput & JSXBase.HTMLAttributes<HTMLHtwBerlinInputElement>;
             "htw-berlin-link": LocalJSX.HtwBerlinLink & JSXBase.HTMLAttributes<HTMLHtwBerlinLinkElement>;
             "htw-berlin-logo": LocalJSX.HtwBerlinLogo & JSXBase.HTMLAttributes<HTMLHtwBerlinLogoElement>;

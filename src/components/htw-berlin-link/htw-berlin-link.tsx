@@ -17,9 +17,9 @@ export class HTWLink {
   @Prop() orange: boolean = false;
 
   /**
-   * use breadcrumb or side-menu styling if neccessary
+   * use breadcrumb, dropdown or side-menu styling if neccessary
    */
-  @Prop() variant: "default" | "side-menu" | "breadcrumb" = "default";
+  @Prop() variant: "default" | "side-menu" | "breadcrumb" | "dropdown" = "default";
 
   /**
    * uset link state if neccessary
@@ -45,7 +45,7 @@ export class HTWLink {
       var classList = []
       if (this.dark) classList.push("dark")
       if (this.orange) classList.push("orange")
-      if (this.variant === "side-menu" || this.variant === "breadcrumb") classList.push(this.variant)
+      if (["side-menu", "breadcrumb", "dropdown"].includes(this.variant)) classList.push(this.variant)
       if (this.state === "active" || this.state === "visited") classList.push(this.state)
       return classList.join(" ")
   }

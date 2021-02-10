@@ -1,0 +1,58 @@
+:host {
+  display: inline-block;
+}
+
+div.htw-berlin-dropdown {
+  padding: 5px;
+}
+
+div.htw-berlin-dropdown a.anker {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px;
+  display: block;
+}
+
+div.htw-berlin-dropdown a.anker:hover + div.content,
+div.htw-berlin-dropdown div.content:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+
+div.htw-berlin-dropdown a.anker:hover {
+  color: var(--primary-green);
+}
+
+div.htw-berlin-dropdown.orange a.anker:hover {
+  color: var(--secondary-orange);
+}
+
+div.htw-berlin-dropdown a.anker span.icon {
+  display: inline-block;
+  width: 13px;
+  position: relative;
+  top: 3px;
+  padding-left: 7px;
+}
+
+div.htw-berlin-dropdown div.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  background-color: var(--dark-grey);
+  padding: 10px 10px 10px 15px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* dark */
+
+div.htw-berlin-dropdown.dark {
+  color: var(--white);
+}
+
+div.htw-berlin-dropdown.dark div.content {
+  background-color: var(--background-grey);
+}

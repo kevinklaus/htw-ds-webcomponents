@@ -156,6 +156,10 @@ export namespace Components {
          */
         "dark": boolean;
         /**
+          * hide htw logo if true
+         */
+        "logo": boolean;
+        /**
           * use orange color scheme if true
          */
         "orange": boolean;
@@ -378,6 +382,10 @@ declare namespace LocalJSX {
           * use dark mode if true
          */
         "dark"?: boolean;
+        /**
+          * hide htw logo if true
+         */
+        "logo"?: boolean;
         /**
           * use orange color scheme if true
          */

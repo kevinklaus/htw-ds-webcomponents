@@ -25,26 +25,7 @@ export class HTWBreadcrumb {
 
   render() {
     return <div class={"htw-berlin-breadcrumb " + this.getVariantClasses()}>
-      <htw-berlin-link dark={this.dark} 
-        variant="breadcrumb"
-        state="visited"
-        title="Nothing will happen if you click." 
-        href="#"
-        text="Home">
-      </htw-berlin-link>
-      <htw-berlin-link dark={this.dark} 
-        variant="breadcrumb"
-        title="Nothing will happen if you click." 
-        href="#"
-        text="Fachbereich 4">
-      </htw-berlin-link>
-      <htw-berlin-link dark={this.dark} 
-        variant="breadcrumb"
-        state="active"
-        title="Nothing will happen if you click." 
-        href="#"
-        text="Internationaler Studiengang Medieninformatik (B)">
-      </htw-berlin-link>
+      <slot></slot>
     </div>;
   }
 }

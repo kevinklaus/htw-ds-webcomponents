@@ -36,9 +36,13 @@ export namespace Components {
     }
     interface HtwBerlinContentBox {
         /**
+          * pick color to apply to content box of variant color
+         */
+        "color": "green" | "orange" | "blue";
+        /**
           * pick style to apply to content box
          */
-        "variant": "default" | "green" | "grey" | "dark";
+        "variant": "default" | "color" | "secondary" | "dark";
     }
     interface HtwBerlinDropdown {
         /**
@@ -251,9 +255,13 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinContentBox {
         /**
+          * pick color to apply to content box of variant color
+         */
+        "color"?: "green" | "orange" | "blue";
+        /**
           * pick style to apply to content box
          */
-        "variant"?: "default" | "green" | "grey" | "dark";
+        "variant"?: "default" | "color" | "secondary" | "dark";
     }
     interface HtwBerlinDropdown {
         /**

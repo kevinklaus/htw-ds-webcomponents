@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'htw-berlin-content-box',
@@ -9,12 +9,29 @@ export class HtwContentBox {
   /**
    * pick style to apply to content box
    */
-  @Prop() variant: "default" | "green" | "grey" | "dark" = "default";
+  @Prop() variant: "default" | "color" | "secondary" | "dark" = "default";
 
+  /**
+  * pick color to apply to content box of variant color
+  */
+  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Watch('color')
+  validateColor(newValue: string) {
+    const colors = ['green', 'orange', 'blue', 'disabled'];
+    const colorIsValid = colors.indexOf(newValue) > -1;
+    if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
+    if (this.variant !== "color") { throw new Error('color: can only be set for variant: color)') }
+  }
+
+  @Function() getStyleClasses() {
+    var classList = []
+    if (this.variant !== "color") classList.push(this.variant)
+    if (this.variant === "color" && this.color !== "green") classList.push(this.color)
+    return classList.join(" ")
+  }
 
   render() {
-    return <div class={"htw-berlin-content-box " + this.variant}
-      >
+    return <div class={"htw-berlin-content-box " + this.getStyleClasses()}>
         <slot></slot>
       </div>;
   }

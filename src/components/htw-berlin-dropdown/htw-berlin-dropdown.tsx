@@ -24,7 +24,7 @@ export class HTWDropdown {
   }
 
 
-  @Function() getVariantClasses() {
+  @Function() getStyleClasses() {
     var classList = []
     if (this.dark) classList.push("dark")
     classList.push(this.color)
@@ -32,7 +32,7 @@ export class HTWDropdown {
   }
 
   render() {
-    return <div class={"htw-berlin-dropdown " + this.getVariantClasses()}>
+    return <div class={"htw-berlin-dropdown " + this.getStyleClasses()}>
       <a class="anker" title="open dropdown menu">
         Dropdown
         <span class="icon">

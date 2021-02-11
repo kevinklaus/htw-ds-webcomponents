@@ -40,7 +40,7 @@ export class HTWLogo {
    */
   @Prop() href: string;
 
-  @Function()  getVariantClasses() {
+  @Function()  getStyleClasses() {
     var classList = []
     if (this.dark) { 
       classList.push("dark") 
@@ -52,7 +52,7 @@ export class HTWLogo {
 
   render() {
     return <a 
-      class={"htw-berlin-logo " + this.getVariantClasses() }
+      class={"htw-berlin-logo " + this.getStyleClasses() }
       href={this.href}
       >
         <svg width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">

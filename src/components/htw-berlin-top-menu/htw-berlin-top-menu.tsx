@@ -29,7 +29,7 @@ export class HTWTopMenu {
   @Prop() logo: boolean = true;
 
 
-  @Function()  getVariantClasses() {
+  @Function()  getStyleClasses() {
     var classList = []
     if (this.dark) classList.push("dark")
     classList.push(this.color)
@@ -38,14 +38,14 @@ export class HTWTopMenu {
 
   render() {
     if (this.logo) {
-      return <div class={"htw-berlin-top-menu " + this.getVariantClasses()}>
+      return <div class={"htw-berlin-top-menu " + this.getStyleClasses()}>
         <htw-berlin-logo dark={this.dark} color={this.color}></htw-berlin-logo>
         <span class="spacer"></span>
         <slot></slot>
       </div>;
     }
     else {
-      return <div class={"htw-berlin-top-menu " + this.getVariantClasses()}>
+      return <div class={"htw-berlin-top-menu " + this.getStyleClasses()}>
         <slot></slot>
       </div>;
       

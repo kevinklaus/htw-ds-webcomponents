@@ -1,12 +1,6 @@
 div.htw-berlin-dropdown {
   padding: 5px;
-}
-
-div.htw-berlin-dropdown.top-menu {
-  float: right;
-  position: relative;
-  top: -10px;
-  padding-right: 25px;
+  display: inline-block;
 }
 
 div.htw-berlin-dropdown a.anker {
@@ -18,7 +12,6 @@ div.htw-berlin-dropdown a.anker {
 
 div.htw-berlin-dropdown a.anker:hover + div.content,
 div.htw-berlin-dropdown div.content:hover {
-  display: flex;
   opacity: 1;
   pointer-events: all;
 }
@@ -58,6 +51,18 @@ div.htw-berlin-dropdown div.content {
   padding: 10px 10px 10px 15px;
   pointer-events: none;
   opacity: 0;
+}
+
+/* top-menu styles */
+
+div.htw-berlin-dropdown.top-menu {
+  float: right;
+  position: relative;
+  top: -10px;
+  padding-right: 25px;
+}
+
+div.htw-berlin-dropdown.top-menu div.content {
   position: absolute;
   z-index: 999;
   right: 15px;

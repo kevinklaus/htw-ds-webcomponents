@@ -53,6 +53,10 @@ export namespace Components {
           * use dark mode if true
          */
         "dark": boolean;
+        /**
+          * use top-menu styling if true
+         */
+        "topmenu": boolean;
     }
     interface HtwBerlinInput {
         /**
@@ -272,6 +276,10 @@ declare namespace LocalJSX {
           * use dark mode if true
          */
         "dark"?: boolean;
+        /**
+          * use top-menu styling if true
+         */
+        "topmenu"?: boolean;
     }
     interface HtwBerlinInput {
         /**

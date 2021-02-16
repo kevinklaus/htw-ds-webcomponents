@@ -63,13 +63,13 @@ a.htw-berlin-link.dropdown.dark {
 /* breadcrumb styles */
 
 a.htw-berlin-link.breadcrumb {
-  padding: 0 15px 0 0;
+  padding: 0 8px 0 0;
   border: none;
   transition: color 0.2s ease-in-out;
 }
 
 a.htw-berlin-link.breadcrumb span.icon {
-  padding-left: 5px;
+  padding-left: 8px;
 }
 
 a.htw-berlin-link.breadcrumb span.icon svg {

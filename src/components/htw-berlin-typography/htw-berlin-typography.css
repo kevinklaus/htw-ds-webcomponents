@@ -3,7 +3,13 @@
   color: var(--copy);
 }
 
-.dark {
+.htw-berlin-typography {
+  margin: 0;
+}
+
+/* don't use blue on dark mode for accessibility reasons: readability */
+.dark,
+.dark.blue {
   color: var(--white)
 }
 

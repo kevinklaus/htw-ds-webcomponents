@@ -23,6 +23,7 @@ export class HtwBerlinTypography {
     const colorIsValid = colors.indexOf(newValue) > -1;
     
     if (!colorIsValid) { throw new Error('color: not a valid color (copy, green, orange, blue, grey)') }
+    if (newValue === 'blue' && this.dark) { throw new Error('Accessibility: blue should not be used on dark backgrounds') }
   }
 
   /**
@@ -31,17 +32,18 @@ export class HtwBerlinTypography {
   @Prop() tag: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span" = "span";
 
   /**
-   * uset link state if neccessary
+   * specify the font-style of the typogrphy element
    */
   @Prop() fontstyle: "normal" | "bold" |  "italic" = "normal";
 
 
-  @Function()  getStyleClasses() {
-      var classList = []
-      if (this.dark) classList.push("dark")
-      classList.push(this.color)
-      classList.push(this.fontstyle)
-      return classList.join(" ")
+  @Function() getStyleClasses() {
+    var classList = []
+    classList.push("htw-berlin-typography")
+    if (this.dark) classList.push("dark")
+    classList.push(this.color)
+    classList.push(this.fontstyle)
+    return classList.join(" ")
   }
 
   render() {

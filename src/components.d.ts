@@ -182,7 +182,7 @@ export namespace Components {
          */
         "dark": boolean;
         /**
-          * uset link state if neccessary
+          * specify the font-style of the typogrphy element
          */
         "fontstyle": "normal" | "bold" |  "italic";
         /**
@@ -456,7 +456,7 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
         /**
-          * uset link state if neccessary
+          * specify the font-style of the typogrphy element
          */
         "fontstyle"?: "normal" | "bold" |  "italic";
         /**

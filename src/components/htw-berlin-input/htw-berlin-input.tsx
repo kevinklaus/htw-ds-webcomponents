@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, State } from '@stencil/core';
 
 @Component({
   tag: 'htw-berlin-input',
@@ -24,11 +24,6 @@ export class HTWInput {
   @Prop() state: "normal" | "active" | "disabled" = "normal";
 
   /**
-   * value to be saved by input
-   */
-  @Prop() value: string;
-
-  /**
    * placeholder text to be displayed in input
    */
   @Prop() placeholder: string = "Type...";
@@ -48,6 +43,14 @@ export class HTWInput {
    */
   @Prop() altTitle: string = "Enter information here";
 
+  /**
+   * user input string
+   */
+  @State() value: string = "";
+
+  handleChange(event) {
+    this.value = event.target.value;
+  }
 
   render() {    
     var classes = this.color + " " + this.state
@@ -73,7 +76,8 @@ export class HTWInput {
         <input
           class={"htw-berlin-input " + classes}
           title={this.altTitle} 
-          value={this.value}
+          value={this.value} 
+          onInput={(event) => this.handleChange(event)}
           type={this.type}
           placeholder={this.placeholder}
           disabled={disabled}

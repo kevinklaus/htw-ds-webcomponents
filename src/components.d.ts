@@ -157,6 +157,14 @@ export namespace Components {
         "dark": boolean;
     }
     interface HtwBerlinTable {
+        /**
+          * color scheme of table
+         */
+        "color": "green" | "orange" | "blue";
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
     }
     interface HtwBerlinTopMenu {
         /**
@@ -431,6 +439,14 @@ declare namespace LocalJSX {
         "dark"?: boolean;
     }
     interface HtwBerlinTable {
+        /**
+          * color scheme of table
+         */
+        "color"?: "green" | "orange" | "blue";
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
     }
     interface HtwBerlinTopMenu {
         /**

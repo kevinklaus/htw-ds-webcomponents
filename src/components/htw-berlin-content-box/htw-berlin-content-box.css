@@ -13,6 +13,7 @@ div.htw-berlin-content-box.default {
 }
 
 div.htw-berlin-content-box.dark {
+  box-shadow: 2px 3px 27px -7px rgba(0, 0, 0, 0.75);
   background-color: var(--dark-grey);
   color: var(--white);
 }

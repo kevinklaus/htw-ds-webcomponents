@@ -26,7 +26,7 @@ export class HTWLogo {
   /**
    * render logo in different sizes
    */
-  @Prop() size: "s" | "m" | "l" = "m";
+  @Prop() size: "s" | "m" | "l" = "s";
   @Watch('size')
   validateSize(newValue: string) {
     const sizes = ['s', 'm', 'l'];
@@ -39,6 +39,7 @@ export class HTWLogo {
    * href property
    */
   @Prop() href: string;
+  
 
   @Function()  getStyleClasses() {
     var classList = []
@@ -46,7 +47,7 @@ export class HTWLogo {
       classList.push("dark") 
     }
     else classList.push(this.color)
-    if (this.size) classList.push(this.size)
+    classList.push(this.size)
     return classList.join(" ")
   }
 

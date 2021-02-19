@@ -13,3 +13,18 @@
 .htw-berlin-logo.dark path {
   fill: var(--white);
 }
+
+.htw-berlin-logo.s svg {
+  width: 49px;
+  height: 15px;
+}
+
+.htw-berlin-logo.m svg {
+  width: 98px;
+  height: 30px;
+}
+
+.htw-berlin-logo.l svg {
+  width: 147px;
+  height: 45px;
+}

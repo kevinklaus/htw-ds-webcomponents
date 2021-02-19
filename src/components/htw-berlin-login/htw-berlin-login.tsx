@@ -47,47 +47,45 @@ export class HtwBerlinLogin {
 
   render() {
     return (
-      <htw-berlin-content-box variant={this.dark ? "dark" : "default"}>
-        <div class="htw-berlin-login">
-          <div class="header">
-            <htw-berlin-typography color={this.color} dark={this.dark} tag="h1" fontstyle="bold">
-              Log in
-            </htw-berlin-typography>
-            <htw-berlin-typography dark={this.dark} tag="p">
-              Use your HTW Berlin account to log in.
-            </htw-berlin-typography>
-          </div>
-          <form onSubmit={(event) => this.handleSubmit(event)}>
-            <htw-berlin-input 
-              label="HTW email" 
-              altTitle="Enter your HTW Berlin email" 
-              dark={this.dark}
-              color={this.color}
-              placeholder="you@htw-berlin.de"
-              type="email"
-              onInput={(event) => this.handleUserChange(event)}
-            >
-            </htw-berlin-input>
-            <htw-berlin-input 
-              label="Password" 
-              altTitle="Enter your password" 
-              dark={this.dark}
-              color={this.color}
-              type="password"
-              onInput={(event) => this.handlePasswordChange(event)}
-            >
-            </htw-berlin-input>
-            <htw-berlin-button 
-              text="Log in" 
-              altTitle="Log in with your HTW user account" 
-              dark={this.dark}
-              color={this.color}
-              type="submit"
-            >
-            </htw-berlin-button>
-          </form>
+      <div class="htw-berlin-login">
+        <div class="header">
+          <htw-berlin-typography color={this.color} dark={this.dark} tag="h1" fontstyle="bold">
+            Log in
+          </htw-berlin-typography>
+          <htw-berlin-typography dark={this.dark} tag="p">
+            Use your HTW Berlin account to log in.
+          </htw-berlin-typography>
         </div>
-      </htw-berlin-content-box>
+        <form onSubmit={(event) => this.handleSubmit(event)}>
+          <htw-berlin-input 
+            label="HTW email" 
+            altTitle="Enter your HTW Berlin email" 
+            dark={this.dark}
+            color={this.color}
+            placeholder="you@htw-berlin.de"
+            type="email"
+            onInput={(event) => this.handleUserChange(event)}
+          >
+          </htw-berlin-input>
+          <htw-berlin-input 
+            label="Password" 
+            altTitle="Enter your password" 
+            dark={this.dark}
+            color={this.color}
+            type="password"
+            onInput={(event) => this.handlePasswordChange(event)}
+          >
+          </htw-berlin-input>
+          <htw-berlin-button 
+            text="Log in" 
+            altTitle="Log in with your HTW user account" 
+            dark={this.dark}
+            color={this.color}
+            type="submit"
+          >
+          </htw-berlin-button>
+        </form>
+      </div>
     );
   }
 

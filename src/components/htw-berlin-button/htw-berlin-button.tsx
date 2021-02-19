@@ -52,13 +52,38 @@ export class HTWButton {
    */
   @Prop() href: string;
 
-  render() {    
-    return <a
-        class={"htw-berlin-button " + this.variant + " " + this.color}
+  /**
+   * type
+   */
+  @Prop() type: "default" | "submit" = "default";
+
+
+  @Function()  getStyleClasses() {
+    var classList = []
+    if (this.dark) classList.push("dark")
+    classList.push(this.color)
+    classList.push(this.variant)
+    return classList.join(" ")
+  }
+
+  render() {  
+    if (this.type === "default") {
+      return <a
+          class={"htw-berlin-button " + this.getStyleClasses()} 
+          title={this.altTitle} 
+          href={this.color === "disabled" ? 'javascript:void(0)': this.href}
+        >
+          {this.text}
+        </a>;
+    }
+    else {
+      return <button
+        class={"htw-berlin-button " + this.getStyleClasses()}
         title={this.altTitle} 
-        href={this.color === "disabled" ? 'javascript:void(0)': this.href}
+        type="submit"
       >
         {this.text}
-      </a>;
+      </button>;
+    }
   }
 }

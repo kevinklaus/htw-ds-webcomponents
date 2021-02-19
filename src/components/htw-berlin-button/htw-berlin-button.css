@@ -4,7 +4,7 @@
 
 /* generic button styles */
 
-a.htw-berlin-button {
+.htw-berlin-button {
   text-decoration: none;
   font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
   transition: color 0.2s ease-in-out;
@@ -14,8 +14,8 @@ a.htw-berlin-button {
   letter-spacing: 0.04em;
 }
 
-a.htw-berlin-button.filled,
-a.htw-berlin-button.outlined {
+.htw-berlin-button.filled,
+.htw-berlin-button.outlined {
   border: 2px solid transparent;
   padding: 10px 18px;
   margin: 5px;
@@ -25,71 +25,77 @@ a.htw-berlin-button.outlined {
 
 /* filled */
 
-a.htw-berlin-button.filled {
+.htw-berlin-button.filled {
   color: var(--white);
   display: inline-block;
 }
 
-a.htw-berlin-button.filled.green {
+.htw-berlin-button.filled.green {
   background-color: var(--primary-green);
   border-color: var(--primary-green);
 }
 
-a.htw-berlin-button.filled.orange {
+.htw-berlin-button.filled.orange {
   background-color: var(--secondary-orange);
   border-color: var(--secondary-orange);
 }
 
-a.htw-berlin-button.filled.blue {
+.htw-berlin-button.filled.blue {
   background-color: var(--secondary-blue);
   border-color: var(--secondary-blue);
 }
 
-a.htw-berlin-button.filled.disabled {
+.htw-berlin-button.filled.disabled {
   background-color: var(--secondary-grey);
   border-color: var(--secondary-grey);
   cursor: not-allowed;
 }
 
-a.htw-berlin-button.filled:hover {
+.htw-berlin-button.filled:hover {
   background-color: var(--dark-grey) !important;
   border-color: var(--dark-grey) !important;
   color: var(--white) !important;
 }
 
+.htw-berlin-button.filled.dark:hover {
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+  color: var(--dark-grey) !important;
+}
+
 /* outlined */
 
-a.htw-berlin-button.outlined {
+.htw-berlin-button.outlined {
   display: inline-block;
 }
 
-a.htw-berlin-button.outlined.green {
+.htw-berlin-button.outlined.green {
   color: var(--primary-green);
   border-color: var(--primary-green);
 }
 
-a.htw-berlin-button.outlined.orange {
+.htw-berlin-button.outlined.orange {
   color: var(--secondary-orange);
   border-color: var(--secondary-orange);
 }
 
-a.htw-berlin-button.outlined.blue {
+.htw-berlin-button.outlined.blue {
   color: var(--secondary-blue);
   border-color: var(--secondary-blue);
 }
 
-a.htw-berlin-button.outlined.disabled {
+.htw-berlin-button.outlined.disabled {
   color: var(--secondary-grey);
   border-color: var(--secondary-grey);
   cursor: not-allowed;
 }
 
-a.htw-berlin-button.outlined:hover {
+.htw-berlin-button.outlined:hover {
   border-color: var(--dark-grey) !important;
   color: var(--dark-grey) !important;
 }
 
-a.htw-berlin-button.outlined.dark:hover {
+.htw-berlin-button.outlined.dark:hover {
   border-color: var(--white) !important;
   color: var(--white) !important;
 }
@@ -97,33 +103,33 @@ a.htw-berlin-button.outlined.dark:hover {
 
 /* text */
 
-a.htw-berlin-button.text {
+.htw-berlin-button.text {
   font-weight: bold;
   letter-spacing: 0.3px;
   margin: 0 3px;
 }
 
-a.htw-berlin-button.text.green {
+.htw-berlin-button.text.green {
   color: var(--primary-green);
 }
 
-a.htw-berlin-button.text.orange {
+.htw-berlin-button.text.orange {
   color: var(--secondary-orange);
 }
 
-a.htw-berlin-button.text.blue {
+.htw-berlin-button.text.blue {
   color: var(--secondary-blue);
 }
 
-a.htw-berlin-button.text.disabled {
+.htw-berlin-button.text.disabled {
   color: var(--secondary-grey);
   cursor: not-allowed;
 }
 
-a.htw-berlin-button.text:hover {
+.htw-berlin-button.text:hover {
   color: var(--dark-grey) !important;
 }
 
-a.htw-berlin-button.text.dark:hover {
+.htw-berlin-button.text.dark:hover {
   color: var(--white) !important;
 }

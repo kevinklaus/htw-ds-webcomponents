@@ -26,6 +26,7 @@ export class HTWDropdown {
     const colorIsValid = colors.indexOf(newValue) > -1;
     
     if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
+    if (newValue === 'blue' && this.dark) { throw new Error('Accessibility: blue should not be used on dark backgrounds') }
   }
 
 

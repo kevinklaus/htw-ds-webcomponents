@@ -1,0 +1,37 @@
+:host {
+  font-family: "HTWBerlin Office", Helvetica, Arial, sans-serif;
+  color: var(--copy);
+}
+
+.dark {
+  color: var(--white)
+}
+
+.green {
+  color: var(--primary-green)
+}
+
+.orange {
+  color: var(--secondary-orange)
+}
+
+.blue {
+  color: var(--secondary-blue)
+}
+
+.grey {
+  color: var(--secondary-grey)
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.normal {
+  font-style: normal;
+  font-weight: normal;
+}

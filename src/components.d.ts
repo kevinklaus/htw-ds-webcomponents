@@ -30,6 +30,10 @@ export namespace Components {
          */
         "text": string;
         /**
+          * type
+         */
+        "type": "default" | "submit";
+        /**
           * button variant
          */
         "variant": "filled" | "outlined" | "text";
@@ -87,10 +91,6 @@ export namespace Components {
           * type of input
          */
         "type": string;
-        /**
-          * value to be saved by input
-         */
-        "value": string;
     }
     interface HtwBerlinLink {
         /**
@@ -122,6 +122,16 @@ export namespace Components {
          */
         "variant": "default" | "side-menu" | "breadcrumb" | "dropdown";
     }
+    interface HtwBerlinLogin {
+        /**
+          * color scheme of login
+         */
+        "color": "green" | "orange" | "blue";
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+    }
     interface HtwBerlinLogo {
         /**
           * color scheme
@@ -146,6 +156,8 @@ export namespace Components {
          */
         "dark": boolean;
     }
+    interface HtwBerlinTable {
+    }
     interface HtwBerlinTopMenu {
         /**
           * color scheme of menu
@@ -156,9 +168,27 @@ export namespace Components {
          */
         "dark": boolean;
         /**
-          * hide htw logo if true
+          * set to false to hide htw logo
          */
         "logo": boolean;
+    }
+    interface HtwBerlinTypography {
+        /**
+          * link color
+         */
+        "color": "copy" | "green" | "orange" | "blue" | "grey";
+        /**
+          * use dark mode if true - reverses copy color to white
+         */
+        "dark": boolean;
+        /**
+          * uset link state if neccessary
+         */
+        "fontstyle": "normal" | "bold" |  "italic";
+        /**
+          * specify the html tag of the typogrphy element
+         */
+        "tag": "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span";
     }
 }
 declare global {
@@ -198,6 +228,12 @@ declare global {
         prototype: HTMLHtwBerlinLinkElement;
         new (): HTMLHtwBerlinLinkElement;
     };
+    interface HTMLHtwBerlinLoginElement extends Components.HtwBerlinLogin, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinLoginElement: {
+        prototype: HTMLHtwBerlinLoginElement;
+        new (): HTMLHtwBerlinLoginElement;
+    };
     interface HTMLHtwBerlinLogoElement extends Components.HtwBerlinLogo, HTMLStencilElement {
     }
     var HTMLHtwBerlinLogoElement: {
@@ -210,11 +246,23 @@ declare global {
         prototype: HTMLHtwBerlinSideMenuElement;
         new (): HTMLHtwBerlinSideMenuElement;
     };
+    interface HTMLHtwBerlinTableElement extends Components.HtwBerlinTable, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinTableElement: {
+        prototype: HTMLHtwBerlinTableElement;
+        new (): HTMLHtwBerlinTableElement;
+    };
     interface HTMLHtwBerlinTopMenuElement extends Components.HtwBerlinTopMenu, HTMLStencilElement {
     }
     var HTMLHtwBerlinTopMenuElement: {
         prototype: HTMLHtwBerlinTopMenuElement;
         new (): HTMLHtwBerlinTopMenuElement;
+    };
+    interface HTMLHtwBerlinTypographyElement extends Components.HtwBerlinTypography, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinTypographyElement: {
+        prototype: HTMLHtwBerlinTypographyElement;
+        new (): HTMLHtwBerlinTypographyElement;
     };
     interface HTMLElementTagNameMap {
         "htw-berlin-breadcrumb": HTMLHtwBerlinBreadcrumbElement;
@@ -223,9 +271,12 @@ declare global {
         "htw-berlin-dropdown": HTMLHtwBerlinDropdownElement;
         "htw-berlin-input": HTMLHtwBerlinInputElement;
         "htw-berlin-link": HTMLHtwBerlinLinkElement;
+        "htw-berlin-login": HTMLHtwBerlinLoginElement;
         "htw-berlin-logo": HTMLHtwBerlinLogoElement;
         "htw-berlin-side-menu": HTMLHtwBerlinSideMenuElement;
+        "htw-berlin-table": HTMLHtwBerlinTableElement;
         "htw-berlin-top-menu": HTMLHtwBerlinTopMenuElement;
+        "htw-berlin-typography": HTMLHtwBerlinTypographyElement;
     }
 }
 declare namespace LocalJSX {
@@ -252,6 +303,10 @@ declare namespace LocalJSX {
           * text to be displayed in button
          */
         "text"?: string;
+        /**
+          * type
+         */
+        "type"?: "default" | "submit";
         /**
           * button variant
          */
@@ -310,10 +365,6 @@ declare namespace LocalJSX {
           * type of input
          */
         "type"?: string;
-        /**
-          * value to be saved by input
-         */
-        "value"?: string;
     }
     interface HtwBerlinLink {
         /**
@@ -345,6 +396,16 @@ declare namespace LocalJSX {
          */
         "variant"?: "default" | "side-menu" | "breadcrumb" | "dropdown";
     }
+    interface HtwBerlinLogin {
+        /**
+          * color scheme of login
+         */
+        "color"?: "green" | "orange" | "blue";
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+    }
     interface HtwBerlinLogo {
         /**
           * color scheme
@@ -369,6 +430,8 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
     }
+    interface HtwBerlinTable {
+    }
     interface HtwBerlinTopMenu {
         /**
           * color scheme of menu
@@ -379,9 +442,27 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
         /**
-          * hide htw logo if true
+          * set to false to hide htw logo
          */
         "logo"?: boolean;
+    }
+    interface HtwBerlinTypography {
+        /**
+          * link color
+         */
+        "color"?: "copy" | "green" | "orange" | "blue" | "grey";
+        /**
+          * use dark mode if true - reverses copy color to white
+         */
+        "dark"?: boolean;
+        /**
+          * uset link state if neccessary
+         */
+        "fontstyle"?: "normal" | "bold" |  "italic";
+        /**
+          * specify the html tag of the typogrphy element
+         */
+        "tag"?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span";
     }
     interface IntrinsicElements {
         "htw-berlin-breadcrumb": HtwBerlinBreadcrumb;
@@ -390,9 +471,12 @@ declare namespace LocalJSX {
         "htw-berlin-dropdown": HtwBerlinDropdown;
         "htw-berlin-input": HtwBerlinInput;
         "htw-berlin-link": HtwBerlinLink;
+        "htw-berlin-login": HtwBerlinLogin;
         "htw-berlin-logo": HtwBerlinLogo;
         "htw-berlin-side-menu": HtwBerlinSideMenu;
+        "htw-berlin-table": HtwBerlinTable;
         "htw-berlin-top-menu": HtwBerlinTopMenu;
+        "htw-berlin-typography": HtwBerlinTypography;
     }
 }
 export { LocalJSX as JSX };
@@ -405,9 +489,12 @@ declare module "@stencil/core" {
             "htw-berlin-dropdown": LocalJSX.HtwBerlinDropdown & JSXBase.HTMLAttributes<HTMLHtwBerlinDropdownElement>;
             "htw-berlin-input": LocalJSX.HtwBerlinInput & JSXBase.HTMLAttributes<HTMLHtwBerlinInputElement>;
             "htw-berlin-link": LocalJSX.HtwBerlinLink & JSXBase.HTMLAttributes<HTMLHtwBerlinLinkElement>;
+            "htw-berlin-login": LocalJSX.HtwBerlinLogin & JSXBase.HTMLAttributes<HTMLHtwBerlinLoginElement>;
             "htw-berlin-logo": LocalJSX.HtwBerlinLogo & JSXBase.HTMLAttributes<HTMLHtwBerlinLogoElement>;
             "htw-berlin-side-menu": LocalJSX.HtwBerlinSideMenu & JSXBase.HTMLAttributes<HTMLHtwBerlinSideMenuElement>;
+            "htw-berlin-table": LocalJSX.HtwBerlinTable & JSXBase.HTMLAttributes<HTMLHtwBerlinTableElement>;
             "htw-berlin-top-menu": LocalJSX.HtwBerlinTopMenu & JSXBase.HTMLAttributes<HTMLHtwBerlinTopMenuElement>;
+            "htw-berlin-typography": LocalJSX.HtwBerlinTypography & JSXBase.HTMLAttributes<HTMLHtwBerlinTypographyElement>;
         }
     }
 }

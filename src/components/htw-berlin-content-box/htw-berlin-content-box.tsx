@@ -7,12 +7,12 @@ import { Component, Prop, h, Watch } from '@stencil/core';
 })
 export class HtwContentBox {
   /**
-   * pick style to apply to content box
+   * set style to apply to the content box
    */
   @Prop() variant: "default" | "color" | "secondary" | "dark" = "default";
 
   /**
-  * pick color to apply to content box of variant color
+  * pick color to apply to content when variant="color"
   */
   @Prop() color: "green" | "orange" | "blue" = "green";
   @Watch('color')

@@ -7,9 +7,9 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-    },
-    {
-      type: 'dist-custom-elements-bundle',
+      copy: [
+        { src: 'global/fonts', dest: 'dist/fonts', warn: true}
+      ],
     },
     {
       type: 'docs-readme',

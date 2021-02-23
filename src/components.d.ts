@@ -18,7 +18,7 @@ export namespace Components {
          */
         "color": "green" | "orange" | "blue" | "disabled";
         /**
-          * text to be displayed in button
+          * set true to use dark mode styling
          */
         "dark": boolean;
         /**
@@ -30,7 +30,7 @@ export namespace Components {
          */
         "text": string;
         /**
-          * type
+          * button type, default is anker <a>
          */
         "type": "default" | "submit";
         /**
@@ -40,11 +40,11 @@ export namespace Components {
     }
     interface HtwBerlinContentBox {
         /**
-          * pick color to apply to content box of variant color
+          * pick color to apply to content when variant="color"
          */
         "color": "green" | "orange" | "blue";
         /**
-          * pick style to apply to content box
+          * set style to apply to the content box
          */
         "variant": "default" | "color" | "secondary" | "dark";
     }
@@ -57,6 +57,10 @@ export namespace Components {
           * use dark mode if true
          */
         "dark": boolean;
+        /**
+          * set the dropdown link text
+         */
+        "droptext": string;
         /**
           * use top-menu styling if true
          */
@@ -84,7 +88,7 @@ export namespace Components {
          */
         "placeholder": string;
         /**
-          * color applied to the input field
+          * set the state of the input field
          */
         "state": "normal" | "active" | "disabled";
         /**
@@ -110,13 +114,9 @@ export namespace Components {
          */
         "href": string;
         /**
-          * uset link state if neccessary
+          * set link state if neccessary
          */
         "state": "default" | "active" | "visited";
-        /**
-          * text to be displayed in link
-         */
-        "text": string;
         /**
           * use breadcrumb, dropdown or side-menu styling if neccessary
          */
@@ -179,6 +179,10 @@ export namespace Components {
           * set to false to hide htw logo
          */
         "logo": boolean;
+        /**
+          * Menu fixed at top by default. Set true to scroll with content
+         */
+        "shouldscroll": boolean;
     }
     interface HtwBerlinTypography {
         /**
@@ -300,7 +304,7 @@ declare namespace LocalJSX {
          */
         "color"?: "green" | "orange" | "blue" | "disabled";
         /**
-          * text to be displayed in button
+          * set true to use dark mode styling
          */
         "dark"?: boolean;
         /**
@@ -312,7 +316,7 @@ declare namespace LocalJSX {
          */
         "text"?: string;
         /**
-          * type
+          * button type, default is anker <a>
          */
         "type"?: "default" | "submit";
         /**
@@ -322,11 +326,11 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinContentBox {
         /**
-          * pick color to apply to content box of variant color
+          * pick color to apply to content when variant="color"
          */
         "color"?: "green" | "orange" | "blue";
         /**
-          * pick style to apply to content box
+          * set style to apply to the content box
          */
         "variant"?: "default" | "color" | "secondary" | "dark";
     }
@@ -339,6 +343,10 @@ declare namespace LocalJSX {
           * use dark mode if true
          */
         "dark"?: boolean;
+        /**
+          * set the dropdown link text
+         */
+        "droptext"?: string;
         /**
           * use top-menu styling if true
          */
@@ -366,7 +374,7 @@ declare namespace LocalJSX {
          */
         "placeholder"?: string;
         /**
-          * color applied to the input field
+          * set the state of the input field
          */
         "state"?: "normal" | "active" | "disabled";
         /**
@@ -392,13 +400,9 @@ declare namespace LocalJSX {
          */
         "href"?: string;
         /**
-          * uset link state if neccessary
+          * set link state if neccessary
          */
         "state"?: "default" | "active" | "visited";
-        /**
-          * text to be displayed in link
-         */
-        "text"?: string;
         /**
           * use breadcrumb, dropdown or side-menu styling if neccessary
          */
@@ -461,6 +465,10 @@ declare namespace LocalJSX {
           * set to false to hide htw logo
          */
         "logo"?: boolean;
+        /**
+          * Menu fixed at top by default. Set true to scroll with content
+         */
+        "shouldscroll"?: boolean;
     }
     interface HtwBerlinTypography {
         /**

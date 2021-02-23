@@ -39,7 +39,7 @@ export class HTWButton {
   @Prop() text: string;
 
   /**
-   * text to be displayed in button
+   * set true to use dark mode styling
    */
   @Prop() dark: boolean = false; 
 
@@ -54,7 +54,7 @@ export class HTWButton {
   @Prop() href: string;
 
   /**
-   * type
+   * button type, default is anker <a>
    */
   @Prop() type: "default" | "submit" = "default";
 

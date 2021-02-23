@@ -11,8 +11,7 @@
 | `color`    | `color`     | link color                                                  | `"blue" \| "disabled" \| "green" \| "orange"`            | `"green"`   |
 | `dark`     | `dark`      | use dark mode if true                                       | `boolean`                                                | `false`     |
 | `href`     | `href`      | href property                                               | `string`                                                 | `undefined` |
-| `state`    | `state`     | uset link state if neccessary                               | `"active" \| "default" \| "visited"`                     | `"default"` |
-| `text`     | `text`      | text to be displayed in link                                | `string`                                                 | `undefined` |
+| `state`    | `state`     | set link state if neccessary                                | `"active" \| "default" \| "visited"`                     | `"default"` |
 | `variant`  | `variant`   | use breadcrumb, dropdown or side-menu styling if neccessary | `"breadcrumb" \| "default" \| "dropdown" \| "side-menu"` | `"default"` |
 
 

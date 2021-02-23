@@ -12,10 +12,22 @@
 | `dark`        | `dark`        | use dark color theme if true                 | `boolean`                            | `undefined`                |
 | `label`       | `label`       | label text to be displayed above input field | `string`                             | `""`                       |
 | `placeholder` | `placeholder` | placeholder text to be displayed in input    | `string`                             | `"Type..."`                |
-| `state`       | `state`       | color applied to the input field             | `"active" \| "disabled" \| "normal"` | `"normal"`                 |
+| `state`       | `state`       | set the state of the input field             | `"active" \| "disabled" \| "normal"` | `"normal"`                 |
 | `type`        | `type`        | type of input                                | `string`                             | `"text"`                   |
-| `value`       | `value`       | value to be saved by input                   | `string`                             | `undefined`                |
 
+
+## Dependencies
+
+### Used by
+
+ - [htw-berlin-login](../htw-berlin-login)
+
+### Graph
+```mermaid
+graph TD;
+  htw-berlin-login --> htw-berlin-input
+  style htw-berlin-input fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

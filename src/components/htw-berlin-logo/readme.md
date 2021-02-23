@@ -10,7 +10,7 @@
 | `color`  | `color`   | color scheme                   | `"blue" \| "green" \| "orange"` | `"green"`   |
 | `dark`   | `dark`    | use dark mode if true          | `boolean`                       | `false`     |
 | `href`   | `href`    | href property                  | `string`                        | `undefined` |
-| `size`   | `size`    | render logo in different sizes | `"l" \| "m" \| "s"`             | `"m"`       |
+| `size`   | `size`    | render logo in different sizes | `"l" \| "m" \| "s"`             | `"s"`       |
 
 
 ## Dependencies

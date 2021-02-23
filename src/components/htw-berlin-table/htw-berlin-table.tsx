@@ -7,7 +7,7 @@ import { Component, h, Prop, Watch } from '@stencil/core';
 })
 export class HtwBerlinTable {
 
-    /**
+  /**
    * use dark mode if true
    */
   @Prop() dark: boolean = false;

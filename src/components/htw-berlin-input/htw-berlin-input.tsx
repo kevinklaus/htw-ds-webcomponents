@@ -19,7 +19,7 @@ export class HTWInput {
   @Prop() color: "green" | "orange" | "blue" = "green";
 
   /**
-   * color applied to the input field
+   * set the state of the input field
    */
   @Prop() state: "normal" | "active" | "disabled" = "normal";
 

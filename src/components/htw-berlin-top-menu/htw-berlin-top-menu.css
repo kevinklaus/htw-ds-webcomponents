@@ -16,7 +16,6 @@ div.htw-berlin-top-menu {
 
 div.htw-berlin-top-menu.scroll {
   position: relative;
-  overflow: auto;
 }
 
 
@@ -47,17 +46,18 @@ div.htw-berlin-top-menu a.closeMenu {
   div.htw-berlin-top-menu.responsive htw-berlin-link,
   div.htw-berlin-top-menu.responsive htw-berlin-dropdown {
     display: block;
+    overflow: auto;
   }
 
-  div.htw-berlin-top-menu.responsive htw-berlin-link:first-of-type {
+  div.htw-berlin-top-menu.responsive > htw-berlin-link:first-of-type {
     margin-top: 20px;
   }
 
-  div.htw-berlin-top-menu.responsive htw-berlin-link:last-of-type {
+  div.htw-berlin-top-menu.responsive > htw-berlin-link:last-of-type {
     margin-bottom: 20px;
   }
 
-  div.htw-berlin-top-menu.responsive htw-berlin-link {
+  div.htw-berlin-top-menu.responsive > htw-berlin-link {
     margin-left: 40px;
   }
   

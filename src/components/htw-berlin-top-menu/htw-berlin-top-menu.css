@@ -4,10 +4,21 @@
 
 div.htw-berlin-top-menu {
   border-top: 8px solid var(--primary-green);
-  padding: 15px 0 8px 15px;
+  padding: 10px 0 0 15px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
   background-color: var(--white);
+  min-height: 54.5px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
 }
+
+div.htw-berlin-top-menu.scroll {
+  position: relative;
+  overflow: auto;
+}
+
 
 div.htw-berlin-top-menu.orange {
   border-top: 8px solid var(--secondary-orange);
@@ -25,4 +36,96 @@ div.htw-berlin-top-menu.dark {
 span.spacer {
   width: 15px;
   display: inline-block;
+}
+
+div.htw-berlin-top-menu a.responsiveMenu,
+div.htw-berlin-top-menu a.closeMenu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  div.htw-berlin-top-menu.responsive htw-berlin-link,
+  div.htw-berlin-top-menu.responsive htw-berlin-dropdown {
+    display: block;
+  }
+
+  div.htw-berlin-top-menu.responsive htw-berlin-link:first-of-type {
+    margin-top: 20px;
+  }
+
+  div.htw-berlin-top-menu.responsive htw-berlin-link:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  div.htw-berlin-top-menu.responsive htw-berlin-link {
+    margin-left: 40px;
+  }
+  
+ div.htw-berlin-top-menu a.responsiveMenu,
+ div.htw-berlin-top-menu.responsive a.closeMenu {
+   float: right;
+   color: var(--primary-green);
+   text-decoration: none;
+   display: block;
+   padding: 5px 30px;
+   transition: color 0.2s ease-in-out;
+   position: relative;
+   top: -6px;
+ }
+
+  div.htw-berlin-top-menu a.responsiveMenu svg,
+  div.htw-berlin-top-menu.responsive a.closeMenu svg {
+    margin-right: 10px;
+    position: relative;
+  }
+
+  div.htw-berlin-top-menu.responsive a.closeMenu svg {
+    width: 15px;
+    top: 5px;
+  }
+
+  div.htw-berlin-top-menu a.responsiveMenu svg {
+    width: 17px;
+    top: 4px;
+  }
+
+  div.htw-berlin-top-menu.responsive a.responsiveMenu,
+  div.htw-berlin-top-menu a.closeMenu,
+  div.htw-berlin-top-menu htw-berlin-link,
+  div.htw-berlin-top-menu htw-berlin-dropdown {
+    display: none;
+  }
+
+  div.htw-berlin-top-menu.green a.responsiveMenu:hover,
+  div.htw-berlin-top-menu.orange a.responsiveMenu:hover,
+  div.htw-berlin-top-menu.blue a.responsiveMenu:hover,
+  div.htw-berlin-top-menu.green a.closeMenu:hover,
+  div.htw-berlin-top-menu.orange a.closeMenu:hover,
+  div.htw-berlin-top-menu.blue a.closeMenu:hover {
+    color: var(--copy);
+  }
+
+  div.htw-berlin-top-menu.dark.green a.responsiveMenu:hover,
+  div.htw-berlin-top-menu.dark.green a.closeMenu:hover {
+    color: var(--primary-green)
+  }
+
+  div.htw-berlin-top-menu.orange a.responsiveMenu,
+  div.htw-berlin-top-menu.dark.orange a.responsiveMenu:hover,
+  div.htw-berlin-top-menu.orange a.closeMenu,
+  div.htw-berlin-top-menu.dark.orange a.closeMenu:hover {
+    color: var(--secondary-orange)
+  }
+
+  div.htw-berlin-top-menu.blue a.responsiveMenu,
+  div.htw-berlin-top-menu.dark.blue a.responsiveMenu:hover,
+  div.htw-berlin-top-menu.blue a.closeMenu,
+  div.htw-berlin-top-menu.dark.blue a.closeMenu:hover {
+    color: var(--secondary-blue)
+  }
+
+  div.htw-berlin-top-menu.dark a.responsiveMenu,
+  div.htw-berlin-top-menu.dark a.closeMenu {
+    color: var(--white)
+  }
 }

@@ -23,7 +23,7 @@ export class HtwBerlinChatBubble {
   @Prop() fullname: string;
 
   /**
-   * set date and time stamp of message
+   * set date and time of message
    */
   @Prop() datetime: string;
 

@@ -16,7 +16,7 @@ export namespace Components {
          */
         "link": string;
         /**
-          * render logo in different sizes
+          * render avatar in different sizes
          */
         "size": "s" | "m" | "l";
         /**
@@ -76,7 +76,7 @@ export namespace Components {
          */
         "dark": boolean;
         /**
-          * set date and time stamp of message
+          * set date and time of message
          */
         "datetime": string;
         /**
@@ -373,7 +373,7 @@ declare namespace LocalJSX {
          */
         "link"?: string;
         /**
-          * render logo in different sizes
+          * render avatar in different sizes
          */
         "size"?: "s" | "m" | "l";
         /**
@@ -433,7 +433,7 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
         /**
-          * set date and time stamp of message
+          * set date and time of message
          */
         "datetime"?: string;
         /**

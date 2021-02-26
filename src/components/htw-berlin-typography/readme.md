@@ -19,11 +19,13 @@
 
 ### Used by
 
+ - [htw-berlin-chat](../htw-berlin-chat)
  - [htw-berlin-login](../htw-berlin-login)
 
 ### Graph
 ```mermaid
 graph TD;
+  htw-berlin-chat --> htw-berlin-typography
   htw-berlin-login --> htw-berlin-typography
   style htw-berlin-typography fill:#f9f,stroke:#333,stroke-width:4px
 ```

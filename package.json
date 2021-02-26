@@ -1,6 +1,6 @@
 {
   "name": "htw-berlin-ds-webcomponents",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "HTW Berlin Design System Web Component collection based on Stencil Component Starter",
   "repository": "https://github.com/kevinklaus/htw-berlin-ds-webcomponents",
   "main": "dist/index.cjs.js",

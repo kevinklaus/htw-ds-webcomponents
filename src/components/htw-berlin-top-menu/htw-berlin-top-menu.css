@@ -42,6 +42,11 @@ div.htw-berlin-top-menu a.closeMenu {
   display: none;
 }
 
+div.htw-berlin-top-menu htw-berlin-avatar {
+  float: right;
+  margin-right: 10px;
+}
+
 @media screen and (max-width: 600px) {
   div.htw-berlin-top-menu.responsive htw-berlin-link,
   div.htw-berlin-top-menu.responsive htw-berlin-dropdown {

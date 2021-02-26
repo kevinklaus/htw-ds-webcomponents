@@ -1,0 +1,190 @@
+div.htw-berlin-chat.open {
+  bottom: 0;
+  min-width: 275px;
+  width: 20vw;
+}
+
+div.htw-berlin-chat {
+  bottom: -315px;
+  display: inline-block;
+  position: fixed;
+  right: 4%;
+  background-color: var(--white);
+  min-width: 200px;
+  min-height: 350px;
+  height: 35vh;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+div.htw-berlin-chat.dark {
+  background-color: var(--dark-grey);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.75);
+  right: 40%;
+}
+
+div.header {
+  background-color: var(--primary-green);
+  padding: 7px;
+  overflow: auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+div.blue div.header {
+  background-color: var(--secondary-blue);
+}
+
+div.orange div.header {
+  background-color: var(--secondary-orange);
+}
+
+div.header htw-berlin-avatar,
+div.header htw-berlin-typography {
+  float: left;
+}
+
+div.htw-berlin-chat div.header htw-berlin-avatar,
+div.htw-berlin-chat div.messages,
+div.htw-berlin-chat div.send {
+  display: none;
+}
+
+div.htw-berlin-chat.open div.header htw-berlin-avatar,
+div.htw-berlin-chat.open div.send,
+div.htw-berlin-chat.open div.messages {
+  display: block;
+}
+
+div.htw-berlin-chat div.header htw-berlin-typography {
+  margin-left: 5px;
+}
+
+div.htw-berlin-chat.open div.header htw-berlin-typography {
+  line-height: 35px;
+}
+
+div.htw-berlin-chat.open div.messages {
+  padding: 20px;
+  overflow-y: scroll;
+  height: 215px;
+}
+
+div.htw-berlin-chat a.closeChat {
+  cursor: pointer;
+}
+
+div.htw-berlin-chat a.closeChat svg.fa-comment,
+div.htw-berlin-chat a.closeChat svg.fa-times {
+  float: right;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+  line-height: 35px;
+  margin-right: 10px;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+}
+
+div.htw-berlin-chat a.closeChat svg.fa-comment,
+div.htw-berlin-chat.open a.closeChat svg.fa-times {
+  opacity: 1;
+}
+
+div.htw-berlin-chat.open a.closeChat svg.fa-times {
+  width: 13px;
+  top: 8px;
+}
+
+div.htw-berlin-chat a.closeChat svg.fa-comment {
+  width: 15px;
+  top: 5px;
+}
+
+div.htw-berlin-chat.open a.closeChat svg.fa-comment,
+div.htw-berlin-chat a.closeChat svg.fa-times {
+  opacity: 0;
+  width: 0;
+}
+
+
+form.send textarea {
+  background-color: var(--background-grey);
+  border: 2px solid var(--white);
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 5px;
+  line-height: 120%;
+  resize: none;
+  margin: 0;
+  outline: none;
+  height: 100%;
+}
+
+div.htw-berlin-chat.dark form.send textarea {
+  background-color: var(--secondary-grey);
+  border-color: var(--dark-grey);
+}
+
+form.send {
+  display: flex;
+  height: 50px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.75);
+}
+
+form.send button {
+  min-width: 40px;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  transition: background 0.2s ease-in-out;
+}
+
+div.htw-berlin-chat.dark form.send button svg,
+form.send button:hover svg {
+  color: var(--white);
+}
+
+div.htw-berlin-chat.dark form.send button {
+  background-color: var(--dark-grey);
+  border: 2px solid var(--dark-grey);
+}
+
+div.htw-berlin-chat form.send button svg {
+  color: var(--primary-green);
+  width: 17px;
+}
+
+div.htw-berlin-chat.orange form.send button svg {
+  color: var(--secondary-orange);
+}
+
+div.htw-berlin-chat.blue form.send button svg {
+  color: var(--secondary-blue);
+}
+
+div.htw-berlin-chat form.send button:hover svg,
+div.htw-berlin-chat.dark form.send button svg {
+  color: var(--white);
+}
+
+div.htw-berlin-chat.dark form.send button:hover,
+div.htw-berlin-chat form.send button:hover {
+  background-color: var(--primary-green);
+}
+
+div.htw-berlin-chat.dark.blue form.send button:hover,
+div.htw-berlin-chat.blue form.send button:hover {
+  background-color: var(--secondary-blue);
+}
+
+div.htw-berlin-chat.dark.orange form.send button:hover,
+div.htw-berlin-chat.orange form.send button:hover {
+  background-color: var(--secondary-orange);
+}
+

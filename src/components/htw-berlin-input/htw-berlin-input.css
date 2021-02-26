@@ -17,6 +17,7 @@ input.htw-berlin-input {
   background 0.2s ease-in-out,
   color 0.2s ease-in-out;
   display: inline-block;
+  outline: none;
 }
 
 input.htw-berlin-input::placeholder {

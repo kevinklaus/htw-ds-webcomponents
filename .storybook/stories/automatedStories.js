@@ -1,3 +1,8 @@
+/* from
+https://medium.com/swlh/automated-stories-with-storybook-and-stenciljs-8a8dc611fcdf
+https://github.com/MagalyMJ/stencil-automated-stories
+*/
+
 import { storiesOf } from '@storybook/web-components';
 
 /**

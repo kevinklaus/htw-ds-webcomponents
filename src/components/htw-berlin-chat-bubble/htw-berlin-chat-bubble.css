@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+div.htw-berlin-chat-bubble.received {
+  background-color: var(--background-grey);
+  margin: 0 25px 10px 0;
+  float: left;
+  color: var(--copy);
+}
+
+div.htw-berlin-chat-bubble.received.dark {
+  background-color: var(--secondary-grey);
+  color: var(--copy);
+}
+
+div.htw-berlin-chat-bubble {
+  background-color: var(--secondary-grey);
+  padding: 7px 9px;
+  margin: 0 0 10px 20px;
+  float: right;
+  border-radius: 2px;
+  color: var(--white);
+  font-size: 0.85rem;
+  line-height: 120%;
+}
+
+div.htw-berlin-chat-bubble.blue {
+  background-color: var(--secondary-blue);
+}
+
+div.htw-berlin-chat-bubble.orange {
+  background-color: var(--secondary-orange);
+}
+
+div.htw-berlin-chat-bubble.dark {
+  background-color: var(--copy);
+  color: var(--background-grey);
+}

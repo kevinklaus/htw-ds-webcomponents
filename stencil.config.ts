@@ -8,7 +8,7 @@ export const config: Config = {
       type: 'dist',
       esmLoaderPath: '../loader',
       copy: [
-        { src: 'global/fonts', dest: 'dist/fonts', warn: true}
+        { src: 'global/fonts', dest: './fonts', warn: true}
       ],
     },
     {

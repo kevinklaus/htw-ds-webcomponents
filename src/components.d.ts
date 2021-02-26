@@ -6,6 +6,24 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface HtwBerlinAvatar {
+        /**
+          * set full name of user
+         */
+        "fullname": string;
+        /**
+          * set link for avatar
+         */
+        "link": string;
+        /**
+          * render logo in different sizes
+         */
+        "size": "s" | "m" | "l";
+        /**
+          * set source of image
+         */
+        "src": string;
+    }
     interface HtwBerlinBreadcrumb {
     }
     interface HtwBerlinButton {
@@ -37,6 +55,38 @@ export namespace Components {
           * button variant
          */
         "variant": "filled" | "outlined" | "text";
+    }
+    interface HtwBerlinChat {
+        /**
+          * color scheme of chat
+         */
+        "color": "green" | "orange" | "blue";
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * full name of user or group name
+         */
+        "fullname": string;
+    }
+    interface HtwBerlinChatBubble {
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * set date and time stamp of message
+         */
+        "datetime": string;
+        /**
+          * full name of user or group name
+         */
+        "fullname": string;
+        /**
+          * set true if this is a received message
+         */
+        "received": boolean;
     }
     interface HtwBerlinContentBox {
         /**
@@ -204,6 +254,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLHtwBerlinAvatarElement extends Components.HtwBerlinAvatar, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinAvatarElement: {
+        prototype: HTMLHtwBerlinAvatarElement;
+        new (): HTMLHtwBerlinAvatarElement;
+    };
     interface HTMLHtwBerlinBreadcrumbElement extends Components.HtwBerlinBreadcrumb, HTMLStencilElement {
     }
     var HTMLHtwBerlinBreadcrumbElement: {
@@ -215,6 +271,18 @@ declare global {
     var HTMLHtwBerlinButtonElement: {
         prototype: HTMLHtwBerlinButtonElement;
         new (): HTMLHtwBerlinButtonElement;
+    };
+    interface HTMLHtwBerlinChatElement extends Components.HtwBerlinChat, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinChatElement: {
+        prototype: HTMLHtwBerlinChatElement;
+        new (): HTMLHtwBerlinChatElement;
+    };
+    interface HTMLHtwBerlinChatBubbleElement extends Components.HtwBerlinChatBubble, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinChatBubbleElement: {
+        prototype: HTMLHtwBerlinChatBubbleElement;
+        new (): HTMLHtwBerlinChatBubbleElement;
     };
     interface HTMLHtwBerlinContentBoxElement extends Components.HtwBerlinContentBox, HTMLStencilElement {
     }
@@ -277,8 +345,11 @@ declare global {
         new (): HTMLHtwBerlinTypographyElement;
     };
     interface HTMLElementTagNameMap {
+        "htw-berlin-avatar": HTMLHtwBerlinAvatarElement;
         "htw-berlin-breadcrumb": HTMLHtwBerlinBreadcrumbElement;
         "htw-berlin-button": HTMLHtwBerlinButtonElement;
+        "htw-berlin-chat": HTMLHtwBerlinChatElement;
+        "htw-berlin-chat-bubble": HTMLHtwBerlinChatBubbleElement;
         "htw-berlin-content-box": HTMLHtwBerlinContentBoxElement;
         "htw-berlin-dropdown": HTMLHtwBerlinDropdownElement;
         "htw-berlin-input": HTMLHtwBerlinInputElement;
@@ -292,6 +363,24 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface HtwBerlinAvatar {
+        /**
+          * set full name of user
+         */
+        "fullname"?: string;
+        /**
+          * set link for avatar
+         */
+        "link"?: string;
+        /**
+          * render logo in different sizes
+         */
+        "size"?: "s" | "m" | "l";
+        /**
+          * set source of image
+         */
+        "src"?: string;
+    }
     interface HtwBerlinBreadcrumb {
     }
     interface HtwBerlinButton {
@@ -323,6 +412,38 @@ declare namespace LocalJSX {
           * button variant
          */
         "variant"?: "filled" | "outlined" | "text";
+    }
+    interface HtwBerlinChat {
+        /**
+          * color scheme of chat
+         */
+        "color"?: "green" | "orange" | "blue";
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * full name of user or group name
+         */
+        "fullname"?: string;
+    }
+    interface HtwBerlinChatBubble {
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * set date and time stamp of message
+         */
+        "datetime"?: string;
+        /**
+          * full name of user or group name
+         */
+        "fullname"?: string;
+        /**
+          * set true if this is a received message
+         */
+        "received"?: boolean;
     }
     interface HtwBerlinContentBox {
         /**
@@ -489,8 +610,11 @@ declare namespace LocalJSX {
         "tag"?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span";
     }
     interface IntrinsicElements {
+        "htw-berlin-avatar": HtwBerlinAvatar;
         "htw-berlin-breadcrumb": HtwBerlinBreadcrumb;
         "htw-berlin-button": HtwBerlinButton;
+        "htw-berlin-chat": HtwBerlinChat;
+        "htw-berlin-chat-bubble": HtwBerlinChatBubble;
         "htw-berlin-content-box": HtwBerlinContentBox;
         "htw-berlin-dropdown": HtwBerlinDropdown;
         "htw-berlin-input": HtwBerlinInput;
@@ -507,8 +631,11 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "htw-berlin-avatar": LocalJSX.HtwBerlinAvatar & JSXBase.HTMLAttributes<HTMLHtwBerlinAvatarElement>;
             "htw-berlin-breadcrumb": LocalJSX.HtwBerlinBreadcrumb & JSXBase.HTMLAttributes<HTMLHtwBerlinBreadcrumbElement>;
             "htw-berlin-button": LocalJSX.HtwBerlinButton & JSXBase.HTMLAttributes<HTMLHtwBerlinButtonElement>;
+            "htw-berlin-chat": LocalJSX.HtwBerlinChat & JSXBase.HTMLAttributes<HTMLHtwBerlinChatElement>;
+            "htw-berlin-chat-bubble": LocalJSX.HtwBerlinChatBubble & JSXBase.HTMLAttributes<HTMLHtwBerlinChatBubbleElement>;
             "htw-berlin-content-box": LocalJSX.HtwBerlinContentBox & JSXBase.HTMLAttributes<HTMLHtwBerlinContentBoxElement>;
             "htw-berlin-dropdown": LocalJSX.HtwBerlinDropdown & JSXBase.HTMLAttributes<HTMLHtwBerlinDropdownElement>;
             "htw-berlin-input": LocalJSX.HtwBerlinInput & JSXBase.HTMLAttributes<HTMLHtwBerlinInputElement>;

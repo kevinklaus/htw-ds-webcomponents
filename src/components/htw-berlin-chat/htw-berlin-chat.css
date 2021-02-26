@@ -21,7 +21,6 @@ div.htw-berlin-chat {
 div.htw-berlin-chat.dark {
   background-color: var(--dark-grey);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.75);
-  right: 40%;
 }
 
 div.header {

@@ -22,7 +22,7 @@ export class HtwBerlinChat {
   @Prop() color: "green" | "orange" | "blue" = "green";
   @Watch('color')
   validateColor(newValue: string) {
-    const colors = ['green', 'orange', 'blue', 'disabled'];
+    const colors = ['green', 'orange', 'blue'];
     const colorIsValid = colors.indexOf(newValue) > -1;
     
     if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue)') }

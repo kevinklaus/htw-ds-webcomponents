@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HTWButton } from './htw-berlin-button';
+import { Button } from './htw-berlin-button';
 
 describe('htw-berlin-button', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [HTWButton],
+      components: [Button],
       html: '<htw-berlin-button></htw-berlin-button>',
     });
     expect(root).toEqualHtml(`
@@ -20,7 +20,7 @@ describe('htw-berlin-button', () => {
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [HTWButton],
+      components: [Button],
       html: `<htw-berlin-button first="Stencil" last="'Don't call me a framework' JS"></htw-berlin-button>`,
     });
     expect(root).toEqualHtml(`

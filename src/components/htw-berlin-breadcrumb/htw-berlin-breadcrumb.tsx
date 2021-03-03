@@ -5,7 +5,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'htw-berlin-breadcrumb.css',
   shadow: true,
 })
-export class HTWBreadcrumb {
+export class Breadcrumb {
   render() {
     return <div class={"htw-berlin-breadcrumb"}>
       <slot></slot>

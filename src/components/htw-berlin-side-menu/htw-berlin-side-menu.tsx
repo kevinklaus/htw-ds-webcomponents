@@ -5,7 +5,7 @@ import { Component, Prop, h } from '@stencil/core';
   styleUrl: 'htw-berlin-side-menu.css',
   shadow: true,
 })
-export class HTWSideMenu {
+export class SideMenu {
   /**
    * use dark mode if true
    */

@@ -5,7 +5,7 @@ import { Component, Prop, Watch, h } from '@stencil/core';
   styleUrl: 'htw-berlin-chat.css',
   shadow: false,
 })
-export class HtwBerlinChat {
+export class Chat {
   /**
    * use dark mode if true
    */
@@ -55,7 +55,7 @@ export class HtwBerlinChat {
           onClick={() => this.toggleChat()}
           title={"Chat with " + this.fullname}>
           <div class="header">
-            <slot name="user"></slot>
+            <slot name="avatar"></slot>
             <htw-berlin-typography color="copy" dark={true} tag="h4">
                 Chat with {this.fullname}
             </htw-berlin-typography>

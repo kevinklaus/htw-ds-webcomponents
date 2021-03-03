@@ -5,7 +5,7 @@ import { Component, h, Prop, Watch, State } from '@stencil/core';
   styleUrl: 'htw-berlin-login.css',
   shadow: true,
 })
-export class HtwBerlinLogin {
+export class Login {
 
   /**
    * use dark mode if true

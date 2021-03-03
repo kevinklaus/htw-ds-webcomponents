@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HtwBerlinLogin } from '../htw-berlin-login';
+import { Login } from '../htw-berlin-login';
 
 describe('htw-berlin-login', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [HtwBerlinLogin],
+      components: [Login],
       html: `<htw-berlin-login></htw-berlin-login>`,
     });
     expect(page.root).toEqualHtml(`

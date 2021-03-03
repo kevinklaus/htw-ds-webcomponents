@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HtwBerlinChat } from '../htw-berlin-chat';
+import { Chat } from '../htw-berlin-chat';
 
 describe('htw-berlin-chat', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [HtwBerlinChat],
+      components: [Chat],
       html: `<htw-berlin-chat></htw-berlin-chat>`,
     });
     expect(page.root).toEqualHtml(`

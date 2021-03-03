@@ -6,12 +6,12 @@ import { Component, Prop, Watch, h } from '@stencil/core';
   shadow: true,
 })
 
-export class HTWButton {
+export class Button {
 
   /**
    * button variant
    */
-  @Prop() variant: "filled" | "outlined" | "text" = "filled";
+  @Prop() variant: 'filled' | 'outlined' | 'text' = 'filled';
   @Watch('variant')
   validateVariant(newValue: string) {
     const variants = ['filled', 'outlined', 'text'];
@@ -23,14 +23,14 @@ export class HTWButton {
   /**
    * button color
    */
-  @Prop() color: "green" | "orange" | "blue" | "disabled" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' | 'disabled' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue', 'disabled'];
     const colorIsValid = colors.indexOf(newValue) > -1;
     
     if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
-    if (newValue === 'blue' && this.dark && (this.variant === "outlined" || this.variant === "text")) { throw new Error('Accessibility: blue should not be used on dark backgrounds') }
+    if (newValue === 'blue' && this.dark && (this.variant === 'outlined' || this.variant === 'text')) { throw new Error('Accessibility: blue should not be used on dark backgrounds') }
   }
 
   /**
@@ -56,19 +56,19 @@ export class HTWButton {
   /**
    * button type, default is anker <a>
    */
-  @Prop() type: "default" | "submit" = "default";
+  @Prop() type: 'default' | 'submit' = 'default';
 
 
   @Function()  getStyleClasses() {
     var classList = []
-    if (this.dark) classList.push("dark")
+    if (this.dark) classList.push('dark')
     classList.push(this.color)
     classList.push(this.variant)
-    return classList.join(" ")
+    return classList.join(' ')
   }
 
   render() {  
-    if (this.type === "default") {
+    if (this.type === 'default') {
       return <a
           class={"htw-berlin-button " + this.getStyleClasses()} 
           title={this.altTitle} 

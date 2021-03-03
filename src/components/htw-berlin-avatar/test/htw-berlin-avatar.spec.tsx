@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HtwBerlinAvatar } from '../htw-berlin-avatar';
+import { Avatar } from '../htw-berlin-avatar';
 
 describe('htw-berlin-avatar', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [HtwBerlinAvatar],
+      components: [Avatar],
       html: `<htw-berlin-avatar></htw-berlin-avatar>`,
     });
     expect(page.root).toEqualHtml(`

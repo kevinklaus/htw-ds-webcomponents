@@ -5,7 +5,7 @@ import { Component, Host, Prop, h } from '@stencil/core';
   styleUrl: 'htw-berlin-chat-bubble.css',
   shadow: true,
 })
-export class HtwBerlinChatBubble {
+export class ChatBubble {
 
   /**
    * use dark mode if true

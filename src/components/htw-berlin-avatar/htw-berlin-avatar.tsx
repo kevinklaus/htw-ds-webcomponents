@@ -7,7 +7,7 @@ import { Component, Prop, h, Watch } from '@stencil/core';
 })
 
 
-export class HtwBerlinAvatar {
+export class Avatar {
 
   /**
    * render avatar in different sizes

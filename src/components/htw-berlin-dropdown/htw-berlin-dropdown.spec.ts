@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HTWDropdown } from './htw-berlin-dropdown';
+import { DropdownMenu } from './htw-berlin-dropdown';
 
 describe('htw-berlin-dropdown', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [HTWDropdown],
+      components: [DropdownMenu],
       html: '<htw-berlin-dropdown></htw-berlin-dropdown>',
     });
     expect(root).toEqualHtml(`
@@ -20,7 +20,7 @@ describe('htw-berlin-dropdown', () => {
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [HTWDropdown],
+      components: [DropdownMenu],
       html: `<htw-berlin-dropdown first="Stencil" last="'Don't call me a framework' JS"></htw-berlin-dropdown>`,
     });
     expect(root).toEqualHtml(`

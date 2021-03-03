@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HTWLogo } from './htw-berlin-logo';
+import { Logo } from './htw-berlin-logo';
 
 describe('htw-berlin-logo', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [HTWLogo],
+      components: [Logo],
       html: '<htw-berlin-logo></htw-berlin-logo>',
     });
     expect(root).toEqualHtml(`
@@ -20,7 +20,7 @@ describe('htw-berlin-logo', () => {
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [HTWLogo],
+      components: [Logo],
       html: `<htw-berlin-logo first="Stencil" last="'Don't call me a framework' JS"></htw-berlin-logo>`,
     });
     expect(root).toEqualHtml(`

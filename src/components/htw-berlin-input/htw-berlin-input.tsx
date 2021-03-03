@@ -6,7 +6,7 @@ import { Component, Prop, h, State, Watch } from '@stencil/core';
   shadow: true,
 })
 
-export class HTWInput {
+export class Input {
 
   /**
    * use dark color theme if true

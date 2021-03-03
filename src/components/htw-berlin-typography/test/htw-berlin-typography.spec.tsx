@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HtwBerlinTypography } from '../htw-berlin-typography';
+import { Typography } from '../htw-berlin-typography';
 
 describe('htw-berlin-typography', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [HtwBerlinTypography],
+      components: [Typography],
       html: `<htw-berlin-typography></htw-berlin-typography>`,
     });
     expect(page.root).toEqualHtml(`

@@ -3,9 +3,9 @@ import { Component, Prop, h, Watch } from '@stencil/core';
 @Component({
   tag: 'htw-berlin-content-box',
   styleUrl: 'htw-berlin-content-box.css',
-  shadow: false,
+  shadow: true,
 })
-export class HtwContentBox {
+export class ContentBox {
   /**
    * set style to apply to the content box
    */

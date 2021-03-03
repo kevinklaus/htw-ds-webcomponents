@@ -6,7 +6,7 @@ import { Component, h, Prop, Watch } from '@stencil/core';
   shadow: true,
 })
 
-export class HtwBerlinTypography {
+export class Typography {
 
   /**
    * use dark mode if true - reverses copy color to white

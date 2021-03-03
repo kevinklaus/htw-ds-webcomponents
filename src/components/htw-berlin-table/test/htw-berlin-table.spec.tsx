@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HtwBerlinTable } from '../htw-berlin-table';
+import { Table } from '../htw-berlin-table';
 
 describe('htw-berlin-table', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [HtwBerlinTable],
+      components: [Table],
       html: `<htw-berlin-table></htw-berlin-table>`,
     });
     expect(page.root).toEqualHtml(`

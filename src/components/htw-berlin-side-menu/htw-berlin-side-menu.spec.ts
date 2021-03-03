@@ -1,10 +1,10 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { HTWSideMenu } from './htw-berlin-side-menu';
+import { SideMenu } from './htw-berlin-side-menu';
 
 describe('htw-berlin-side-menu', () => {
   it('renders', async () => {
     const { root } = await newSpecPage({
-      components: [HTWSideMenu],
+      components: [SideMenu],
       html: '<htw-berlin-side-menu></htw-berlin-side-menu>',
     });
     expect(root).toEqualHtml(`
@@ -20,7 +20,7 @@ describe('htw-berlin-side-menu', () => {
 
   it('renders with values', async () => {
     const { root } = await newSpecPage({
-      components: [HTWSideMenu],
+      components: [SideMenu],
       html: `<htw-berlin-side-menu first="Stencil" last="'Don't call me a framework' JS"></htw-berlin-side-menu>`,
     });
     expect(root).toEqualHtml(`

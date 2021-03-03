@@ -5,7 +5,7 @@ import { Component, Prop, h, Watch } from '@stencil/core';
   styleUrl: 'htw-berlin-dropdown.css',
   shadow: true,
 })
-export class HTWDropdown {
+export class DropdownMenu {
   /**
    * use dark mode if true
    */

@@ -34,7 +34,7 @@ export namespace Components {
         /**
           * button color
          */
-        "color": "green" | "orange" | "blue" | "disabled";
+        "color": 'green' | 'orange' | 'blue' | 'disabled';
         /**
           * set true to use dark mode styling
          */
@@ -50,11 +50,11 @@ export namespace Components {
         /**
           * button type, default is anker <a>
          */
-        "type": "default" | "submit";
+        "type": 'default' | 'submit';
         /**
           * button variant
          */
-        "variant": "filled" | "outlined" | "text";
+        "variant": 'filled' | 'outlined' | 'text';
     }
     interface HtwBerlinChat {
         /**
@@ -391,7 +391,7 @@ declare namespace LocalJSX {
         /**
           * button color
          */
-        "color"?: "green" | "orange" | "blue" | "disabled";
+        "color"?: 'green' | 'orange' | 'blue' | 'disabled';
         /**
           * set true to use dark mode styling
          */
@@ -407,11 +407,11 @@ declare namespace LocalJSX {
         /**
           * button type, default is anker <a>
          */
-        "type"?: "default" | "submit";
+        "type"?: 'default' | 'submit';
         /**
           * button variant
          */
-        "variant"?: "filled" | "outlined" | "text";
+        "variant"?: 'filled' | 'outlined' | 'text';
     }
     interface HtwBerlinChat {
         /**

@@ -14,7 +14,7 @@ export class Logo {
   /**
    * color scheme
    */
-  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue'];
@@ -26,7 +26,7 @@ export class Logo {
   /**
    * render logo in different sizes
    */
-  @Prop() size: "s" | "m" | "l" = "s";
+  @Prop() size: 's' | 'm' | 'l' = 's';
   @Watch('size')
   validateSize(newValue: string) {
     const sizes = ['s', 'm', 'l'];
@@ -44,11 +44,11 @@ export class Logo {
   @Function()  getStyleClasses() {
     var classList = []
     if (this.dark) { 
-      classList.push("dark") 
+      classList.push('dark') 
     }
     else classList.push(this.color)
     classList.push(this.size)
-    return classList.join(" ")
+    return classList.join(' ')
   }
 
   render() {

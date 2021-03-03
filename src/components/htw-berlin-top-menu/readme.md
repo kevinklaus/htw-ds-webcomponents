@@ -7,7 +7,7 @@
 
 | Property       | Attribute      | Description                                                   | Type                            | Default   |
 | -------------- | -------------- | ------------------------------------------------------------- | ------------------------------- | --------- |
-| `color`        | `color`        | color scheme of menu                                          | `"blue" \| "green" \| "orange"` | `"green"` |
+| `color`        | `color`        | color scheme of menu                                          | `"blue" \| "green" \| "orange"` | `'green'` |
 | `dark`         | `dark`         | use dark mode if true                                         | `boolean`                       | `false`   |
 | `logo`         | `logo`         | set to false to hide htw logo                                 | `boolean`                       | `true`    |
 | `shouldscroll` | `shouldscroll` | Menu fixed at top by default. Set true to scroll with content | `boolean`                       | `false`   |

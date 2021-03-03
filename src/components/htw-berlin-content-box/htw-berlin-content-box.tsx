@@ -9,18 +9,18 @@ export class ContentBox {
   /**
    * set style to apply to the content box
    */
-  @Prop() variant: "default" | "color" | "secondary" | "dark" = "default";
+  @Prop() variant: 'default' | 'color' | 'secondary' | 'dark' = 'default';
 
   /**
-  * pick color to apply to content when variant="color"
+  * pick color to apply to content when variant='color'
   */
-  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue', 'disabled'];
     const colorIsValid = colors.indexOf(newValue) > -1;
     if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue, disabled)') }
-    if (this.variant !== "color") { throw new Error('color: can only be set for variant: color)') }
+    if (this.variant !== 'color') { throw new Error('color: can only be set for variant: color)') }
   }
 
   @Function() getStyleClasses() {

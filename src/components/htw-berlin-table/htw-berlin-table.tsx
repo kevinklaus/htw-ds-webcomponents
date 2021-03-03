@@ -15,7 +15,7 @@ export class Table {
   /**
    *  color scheme of table
    */
-  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue'];

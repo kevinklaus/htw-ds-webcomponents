@@ -16,7 +16,7 @@ export class Input {
   /**
    * color applied to the input field
    */
-  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue'];
@@ -28,46 +28,46 @@ export class Input {
   /**
    * set the state of the input field
    */
-  @Prop() state: "normal" | "active" | "disabled" = "normal";
+  @Prop() state: 'normal' | 'active' | 'disabled' = 'normal';
 
   /**
    * placeholder text to be displayed in input
    */
-  @Prop() placeholder: string = "Type...";
+  @Prop() placeholder: string = 'Type...';
 
   /**
    * label text to be displayed above input field
    */
-  @Prop() label: string = "";
+  @Prop() label: string = '';
 
   /**
    * type of input
    */
-  @Prop() type: string = "text";
+  @Prop() type: string = 'text';
 
   /**
    * alternative title shown on hover
    */
-  @Prop() altTitle: string = "Enter information here";
+  @Prop() altTitle: string = 'Enter information here';
 
   /**
    * user input string
    */
-  @State() value: string = "";
+  @State() value: string = '';
 
   handleChange(event) {
     this.value = event.target.value;
   }
 
   render() {    
-    var classes = this.color + " " + this.state
-    classes += this.dark ? " dark" : "" 
+    var classes = this.color + ' ' + this.state
+    classes += this.dark ? ' dark' : '' 
     var disabled = false
-    if (this.state == "disabled") {
+    if (this.state == 'disabled') {
       disabled = true
     } 
 
-    if (this.label === "") { 
+    if (this.label === '') { 
       return <input
         class={"htw-berlin-input " + classes}
         title={this.altTitle} 

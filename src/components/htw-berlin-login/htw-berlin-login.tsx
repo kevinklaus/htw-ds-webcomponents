@@ -15,17 +15,17 @@ export class Login {
   /**
    *  color scheme of login
    */
-  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
-    const colors = ['green', 'orange', 'blue', 'disabled'];
+    const colors = ['green', 'orange', 'blue'];
     const colorIsValid = colors.indexOf(newValue) > -1;
     
     if (!colorIsValid) { throw new Error('color: not a valid color (green, orange, blue)') }
   }
 
-  @State() userValue: string = "";
-  @State() passwordValue: string = "";
+  @State() userValue: string = '';
+  @State() passwordValue: string = '';
 
 
   handleSubmit(event) {

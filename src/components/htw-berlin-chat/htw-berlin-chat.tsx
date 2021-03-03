@@ -19,7 +19,7 @@ export class Chat {
   /**
    *  color scheme of chat
    */
-  @Prop() color: "green" | "orange" | "blue" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue'];
@@ -30,9 +30,9 @@ export class Chat {
 
   @Function()  getStyleClasses() {
     var classList = []
-    if (this.dark) classList.push("dark")
+    if (this.dark) classList.push('dark')
     classList.push(this.color)
-    return classList.join(" ")
+    return classList.join(' ')
   }
 
   chat!: HTMLDivElement;

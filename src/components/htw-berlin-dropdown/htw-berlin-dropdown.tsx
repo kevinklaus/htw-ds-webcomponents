@@ -24,7 +24,7 @@ export class DropdownMenu {
   /**
   *  color scheme
   */
-  @Prop() color: "green" | "orange" | "blue" | "disabled" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' | 'disabled' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue', 'disabled'];
@@ -37,10 +37,10 @@ export class DropdownMenu {
 
   @Function() getStyleClasses() {
     var classList = []
-    if (this.dark) classList.push("dark")
-    if (this.topmenu) classList.push("top-menu")
+    if (this.dark) classList.push('dark')
+    if (this.topmenu) classList.push('top-menu')
     classList.push(this.color)
-    return classList.join(" ")
+    return classList.join(' ')
   }
 
   render() {

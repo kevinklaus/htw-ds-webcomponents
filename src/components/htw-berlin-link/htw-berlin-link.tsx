@@ -14,7 +14,7 @@ export class Link {
   /**
    * link color
    */
-  @Prop() color: "green" | "orange" | "blue" | "disabled" = "green";
+  @Prop() color: 'green' | 'orange' | 'blue' | 'disabled' = 'green';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['green', 'orange', 'blue', 'disabled'];
@@ -26,12 +26,12 @@ export class Link {
   /**
    * use breadcrumb, dropdown or side-menu styling if neccessary
    */
-  @Prop() variant: "default" | "side-menu" | "breadcrumb" | "dropdown" = "default";
+  @Prop() variant: 'default' | 'side-menu' | 'breadcrumb' | 'dropdown' = 'default';
 
   /**
    * set link state if neccessary
    */
-  @Prop() state: "default" | "active" | "visited" = "default";
+  @Prop() state: 'default' | 'active' | 'visited' = 'default';
 
   /**
    * alternative title
@@ -45,11 +45,11 @@ export class Link {
 
   @Function()  getStyleClasses() {
       var classList = []
-      if (this.dark) classList.push("dark")
+      if (this.dark) classList.push('dark')
       classList.push(this.color)
-      if (["side-menu", "breadcrumb", "dropdown"].includes(this.variant)) classList.push(this.variant)
-      if (this.state === "active" || this.state === "visited") classList.push(this.state)
-      return classList.join(" ")
+      if (['side-menu', 'breadcrumb', 'dropdown'].includes(this.variant)) classList.push(this.variant)
+      if (this.state === 'active' || this.state === 'visited') classList.push(this.state)
+      return classList.join(' ')
   }
 
   render() {

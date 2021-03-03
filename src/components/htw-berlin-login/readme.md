@@ -9,7 +9,7 @@
 
 | Property | Attribute | Description           | Type                            | Default   |
 | -------- | --------- | --------------------- | ------------------------------- | --------- |
-| `color`  | `color`   | color scheme of login | `"blue" \| "green" \| "orange"` | `"green"` |
+| `color`  | `color`   | color scheme of login | `"blue" \| "green" \| "orange"` | `'green'` |
 | `dark`   | `dark`    | use dark mode if true | `boolean`                       | `false`   |
 
 

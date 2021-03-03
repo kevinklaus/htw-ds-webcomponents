@@ -16,7 +16,7 @@ export class Typography {
   /**
    * link color
    */
-  @Prop() color: "copy" | "green" | "orange" | "blue" | "grey" = "copy";
+  @Prop() color: 'copy' | 'green' | 'orange' | 'blue' | 'grey' = 'copy';
   @Watch('color')
   validateColor(newValue: string) {
     const colors = ['copy', 'green', 'orange', 'blue', 'grey'];
@@ -29,12 +29,12 @@ export class Typography {
   /**
    * specify the html tag of the typogrphy element
    */
-  @Prop() tag: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span" = "span";
+  @Prop() tag: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'span' = 'span';
 
   /**
    * specify the font-style of the typogrphy element
    */
-  @Prop() fontstyle: "normal" | "bold" |  "italic" = "normal";
+  @Prop() fontstyle: 'normal' | 'bold' |  'italic' = 'normal';
 
 
   @Function() getStyleClasses() {

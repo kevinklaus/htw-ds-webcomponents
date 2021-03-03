@@ -12,7 +12,7 @@ export class Avatar {
   /**
    * render avatar in different sizes
    */
-  @Prop() size: "s" | "m" | "l" = "s";
+  @Prop() size: 's' | 'm' | 'l' = 's';
   @Watch('size')
   validateSize(newValue: string) {
     const sizes = ['s', 'm', 'l'];
@@ -29,18 +29,18 @@ export class Avatar {
   /**
    * set source of image
    */
-  @Prop() src: string = "undefined";
+  @Prop() src: string = 'undefined';
 
   /**
    * set link for avatar
    */
-  @Prop() link: string = "javascript:void(0)";
+  @Prop() link: string = 'javascript:void(0)';
 
 
   @Function()  getStyleClasses() {
     var classList = []
     classList.push(this.size)
-    return classList.join(" ")
+    return classList.join(' ')
   }
 
   render() {

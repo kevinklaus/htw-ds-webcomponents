@@ -1,5 +1,6 @@
 import { configure } from '@storybook/web-components';
 import buildStencilStories from './stories/automatedStories';
+import '../src/global/global.css';
 
 const loader = require('../loader/index.cjs.js');
 

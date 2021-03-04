@@ -14,7 +14,7 @@ export class Chat {
   /**
    * full name of user or group name
    */
-  @Prop() fullname: string;
+  @Prop() fullname: string = "Example User";
 
   /**
    *  color scheme of chat

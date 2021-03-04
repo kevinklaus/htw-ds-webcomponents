@@ -36,12 +36,12 @@ export class Link {
   /**
    * alternative title
    */
-  @Prop() altTitle: string;
+  @Prop() altTitle: string = "Alternative Link Title"; 
 
   /**
    * href property
    */
-  @Prop() href: string;
+  @Prop() href: string = "javascript:void(0)";;
 
   @Function()  getStyleClasses() {
       var classList = []

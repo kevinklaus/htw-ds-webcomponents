@@ -33,22 +33,22 @@ export class Input {
   /**
    * placeholder text to be displayed in input
    */
-  @Prop() placeholder: string = 'Type...';
+  @Prop() placeholder: string = "Type...";
 
   /**
    * label text to be displayed above input field
    */
-  @Prop() label: string = '';
+  @Prop() label: string = "";
 
   /**
    * type of input
    */
-  @Prop() type: string = 'text';
+  @Prop() type: string = "text";
 
   /**
    * alternative title shown on hover
    */
-  @Prop() altTitle: string = 'Enter information here';
+  @Prop() altTitle: string = "Enter information here";
 
   /**
    * user input string

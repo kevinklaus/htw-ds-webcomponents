@@ -38,7 +38,7 @@ export class Logo {
   /**
    * href property
    */
-  @Prop() href: string;
+  @Prop() href: string = "javascript:void(0)";;
   
 
   @Function()  getStyleClasses() {

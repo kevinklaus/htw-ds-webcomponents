@@ -24,17 +24,17 @@ export class Avatar {
   /**
    * set full name of user
    */
-  @Prop() fullname: string;
+  @Prop() fullname: string = "Example User";
 
   /**
    * set source of image
    */
-  @Prop() src: string = 'undefined';
+  @Prop() src: string = "undefined";
 
   /**
    * set link for avatar
    */
-  @Prop() link: string = 'javascript:void(0)';
+  @Prop() link: string = "javascript:void(0)";
 
 
   @Function()  getStyleClasses() {

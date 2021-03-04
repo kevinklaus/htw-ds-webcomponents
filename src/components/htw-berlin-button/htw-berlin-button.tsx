@@ -36,7 +36,7 @@ export class Button {
   /**
    * text to be displayed in button
    */
-  @Prop() text: string;
+  @Prop() text: string = "Button";
 
   /**
    * set true to use dark mode styling
@@ -46,12 +46,12 @@ export class Button {
   /**
    * alternative title
    */
-  @Prop() altTitle: string;
+  @Prop() altTitle: string = "Alternative Button Title";
 
   /**
    * href property
    */
-  @Prop() href: string;
+  @Prop() href: string = "javascript:void(0)";
 
   /**
    * button type, default is anker <a>

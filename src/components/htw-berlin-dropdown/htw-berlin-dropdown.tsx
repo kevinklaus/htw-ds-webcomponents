@@ -14,7 +14,7 @@ export class DropdownMenu {
   /**
    * set the dropdown link text
    */
-  @Prop() droptext: string;
+  @Prop() droptext: string = "Dropdown";
 
   /**
    * use top-menu styling if true

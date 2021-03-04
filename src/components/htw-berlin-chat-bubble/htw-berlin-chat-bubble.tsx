@@ -20,12 +20,12 @@ export class ChatBubble {
   /**
    * full name of user or group name
    */
-  @Prop() fullname: string;
+  @Prop() fullname: string = "Example User";
 
   /**
    * set date and time of message
    */
-  @Prop() datetime: string;
+  @Prop() datetime: string = "12.20pm - 21 July";
 
   @Function()  getStyleClasses() {
     var classList = []

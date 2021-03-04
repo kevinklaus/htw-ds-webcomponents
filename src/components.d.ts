@@ -18,7 +18,7 @@ export namespace Components {
         /**
           * render avatar in different sizes
          */
-        "size": "s" | "m" | "l";
+        "size": 's' | 'm' | 'l';
         /**
           * set source of image
          */
@@ -60,7 +60,7 @@ export namespace Components {
         /**
           * color scheme of chat
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -90,19 +90,19 @@ export namespace Components {
     }
     interface HtwBerlinContentBox {
         /**
-          * pick color to apply to content when variant="color"
+          * pick color to apply to content when variant='color'
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * set style to apply to the content box
          */
-        "variant": "default" | "color" | "secondary" | "dark";
+        "variant": 'default' | 'color' | 'secondary' | 'dark';
     }
     interface HtwBerlinDropdown {
         /**
           * color scheme
          */
-        "color": "green" | "orange" | "blue" | "disabled";
+        "color": 'green' | 'orange' | 'blue' | 'disabled';
         /**
           * use dark mode if true
          */
@@ -124,7 +124,7 @@ export namespace Components {
         /**
           * color applied to the input field
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * use dark color theme if true
          */
@@ -140,7 +140,7 @@ export namespace Components {
         /**
           * set the state of the input field
          */
-        "state": "normal" | "active" | "disabled";
+        "state": 'normal' | 'active' | 'disabled';
         /**
           * type of input
          */
@@ -154,7 +154,7 @@ export namespace Components {
         /**
           * link color
          */
-        "color": "green" | "orange" | "blue" | "disabled";
+        "color": 'green' | 'orange' | 'blue' | 'disabled';
         /**
           * use dark mode if true
          */
@@ -166,17 +166,17 @@ export namespace Components {
         /**
           * set link state if neccessary
          */
-        "state": "default" | "active" | "visited";
+        "state": 'default' | 'active' | 'visited';
         /**
           * use breadcrumb, dropdown or side-menu styling if neccessary
          */
-        "variant": "default" | "side-menu" | "breadcrumb" | "dropdown";
+        "variant": 'default' | 'side-menu' | 'breadcrumb' | 'dropdown';
     }
     interface HtwBerlinLogin {
         /**
           * color scheme of login
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -186,7 +186,7 @@ export namespace Components {
         /**
           * color scheme
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -198,7 +198,7 @@ export namespace Components {
         /**
           * render logo in different sizes
          */
-        "size": "s" | "m" | "l";
+        "size": 's' | 'm' | 'l';
     }
     interface HtwBerlinSideMenu {
         /**
@@ -210,7 +210,7 @@ export namespace Components {
         /**
           * color scheme of table
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -220,7 +220,7 @@ export namespace Components {
         /**
           * color scheme of menu
          */
-        "color": "green" | "orange" | "blue";
+        "color": 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -238,7 +238,7 @@ export namespace Components {
         /**
           * link color
          */
-        "color": "copy" | "green" | "orange" | "blue" | "grey";
+        "color": 'copy' | 'green' | 'orange' | 'blue' | 'grey';
         /**
           * use dark mode if true - reverses copy color to white
          */
@@ -246,11 +246,11 @@ export namespace Components {
         /**
           * specify the font-style of the typogrphy element
          */
-        "fontstyle": "normal" | "bold" |  "italic";
+        "fontstyle": 'normal' | 'bold' |  'italic';
         /**
           * specify the html tag of the typogrphy element
          */
-        "tag": "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span";
+        "tag": 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'span';
     }
 }
 declare global {
@@ -375,7 +375,7 @@ declare namespace LocalJSX {
         /**
           * render avatar in different sizes
          */
-        "size"?: "s" | "m" | "l";
+        "size"?: 's' | 'm' | 'l';
         /**
           * set source of image
          */
@@ -417,7 +417,7 @@ declare namespace LocalJSX {
         /**
           * color scheme of chat
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -447,19 +447,19 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinContentBox {
         /**
-          * pick color to apply to content when variant="color"
+          * pick color to apply to content when variant='color'
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * set style to apply to the content box
          */
-        "variant"?: "default" | "color" | "secondary" | "dark";
+        "variant"?: 'default' | 'color' | 'secondary' | 'dark';
     }
     interface HtwBerlinDropdown {
         /**
           * color scheme
          */
-        "color"?: "green" | "orange" | "blue" | "disabled";
+        "color"?: 'green' | 'orange' | 'blue' | 'disabled';
         /**
           * use dark mode if true
          */
@@ -481,7 +481,7 @@ declare namespace LocalJSX {
         /**
           * color applied to the input field
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * use dark color theme if true
          */
@@ -497,7 +497,7 @@ declare namespace LocalJSX {
         /**
           * set the state of the input field
          */
-        "state"?: "normal" | "active" | "disabled";
+        "state"?: 'normal' | 'active' | 'disabled';
         /**
           * type of input
          */
@@ -511,7 +511,7 @@ declare namespace LocalJSX {
         /**
           * link color
          */
-        "color"?: "green" | "orange" | "blue" | "disabled";
+        "color"?: 'green' | 'orange' | 'blue' | 'disabled';
         /**
           * use dark mode if true
          */
@@ -523,17 +523,17 @@ declare namespace LocalJSX {
         /**
           * set link state if neccessary
          */
-        "state"?: "default" | "active" | "visited";
+        "state"?: 'default' | 'active' | 'visited';
         /**
           * use breadcrumb, dropdown or side-menu styling if neccessary
          */
-        "variant"?: "default" | "side-menu" | "breadcrumb" | "dropdown";
+        "variant"?: 'default' | 'side-menu' | 'breadcrumb' | 'dropdown';
     }
     interface HtwBerlinLogin {
         /**
           * color scheme of login
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -543,7 +543,7 @@ declare namespace LocalJSX {
         /**
           * color scheme
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -555,7 +555,7 @@ declare namespace LocalJSX {
         /**
           * render logo in different sizes
          */
-        "size"?: "s" | "m" | "l";
+        "size"?: 's' | 'm' | 'l';
     }
     interface HtwBerlinSideMenu {
         /**
@@ -567,7 +567,7 @@ declare namespace LocalJSX {
         /**
           * color scheme of table
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -577,7 +577,7 @@ declare namespace LocalJSX {
         /**
           * color scheme of menu
          */
-        "color"?: "green" | "orange" | "blue";
+        "color"?: 'green' | 'orange' | 'blue';
         /**
           * use dark mode if true
          */
@@ -595,7 +595,7 @@ declare namespace LocalJSX {
         /**
           * link color
          */
-        "color"?: "copy" | "green" | "orange" | "blue" | "grey";
+        "color"?: 'copy' | 'green' | 'orange' | 'blue' | 'grey';
         /**
           * use dark mode if true - reverses copy color to white
          */
@@ -603,11 +603,11 @@ declare namespace LocalJSX {
         /**
           * specify the font-style of the typogrphy element
          */
-        "fontstyle"?: "normal" | "bold" |  "italic";
+        "fontstyle"?: 'normal' | 'bold' |  'italic';
         /**
           * specify the html tag of the typogrphy element
          */
-        "tag"?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "span";
+        "tag"?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'span';
     }
     interface IntrinsicElements {
         "htw-berlin-avatar": HtwBerlinAvatar;

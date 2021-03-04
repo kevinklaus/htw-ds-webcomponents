@@ -5,12 +5,12 @@
 
 ## Properties
 
-| Property | Attribute | Description                    | Type                            | Default     |
-| -------- | --------- | ------------------------------ | ------------------------------- | ----------- |
-| `color`  | `color`   | color scheme                   | `"blue" \| "green" \| "orange"` | `'green'`   |
-| `dark`   | `dark`    | use dark mode if true          | `boolean`                       | `false`     |
-| `href`   | `href`    | href property                  | `string`                        | `undefined` |
-| `size`   | `size`    | render logo in different sizes | `"l" \| "m" \| "s"`             | `'s'`       |
+| Property | Attribute | Description                    | Type                            | Default                |
+| -------- | --------- | ------------------------------ | ------------------------------- | ---------------------- |
+| `color`  | `color`   | color scheme                   | `"blue" \| "green" \| "orange"` | `'green'`              |
+| `dark`   | `dark`    | use dark mode if true          | `boolean`                       | `false`                |
+| `href`   | `href`    | href property                  | `string`                        | `"javascript:void(0)"` |
+| `size`   | `size`    | render logo in different sizes | `"l" \| "m" \| "s"`             | `'s'`                  |
 
 
 ## Dependencies

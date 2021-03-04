@@ -5,6 +5,7 @@ import { Component, h, Prop, Watch } from '@stencil/core';
   styleUrl: 'htw-berlin-table.css',
   shadow: false,
 })
+
 export class Table {
 
   /**

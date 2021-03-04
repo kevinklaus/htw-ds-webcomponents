@@ -5,15 +5,15 @@
 
 ## Properties
 
-| Property   | Attribute   | Description                       | Type                                          | Default     |
-| ---------- | ----------- | --------------------------------- | --------------------------------------------- | ----------- |
-| `altTitle` | `alt-title` | alternative title                 | `string`                                      | `undefined` |
-| `color`    | `color`     | button color                      | `"blue" \| "disabled" \| "green" \| "orange"` | `'green'`   |
-| `dark`     | `dark`      | set true to use dark mode styling | `boolean`                                     | `false`     |
-| `href`     | `href`      | href property                     | `string`                                      | `undefined` |
-| `text`     | `text`      | text to be displayed in button    | `string`                                      | `undefined` |
-| `type`     | `type`      | button type, default is anker <a> | `"default" \| "submit"`                       | `'default'` |
-| `variant`  | `variant`   | button variant                    | `"filled" \| "outlined" \| "text"`            | `'filled'`  |
+| Property   | Attribute   | Description                       | Type                                          | Default                      |
+| ---------- | ----------- | --------------------------------- | --------------------------------------------- | ---------------------------- |
+| `altTitle` | `alt-title` | alternative title                 | `string`                                      | `"Alternative Button Title"` |
+| `color`    | `color`     | button color                      | `"blue" \| "disabled" \| "green" \| "orange"` | `'green'`                    |
+| `dark`     | `dark`      | set true to use dark mode styling | `boolean`                                     | `false`                      |
+| `href`     | `href`      | href property                     | `string`                                      | `"javascript:void(0)"`       |
+| `text`     | `text`      | text to be displayed in button    | `string`                                      | `"Button"`                   |
+| `type`     | `type`      | button type, default is anker <a> | `"default" \| "submit"`                       | `'default'`                  |
+| `variant`  | `variant`   | button variant                    | `"filled" \| "outlined" \| "text"`            | `'filled'`                   |
 
 
 ## Dependencies

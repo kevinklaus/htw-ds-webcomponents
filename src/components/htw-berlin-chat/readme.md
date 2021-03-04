@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                     | Type                            | Default     |
-| ---------- | ---------- | ------------------------------- | ------------------------------- | ----------- |
-| `color`    | `color`    | color scheme of chat            | `"blue" \| "green" \| "orange"` | `'green'`   |
-| `dark`     | `dark`     | use dark mode if true           | `boolean`                       | `false`     |
-| `fullname` | `fullname` | full name of user or group name | `string`                        | `undefined` |
+| Property   | Attribute  | Description                     | Type                            | Default          |
+| ---------- | ---------- | ------------------------------- | ------------------------------- | ---------------- |
+| `color`    | `color`    | color scheme of chat            | `"blue" \| "green" \| "orange"` | `'green'`        |
+| `dark`     | `dark`     | use dark mode if true           | `boolean`                       | `false`          |
+| `fullname` | `fullname` | full name of user or group name | `string`                        | `"Example User"` |
 
 
 ## Dependencies

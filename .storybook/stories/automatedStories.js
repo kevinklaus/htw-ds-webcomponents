@@ -3,105 +3,131 @@ https://medium.com/swlh/automated-stories-with-storybook-and-stenciljs-8a8dc611f
 https://github.com/MagalyMJ/stencil-automated-stories
 */
 
+import path from 'path';
+import Case from 'case';
 import { storiesOf } from '@storybook/web-components';
 
 /**
- * Iterates all of the stencil contexts and build a "config" object
- * which is used to generate the individual stories.
+ * Given a property (from stencil Component.properties) and an optional
+ * controlOptions object generates a control which can be used to
+ * dynamically update the properties of the component.
  */
-function buildStencilStories(name, componentsCtx, storiesCtx) {
-  const configs = buildGeneratorConfigs(componentsCtx, storiesCtx);
+function getControlForProp(prop, controlOptions) {
+  let defaultVal = '';
+  let control = {
+    defaultValue: defaultVal,
+    control: { type: 'text' },
+  };
 
-  const stories = storiesOf(name, module);
+  // control options have to be defined using camelCase
+  const propCamel = Case.camel(prop.attribute);
+  const argsOption = controlOptions.args[propCamel] || controlOptions.args[prop.attribute];
+  const argTypesOptions = controlOptions.argTypes[propCamel] || controlOptions.argTypes[prop.attribute];
 
-  Object.keys(configs)
-    .map(comp => configs[comp])
-    .forEach(config =>
-      typeof config === 'function'
-        ? // If the config is a function, call it with the stories context.
-          // The function is responsible for calling stories.add(...) manually.
-          config(stories)
-        : createStencilStory(config, stories),
-    );
+  // if control options are defined, use those
+  if (argTypesOptions) {
+    control = argTypesOptions;
+  }
+  // otherwise, implicitly create controls based on prop type or attribute name
+  else if (/^(?:number|boolean|object)$/i.test(prop.type)) {
+    control = { control: { type: prop.type.toLowerCase() } };
+  } else if (/^(?:string)$/i.test(prop.type)) {
+    if (!/^(?:string|number|boolean|object)$/i.test(prop.complexType.original)) {
+      const arrOptions = prop.complexType.original.split(' | ');
+      const selectOptions = arrOptions.map(o => (o.match(/('(\w|-)+')/g) ? o.replace(/'|\|/gi, '').trim() : o));
+
+      control = {
+        control: {
+          type: 'select',
+          options: selectOptions,
+        },
+      };
+    }
+  } else if (prop.attribute.indexOf('date') !== -1) {
+    control = {
+      control: {
+        type: 'date',
+      },
+    };
+    defaultVal = new Date();
+  }
+
+  if (argsOption) {
+    defaultVal = argsOption;
+  } else if (prop.defaultValue) {
+    try {
+      defaultVal = prop.defaultValue;
+
+      if (typeof defaultVal === 'string') {
+        defaultVal =
+          /('\w+')/g.test(defaultVal) || /('')/g.test(defaultVal) ? (/('')/g.test(defaultVal) ? 'Example Label' : defaultVal.replace(/'/gi, '')) : JSON.parse(defaultVal);
+      }
+    } catch (e) {
+      defaultVal = typeof prop.defaultValue === 'string' ? prop.defaultValue : undefined;
+    }
+  }
+
+  console.log('generating', prop.attribute, 'control with args:', defaultVal, control);
+
+  // switch (type) {
+  //   // controls returns UNIX timestamp for "date" type
+  //   // and we need to convert it to ISO-8601
+  //   case 'date':
+  //     return new Date(val).toISOString();
+  // }
+
+  return { default: defaultVal, control: { ...control, defaultValue: defaultVal } };
 }
 
-export default buildStencilStories;
-
-import path from 'path';
-
 /**
- * Given a module, iterates over the exports and returns the first
- * one which looks like a stencil component (using duck typing).
+ * Given a stencil Component and control options, returns an dictionary of
+ * all the properties and default values.
  */
-function getComponentFromExports(_module) {
-  const key = Object.keys(_module).find(exportKey => {
-    const _export = _module[exportKey];
-    // does it quack like a stencil class component?
-    if (_export.prototype && _export.is && _export.encapsulation) {
-      return true;
+function getPropsWithControlValues(Component, controlOptions) {
+  let controls = { args: {}, argTypes: {} };
+  Object.keys(Component.properties || {}).forEach(key => {
+    const property = Component.properties[key];
+
+    // normalize older "attr" into newer "attribute" property
+    if (property.hasOwnProperty('attr')) {
+      property.attribute = property.attr;
+    }
+
+    if (property.hasOwnProperty('attribute')) {
+      const control = getControlForProp(property, controlOptions);
+      controls = {
+        args: { ...controls.args, [key]: control.default },
+        argTypes: { ...controls.argTypes, [key]: control.control },
+      };
     }
   });
 
-  return _module[key];
+  return controls;
 }
 
 /**
- * Cleans the notes, which should be in markdown format.
- * The markdown parser used by the notes addon is not the best, so
- * we have to fix some issues before rendering.
+ * Template used to render a single stencil component. To use this template
+ * do something like the following code snippet:
+ *
+ *   ```
+ *   const container = document.createElement('div');
+ *   const component = document.createElement('your-component');
+ *   container.innerHTML = getStencilTemplate('Some Title', 'Some Description');
+ *   container.querySelector('.placeholder').appendChild(component);
+ *   ```
  */
-function cleanNotes(notes) {
-  if (notes) {
-    // replaces "\|" with "` `" so property tables to break
-    return notes.replace(/\\\|/g, '` `');
-  }
-}
+function getStencilTemplate({ title, description }) {
+  let template = `
+          <div class="component-area">
+              <h2>${title}</h2>
+              ${description ? '<p>' + description + '</p>' : ''}
+              <div class="placeholder">
+                <!-- the component will be inserted here -->
+              </div>
+          </div>
+      `;
 
-// Gets all stories and check for specific configuration to add to each story
-function buildGeneratorConfigs(componentsCtx, storiesCtx) {
-  const componentRoutes = componentsCtx.keys();
-  const storyRoutes = storiesCtx.keys();
-
-  return componentRoutes.reduce((obj, compRoute) => {
-    const _module = componentsCtx(compRoute);
-    const Component = getComponentFromExports(_module);
-    const dirName = '/' + path.basename(path.dirname(compRoute)) + '/';
-    const storyRoute = storyRoutes.find(k => k.indexOf(dirName) > -1);
-
-    if (!Component) {
-      console.warn(`Couldn't load component ${compRoute}`);
-      return obj;
-    }
-
-    if (storyRoute) {
-      const _export = storiesCtx(storyRoute).default;
-
-      // If the default export is a function, then that function should
-      // be used to create the story. It will be passed the "stories" object
-      // where it should call stories.add(...) manually.
-      if (typeof _export === 'function') {
-        return Object.assign(obj, {
-          [Component.name]: _export,
-        });
-      }
-
-      return Object.assign(obj, {
-        [Component.name]: {
-          Component,
-          states: _export.states,
-          args: _export.args,
-          argTypes: _export.argTypes,
-          notes: cleanNotes(_export.notes),
-        },
-      });
-    }
-
-    return Object.assign(obj, {
-      [Component.name]: {
-        Component,
-      },
-    });
-  }, {});
+  return template;
 }
 
 /**
@@ -130,7 +156,36 @@ function createNodes(el, elements) {
 /**
  * Generates an interactive controls-enabled story for a stencil Component.
  * For any additional states, a static rendering is generated with
- * the given state.
+ * the given state (see existing components for examples).
+ *
+ * Example "states" array:
+ *
+ *   [{
+ *     title: 'A title for this state',
+ *     description: 'A description of why this state exists',
+ *     props: {
+ *        --- props to set on your component ---
+ *     },
+ *     children: [{
+ *        tag: 'span',
+ *        innerText: 'Lorem ipsum',
+ *        children: []
+ *     }]
+ *   }]
+ *
+ * Example "argTypes(controls)" config:
+ *
+ *   {
+ *     [propName]: {          // A decorated @Prop() on your component
+ *        control: {
+ *          type: 'color',       // The type of "control" to use in the controls panel
+ *          description: 'desc'  // The description for the control
+ *          [options]: [         // Options to set for the control built, it can be (options, min, max, step, sepaartor)
+ *            '#ff99cc',         // Check the addon-controls documentation for more info
+ *          ]
+ *        }
+ *     }
+ *   }
  */
 function createStencilStory({ Component, notes, states, args = {}, argTypes = {} }, stories) {
   // It is important that the main container element
@@ -201,109 +256,99 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
 }
 
 /**
- * Template used to render a single stencil component.
+ * Given a module, iterates over the exports and returns the first
+ * one which looks like a stencil component (using duck typing).
  */
-function getStencilTemplate({ title, description }) {
-  let template = `
-          <div class="component-area">
-              <h2>${title}</h2>
-              ${description ? '<p>' + description + '</p>' : ''}
-              <div class="placeholder">
-                <!-- the component will be inserted here -->
-              </div>
-          </div>
-      `;
-
-  return template;
-}
-
-import Case from 'case';
-
-/**
- * Given a property (from stencil Component.properties) and an optional
- * controlOptions object generates a control which can be used to
- * dynamically update the properties of the component.
- */
-function getControlForProp(prop, controlOptions) {
-  let defaultVal = '';
-  let control = {
-    defaultValue: defaultVal,
-    control: { type: 'text' },
-  };
-
-  // control options have to be defined using camelCase
-  const propCamel = Case.camel(prop.attribute);
-  const argsOption = controlOptions.args[propCamel] || controlOptions.args[prop.attribute];
-  const argTypesOptions = controlOptions.argTypes[propCamel] || controlOptions.argTypes[prop.attribute];
-
-  // if control options are defined, use those
-  if (argTypesOptions) {
-    control = argTypesOptions;
-  }
-  // otherwise, implicitly create controls based on prop type or attribute name
-  else if (/^(?:number|boolean|object)$/i.test(prop.type)) {
-    control = { control: { type: prop.type.toLowerCase() } };
-  } else if (/^(?:string)$/i.test(prop.type)) {
-    if (!/^(?:string|number|boolean|object)$/i.test(prop.complexType.original)) {
-      const arrOptions = prop.complexType.original.split(' | ');
-      const selectOptions = arrOptions.map(o => (o.match(/('(\w|-)+')/g) ? o.replace(/'|\|/gi, '').trim() : o));
-
-      control = {
-        control: {
-          type: 'select',
-          options: selectOptions,
-        },
-      };
-    }
-  } else if (prop.attribute.indexOf('date') !== -1) {
-    control = {
-      control: {
-        type: 'date',
-      },
-    };
-    defaultVal = new Date();
-  }
-
-  if (argsOption) {
-    defaultVal = argsOption;
-  } else if (prop.defaultValue) {
-    try {
-      defaultVal = prop.defaultValue;
-
-      if (typeof defaultVal === 'string') {
-        defaultVal =
-          /('\w+')/g.test(defaultVal) || /('')/g.test(defaultVal) ? (/('')/g.test(defaultVal) ? 'Example Label' : defaultVal.replace(/'/gi, '')) : JSON.parse(defaultVal);
-      }
-    } catch (e) {
-      defaultVal = typeof prop.defaultValue === 'string' ? prop.defaultValue : undefined;
-    }
-  }
-
-  return { default: defaultVal, control: { ...control, defaultValue: defaultVal } };
-}
-
-/**
- * Given a stencil Component and control options, returns an dictionary of
- * all the properties and default values.
- */
-function getPropsWithControlValues(Component, controlOptions) {
-  let controls = { args: {}, argTypes: {} };
-  Object.keys(Component.properties || {}).forEach(key => {
-    const property = Component.properties[key];
-
-    // normalize older "attr" into newer "attribute" property
-    if (property.hasOwnProperty('attr')) {
-      property.attribute = property.attr;
-    }
-
-    if (property.hasOwnProperty('attribute')) {
-      const control = getControlForProp(property, controlOptions);
-      controls = {
-        args: { ...controls.args, [key]: control.default },
-        argTypes: { ...controls.argTypes, [key]: control.control },
-      };
+function getComponentFromExports(_module) {
+  const key = Object.keys(_module).find(exportKey => {
+    const _export = _module[exportKey];
+    // does it quack like a stencil class component?
+    if (_export.prototype && _export.is && _export.encapsulation) {
+      return true;
     }
   });
 
-  return controls;
+  return _module[key];
 }
+
+/**
+ * Cleans the notes, which should be in markdown format.
+ * The markdown parser used by the notes addon is not the best, so
+ * we have to fix some issues before rendering.
+ */
+function cleanNotes(notes) {
+  if (notes) {
+    console.log('adding notes: ', notes);
+    // replaces "\|" with "` `" so property tables to break
+    return notes.replace(/\\\|/g, '` `');
+  }
+}
+
+// Gets all stories and check for specific configuration to add to each story
+function buildGeneratorConfigs(componentsCtx, storiesCtx) {
+  const componentRoutes = componentsCtx.keys();
+  const storyRoutes = storiesCtx.keys();
+
+  return componentRoutes.reduce((obj, compRoute) => {
+    const _module = componentsCtx(compRoute);
+    const Component = getComponentFromExports(_module);
+    const dirName = '/' + path.basename(path.dirname(compRoute)) + '/';
+    const storyRoute = storyRoutes.find(k => k.indexOf(dirName) > -1);
+
+    if (!Component) {
+      console.warn(`Couldn't load component ${compRoute}`);
+      return obj;
+    }
+
+    if (storyRoute) {
+      const _export = storiesCtx(storyRoute).default;
+
+      // If the default export is a function, then that function should
+      // be used to create the story. It will be passed the "stories" object
+      // where it should call stories.add(...) manually.
+      if (typeof _export === 'function') {
+        return Object.assign(obj, {
+          [Component.name]: _export,
+        });
+      }
+
+      return Object.assign(obj, {
+        [Component.name]: {
+          Component,
+          states: _export.states,
+          args: _export.args,
+          argTypes: _export.argTypes,
+          notes: cleanNotes(_export.notes),
+        },
+      });
+    }
+
+    return Object.assign(obj, {
+      [Component.name]: {
+        Component,
+      },
+    });
+  }, {});
+}
+
+/**
+ * Iterates all of the stencil contexts and build a "config" object
+ * which is used to generate the individual stories.
+ */
+function buildStencilStories(name, componentsCtx, storiesCtx) {
+  const configs = buildGeneratorConfigs(componentsCtx, storiesCtx);
+
+  const stories = storiesOf(name, module);
+
+  Object.keys(configs)
+    .map(comp => configs[comp])
+    .forEach(config =>
+      typeof config === 'function'
+        ? // If the config is a function, call it with the stories context.
+          // The function is responsible for calling stories.add(...) manually.
+          config(stories)
+        : createStencilStory(config, stories),
+    );
+}
+
+export default buildStencilStories;

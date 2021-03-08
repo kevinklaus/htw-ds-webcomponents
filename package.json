@@ -23,7 +23,7 @@
     "generate": "stencil generate",
     "storybook": "npm-run-all --parallel build storybook.run",
     "build-storybook": "build-storybook -c ./.storybook -o ../public",
-    "storybook.run": "start-storybook -p 6006 -s dist"
+    "storybook.run": "start-storybook -p 6006 -s dist --no-manager-cache"
   },
   "dependencies": {
     "@stencil/core": "2.3.0"
@@ -31,12 +31,14 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.1",
-    "@storybook/addon-actions": "^6.1.20",
-    "@storybook/addon-essentials": "^6.1.20",
-    "@storybook/addon-links": "^6.1.20",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
     "@storybook/addon-notes": "^5.3.21",
-    "@storybook/addon-viewport": "^6.1.20",
-    "@storybook/web-components": "^6.1.20",
+    "@storybook/addon-viewport": "^6.1.21",
+    "@storybook/addons": "^6.1.21",
+    "@storybook/theming": "^6.1.21",
+    "@storybook/web-components": "^6.1.21",
     "@types/jest": "^26.0.20",
     "babel-loader": "^8.2.2",
     "case": "^1.6.3",

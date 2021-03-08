@@ -1,7 +1,6 @@
-# htw-berlin-top-menu
+# htw-berlin-dropdown
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +11,6 @@
 | `droptext` | `droptext` | set the dropdown link text   | `string`                                      | `"Dropdown"` |
 | `topmenu`  | `topmenu`  | use top-menu styling if true | `boolean`                                     | `false`      |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

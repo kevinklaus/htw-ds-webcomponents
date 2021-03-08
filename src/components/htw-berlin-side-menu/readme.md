@@ -1,7 +1,6 @@
-# htw-berlin-top-menu
+# htw-berlin-side-menu
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -9,7 +8,6 @@
 | -------- | --------- | --------------------- | --------- | ------- |
 | `dark`   | `dark`    | use dark mode if true | `boolean` | `false` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

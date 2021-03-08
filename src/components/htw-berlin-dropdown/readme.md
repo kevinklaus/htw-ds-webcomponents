@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description                  | Type                                          | Default      |
@@ -11,6 +12,7 @@
 | `droptext` | `droptext` | set the dropdown link text   | `string`                                      | `"Dropdown"` |
 | `topmenu`  | `topmenu`  | use top-menu styling if true | `boolean`                                     | `false`      |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

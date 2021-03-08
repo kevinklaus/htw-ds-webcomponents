@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute     | Description                                  | Type                                 | Default                    |
@@ -14,20 +15,20 @@
 | `state`       | `state`       | set the state of the input field             | `"active" \| "disabled" \| "normal"` | `'normal'`                 |
 | `type`        | `type`        | type of input                                | `string`                             | `"text"`                   |
 
+
 ## Dependencies
 
 ### Used by
 
-- [htw-berlin-login](../htw-berlin-login)
+ - [htw-berlin-login](../htw-berlin-login)
 
 ### Graph
-
 ```mermaid
 graph TD;
   htw-berlin-login --> htw-berlin-input
   style htw-berlin-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

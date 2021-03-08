@@ -119,7 +119,7 @@ function getPropsWithControlValues(Component, controlOptions) {
 function getStencilTemplate({ title, description }) {
   let template = `
           <div class="component-area">
-              <h2>${title}</h2>
+              <htw-berlin-typography tag="h3" color="green" fontstyle="normal">${title}</htw-berlin-typography>
               ${description ? '<p>' + description + '</p>' : ''}
               <div class="placeholder">
                 <!-- the component will be inserted here -->
@@ -203,6 +203,18 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
     props: {},
     children: [{ tag: 'span', innerText: 'Default' }],
   });
+
+  // @TODO check if stories can be grouped according to stomic design
+  // componentName = Component.name;
+  // var componentName = 'Typography';
+  // const particles = ['Typography'];
+  // const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Avatar', 'Logo'];
+  // const molecules = ['DropdownMenu', 'SideMenu', 'TopMenu', 'Chat', 'Login'];
+  // const organisms = ['ApplicationPage'];
+
+  // if (particles.includes(componentName)) {
+  //   componentName = 'Design System/Particels/' + componentName;
+  // }
 
   // Create the story with all of the states
   stories.add(

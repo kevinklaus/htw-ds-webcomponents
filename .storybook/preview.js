@@ -12,6 +12,24 @@ const COLLECTIONS = [
   },
 ];
 
+export const parameters = {
+  layout: 'padded',
+  backgrounds: {
+    values: [
+      { name: 'light', value: '#fff' },
+      { name: 'dark', value: '#575757' },
+    ],
+  },
+  docs: {
+    extractComponentDescription: (component, { notes }) => {
+      if (notes) {
+        return typeof notes === 'string' ? notes : notes.markdown || notes.text;
+      }
+      return null;
+    },
+  },
+};
+
 function loadStories() {
   loader.defineCustomElements(window);
   COLLECTIONS.forEach(({ name, componentsCtx, storiesCtx }) => {

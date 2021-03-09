@@ -67,14 +67,7 @@ function getControlForProp(prop, controlOptions) {
     }
   }
 
-  console.log('generating', prop.attribute, 'control with args:', defaultVal, control);
-
-  // switch (type) {
-  //   // controls returns UNIX timestamp for "date" type
-  //   // and we need to convert it to ISO-8601
-  //   case 'date':
-  //     return new Date(val).toISOString();
-  // }
+  //console.log('generating', prop.attribute, 'control with args:', defaultVal, control);
 
   return { default: defaultVal, control: { ...control, defaultValue: defaultVal } };
 }
@@ -119,7 +112,7 @@ function getPropsWithControlValues(Component, controlOptions) {
 function getStencilTemplate({ title, description }) {
   let template = `
           <div class="component-area">
-              <htw-berlin-typography tag="h3" color="green" fontstyle="normal">${title}</htw-berlin-typography>
+              <htw-berlin-typography tag="h3" color="green" fontstyle="italic">${title}</htw-berlin-typography>
               ${description ? '<p>' + description + '</p>' : ''}
               <div class="placeholder">
                 <!-- the component will be inserted here -->
@@ -187,7 +180,7 @@ function createNodes(el, elements) {
  *     }
  *   }
  */
-function createStencilStory({ Component, notes, states, args = {}, argTypes = {} }, stories) {
+function createStencilStory({ Component, notes, states, args = {}, argTypes = {} }) {
   // It is important that the main container element
   // is NOT created inside of the render function below!!
   const mainEl = document.createElement('div');
@@ -204,21 +197,39 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
     children: [{ tag: 'span', innerText: 'Default' }],
   });
 
-  // @TODO check if stories can be grouped according to stomic design
-  // componentName = Component.name;
-  // var componentName = 'Typography';
-  // const particles = ['Typography'];
-  // const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Avatar', 'Logo'];
-  // const molecules = ['DropdownMenu', 'SideMenu', 'TopMenu', 'Chat', 'Login'];
-  // const organisms = ['ApplicationPage'];
+  var componentName = Component.name;
+  // list of stories with a custom built story
+  const customStory = ['DropdownMenu', 'Breadcrumb', 'TopMenu', 'SideMenu', 'Chat'];
+  // group stories according to atomic design
+  const particles = ['Typography'];
+  const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Avatar', 'Logo'];
+  const molecules = ['Login'];
+  const organisms = ['ApplicationPage'];
 
-  // if (particles.includes(componentName)) {
-  //   componentName = 'Design System/Particels/' + componentName;
-  // }
+  var storyName = '';
+
+  if (customStory.includes(componentName)) {
+    //console.log('Component is already listed with a custom story. Skipping automatic story build.');
+    return;
+  } else if (particles.includes(componentName)) {
+    storyName = 'Design System/Particles/';
+  } else if (atoms.includes(componentName)) {
+    storyName = 'Design System/Atoms/';
+  } else if (molecules.includes(componentName)) {
+    storyName = 'Design System/Molecules/';
+  } else if (organisms.includes(componentName)) {
+    storyName = 'Design System/Organisms/';
+  } else {
+    console.log('Error grouping Component into Atomic category. List your component in the categories or custom story array.');
+  }
+
+  storyName = storyName + componentName;
+
+  var stories = storiesOf(storyName, module);
 
   // Create the story with all of the states
   stories.add(
-    Component.name,
+    componentName,
     args => {
       mainEl.innerHTML = '';
       // First, add the controls-enabled props to the default state.
@@ -283,18 +294,18 @@ function getComponentFromExports(_module) {
   return _module[key];
 }
 
-/**
- * Cleans the notes, which should be in markdown format.
- * The markdown parser used by the notes addon is not the best, so
- * we have to fix some issues before rendering.
- */
-function cleanNotes(notes) {
-  if (notes) {
-    console.log('adding notes: ', notes);
-    // replaces "\|" with "` `" so property tables to break
-    return notes.replace(/\\\|/g, '` `');
-  }
-}
+// /**
+//  * Cleans the notes, which should be in markdown format.
+//  * The markdown parser used by the notes addon is not the best, so
+//  * we have to fix some issues before rendering.
+//  */
+// function cleanNotes(notes) {
+//   if (notes) {
+//     console.log('adding notes: ', notes);
+//     // replaces "\|" with "` `" so property tables to break
+//     return notes.replace(/\\\|/g, '` `');
+//   }
+// }
 
 // Gets all stories and check for specific configuration to add to each story
 function buildGeneratorConfigs(componentsCtx, storiesCtx) {
@@ -324,13 +335,15 @@ function buildGeneratorConfigs(componentsCtx, storiesCtx) {
         });
       }
 
+      console.log('notes:', dirName + 'readme.md');
+
       return Object.assign(obj, {
         [Component.name]: {
           Component,
           states: _export.states,
           args: _export.args,
           argTypes: _export.argTypes,
-          notes: cleanNotes(_export.notes),
+          notes: dirName + 'readme.md',
         },
       });
     }
@@ -359,7 +372,7 @@ function buildStencilStories(name, componentsCtx, storiesCtx) {
         ? // If the config is a function, call it with the stories context.
           // The function is responsible for calling stories.add(...) manually.
           config(stories)
-        : createStencilStory(config, stories),
+        : createStencilStory(config, name),
     );
 }
 

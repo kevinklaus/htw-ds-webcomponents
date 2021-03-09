@@ -1,5 +1,7 @@
 # htw-berlin-side-menu
 
+The side menu can wrap any number of htw-berlin-link elements.
+
 <!-- Auto Generated Below -->
 
 

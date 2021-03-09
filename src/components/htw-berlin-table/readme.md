@@ -1,6 +1,6 @@
 # htw-berlin-table
 
-
+Wrap standard html tables in this component to apply HTW Berlin styling to the table.
 
 <!-- Auto Generated Below -->
 

@@ -1,5 +1,7 @@
 # htw-berlin-dropdown
 
+The dropdown menu can wrap any number of htw-berlin-link elements.
+
 <!-- Auto Generated Below -->
 
 

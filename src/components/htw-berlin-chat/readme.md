@@ -1,6 +1,7 @@
 # htw-berlin-chat
 
-
+The chat component can wrap any number of htw-berlin-chat-bubble elements in the slot="messages".
+One htw-berlin-avatar can be slotted into slot="avatar".
 
 <!-- Auto Generated Below -->
 

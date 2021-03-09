@@ -30,11 +30,18 @@
 }
 
 .bold {
+  font-style: normal;
   font-weight: bold;
 }
 
 .italic {
   font-style: italic;
+  font-weight: normal;
+}
+
+.bolditalic {
+  font-style: italic;
+  font-weight: bold;
 }
 
 .normal {

@@ -34,7 +34,7 @@ export class Typography {
   /**
    * specify the font-style of the typogrphy element
    */
-  @Prop() fontstyle: 'normal' | 'bold' |  'italic' = 'normal';
+  @Prop() fontstyle: 'normal' | 'bold' | 'italic' | 'bolditalic' = 'normal';
 
 
   @Function() getStyleClasses() {

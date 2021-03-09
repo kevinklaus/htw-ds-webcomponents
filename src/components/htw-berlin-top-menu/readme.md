@@ -1,5 +1,7 @@
 # htw-berlin-top-menu
 
+The top menu can include n htw-berlin-link elements, one htw-berlin-dropdown menu and one htw-berlin-avatar. These should be placed into their according slots by defining slot="link", slot="avatar", slot="dropdown" attributes for each slotted element.
+
 <!-- Auto Generated Below -->
 
 

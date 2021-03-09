@@ -246,7 +246,7 @@ export namespace Components {
         /**
           * specify the font-style of the typogrphy element
          */
-        "fontstyle": 'normal' | 'bold' |  'italic';
+        "fontstyle": 'normal' | 'bold' | 'italic' | 'bolditalic';
         /**
           * specify the html tag of the typogrphy element
          */
@@ -603,7 +603,7 @@ declare namespace LocalJSX {
         /**
           * specify the font-style of the typogrphy element
          */
-        "fontstyle"?: 'normal' | 'bold' |  'italic';
+        "fontstyle"?: 'normal' | 'bold' | 'italic' | 'bolditalic';
         /**
           * specify the html tag of the typogrphy element
          */

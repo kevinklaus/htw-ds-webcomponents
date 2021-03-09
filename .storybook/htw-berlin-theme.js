@@ -26,7 +26,7 @@ export default create({
 
   // Form colors
   inputBg: '#fff',
-  inputBorder: '#afafaf',
+  inputBorder: '#C2DD91',
   inputTextColor: '#333',
   inputBorderRadius: 4,
 });

@@ -1,10 +1,11 @@
 import { create } from '@storybook/theming';
+import htwStroybookImg from '../src/global/350x150pxStorybookLogo.png';
 
 export default create({
   base: 'light',
   brandTitle: 'HTW Berlin Design System',
   brandUrl: 'https://htw-berlin.de',
-  brandImage: '../src/assets/350x150pxStorybookLogo.png',
+  brandImage: '/${htwStroybookImg}',
 
   colorPrimary: '#76B900',
   colorSecondary: '#76B900',
@@ -12,7 +13,6 @@ export default create({
   // UI
   appBg: '#ebebeb',
   appContentBg: '#fff',
-  appBorderColor: '#F3F8E9',
   appBorderRadius: 8,
 
   // Text colors
@@ -26,7 +26,7 @@ export default create({
 
   // Form colors
   inputBg: '#fff',
-  inputBorder: '#F3F8E9',
+  inputBorder: '#afafaf',
   inputTextColor: '#333',
   inputBorderRadius: 4,
 });

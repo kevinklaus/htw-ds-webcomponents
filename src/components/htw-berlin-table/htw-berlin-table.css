@@ -20,6 +20,7 @@ th {
 
 tr {
   color: var(--dark-grey);
+  background-color: var(--white);
 }
 
 div.dark th {
@@ -29,6 +30,7 @@ div.dark th {
 div.dark td,
 div.dark tr {
   color: var(--background-grey);
+  background-color: var(--dark-grey);
 }
 
 div.orange th {

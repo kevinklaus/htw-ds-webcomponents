@@ -1,7 +1,7 @@
 import readme from './readme.md';
 
 export default {
-  title: 'Design System/Molecules',
+  title: 'Design System/Molecules/Side Menu',
   parameters: {
     notes: readme,
   },

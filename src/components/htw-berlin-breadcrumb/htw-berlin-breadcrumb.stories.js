@@ -1,7 +1,8 @@
 import readme from './readme.md';
+import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Design System/Molecules',
+  title: 'Design System/Molecules/Breadcrumb',
   parameters: {
     notes: readme,
   },
@@ -55,4 +56,11 @@ export const Breadcrumb = Template.bind({});
 Breadcrumb.args = {
   color: 'green',
   dark: false,
+};
+
+Breadcrumb.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/3G68UamepjyuhaTgi6knvD/HTW-Berlin-Design-System?node-id=194%3A839',
+  },
 };

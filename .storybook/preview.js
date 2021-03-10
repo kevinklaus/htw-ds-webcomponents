@@ -15,8 +15,10 @@ const COLLECTIONS = [
 export const parameters = {
   layout: 'padded',
   backgrounds: {
+    default: 'white',
     values: [
-      { name: 'light', value: '#fff' },
+      { name: 'white', value: '#fff' },
+      { name: 'light', value: '#ebebeb' },
       { name: 'dark', value: '#575757' },
     ],
   },

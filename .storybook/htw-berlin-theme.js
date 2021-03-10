@@ -1,11 +1,11 @@
 import { create } from '@storybook/theming';
-import htwStroybookImg from '../src/global/350x150pxStorybookLogo.png';
+import htwStroybookImg from '../dist/collection/global/350x150pxStorybookLogo.png';
 
 export default create({
   base: 'light',
   brandTitle: 'HTW Berlin Design System',
   brandUrl: 'https://htw-berlin.de',
-  brandImage: '/${htwStroybookImg}',
+  brandImage: htwStroybookImg,
 
   colorPrimary: '#76B900',
   colorSecondary: '#76B900',

@@ -9,7 +9,8 @@ export const config: Config = {
       esmLoaderPath: '../loader',
       copy: [
         { src: 'global/fonts', dest: './fonts', warn: true},
-        { src: 'components/**/*readme.md', warn: true}
+        { src: 'components/**/*readme.md', warn: true},
+        { src: 'global/350x150pxStorybookLogo.png', warn: true}
       ],
     },
     {

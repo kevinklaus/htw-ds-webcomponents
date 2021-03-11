@@ -8,4 +8,4 @@ Additionally see the htw-berlin-link docs for setting link states, color and dar
 
 ----------------------------------------------
 
-*Built with [StencilJS](https://stenciljs.com/)*
+

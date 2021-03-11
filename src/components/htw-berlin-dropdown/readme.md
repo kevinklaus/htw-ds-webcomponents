@@ -17,4 +17,4 @@ The dropdown menu can wrap any number of htw-berlin-link elements.
 
 ----------------------------------------------
 
-*Built with [StencilJS](https://stenciljs.com/)*
+

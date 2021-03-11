@@ -15,4 +15,4 @@ Wrap standard html tables in this component to apply HTW Berlin styling to the t
 
 ----------------------------------------------
 
-*Built with [StencilJS](https://stenciljs.com/)*
+

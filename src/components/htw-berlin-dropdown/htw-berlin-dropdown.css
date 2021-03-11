@@ -58,12 +58,13 @@ div.htw-berlin-dropdown div.content {
 div.htw-berlin-dropdown.top-menu {
   float: right;
   padding-right: 25px;
+  position: relative;
 }
 
 div.htw-berlin-dropdown.top-menu div.content {
   position: absolute;
   z-index: 999;
-  right: 15px;
+  right: 10px;
 }
 
 /* dark */

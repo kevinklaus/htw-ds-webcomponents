@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.js'],
   addons: [
     '@storybook/addon-links',
     {
@@ -27,11 +27,11 @@ module.exports = {
     config.module.rules[0].use[0].options.sourceType = 'unambiguous';
 
     config.module.rules.push({
-      test: /.\.stories\.tsx$/,
+      test: /.\.stories\.js$/,
       exclude: /(src)/,
       use: 'raw-loader',
     });
-    config.resolve.extensions.push('.stories.tsx');
+    config.resolve.extensions.push('.stories.js');
 
     config.resolve.alias = {
       '@src': path.resolve(__dirname, '../dist/collection'),

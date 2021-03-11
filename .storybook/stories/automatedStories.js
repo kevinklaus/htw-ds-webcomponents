@@ -199,17 +199,18 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
 
   var componentName = Component.name;
   // list of stories with a custom built story
-  const customStory = ['DropdownMenu', 'Breadcrumb', 'TopMenu', 'SideMenu', 'Chat'];
-  // group stories according to atomic design
+  const customStory = ['DropdownMenu', 'Breadcrumb', 'TopMenu', 'SideMenu', 'Chat', 'ApplicationPage'];
+  // group stories according to atomic design structure
   const particles = ['Typography'];
   const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Avatar', 'Logo'];
   const molecules = ['Login'];
-  const organisms = ['ApplicationPage'];
+  const organisms = [];
 
+  // set story name according to atomic design structure
   var storyName = '';
 
   if (customStory.includes(componentName)) {
-    //console.log('Component is already listed with a custom story. Skipping automatic story build.');
+    //console.log('Component is already listed with a custom story. Skipping automated story build.');
     return;
   } else if (particles.includes(componentName)) {
     storyName = 'Design System/Particles/';
@@ -335,15 +336,13 @@ function buildGeneratorConfigs(componentsCtx, storiesCtx) {
         });
       }
 
-      console.log('notes:', dirName + 'readme.md');
-
       return Object.assign(obj, {
         [Component.name]: {
           Component,
           states: _export.states,
           args: _export.args,
           argTypes: _export.argTypes,
-          notes: dirName + 'readme.md',
+          notes: _export.notes,
         },
       });
     }

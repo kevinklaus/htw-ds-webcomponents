@@ -194,7 +194,7 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
     title: 'Default state (use Controls below to edit props):',
     tag: Component.is,
     props: {},
-    children: [{ tag: 'span', innerText: 'Default' }],
+    children: [{ tag: 'span', innerText: 'Lorem ipsum' }],
   });
 
   var componentName = Component.name;

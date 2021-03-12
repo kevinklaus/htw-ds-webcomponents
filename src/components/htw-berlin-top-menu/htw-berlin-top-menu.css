@@ -51,7 +51,6 @@ div.htw-berlin-top-menu htw-berlin-avatar {
   div.htw-berlin-top-menu.responsive htw-berlin-link,
   div.htw-berlin-top-menu.responsive htw-berlin-dropdown {
     display: block;
-    overflow: auto;
   }
 
   div.htw-berlin-top-menu.responsive > htw-berlin-link:first-of-type {

@@ -156,9 +156,6 @@ function createNodes(el, elements) {
  *   }
  */
 function createStencilStory({ Component, notes, states, args = {}, argTypes = {} }) {
-  // It is important that the main container element
-  // is NOT created inside of the render function below!!
-  const mainEl = document.createElement('div');
   const controls = getPropsWithControlValues(Component, { args, argTypes });
   const storyOpts = notes ? { notes, args: controls.args, argTypes: controls.argTypes } : { args: controls.args, argTypes: controls.argTypes };
   const tag = Component.is;
@@ -207,19 +204,17 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
   stories.add(
     componentName,
     args => {
-      mainEl.innerHTML = '';
       // First, add the controls-enabled props to the default state.
       // This MUST be done inside this render function!!
       states[0].props = { ...args };
       states[0].argTypes = controls.argTypes;
 
+      const componentEl = document.createElement(String(tag));
+
       // Next, render each state. Only the first one is interactive (with controls).
       // This is sort of a light-weight "chapters" addon because the community
       // "chapters" addon only works with react :/
       states.forEach(({ title, description, props, children }) => {
-        const containerEl = document.createElement('div');
-        const componentEl = document.createElement(String(tag));
-
         if (props) {
           Object.keys(props).forEach(prop => {
             const propKebab = Case.kebab(prop);
@@ -234,11 +229,9 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
         if (children) {
           createNodes(componentEl, children);
         }
-
-        mainEl.appendChild(componentEl);
       });
 
-      return mainEl;
+      return componentEl;
     },
     storyOpts,
   );

@@ -99,31 +99,6 @@ function getPropsWithControlValues(Component, controlOptions) {
 }
 
 /**
- * Template used to render a single stencil component. To use this template
- * do something like the following code snippet:
- *
- *   ```
- *   const container = document.createElement('div');
- *   const component = document.createElement('your-component');
- *   container.innerHTML = getStencilTemplate('Some Title', 'Some Description');
- *   container.querySelector('.placeholder').appendChild(component);
- *   ```
- */
-function getStencilTemplate({ title, description }) {
-  let template = `
-          <div class="component-area">
-              <htw-berlin-typography tag="h3" color="green" fontstyle="italic">${title}</htw-berlin-typography>
-              ${description ? '<p>' + description + '</p>' : ''}
-              <div class="placeholder">
-                <!-- the component will be inserted here -->
-              </div>
-          </div>
-      `;
-
-  return template;
-}
-
-/**
  * Generates DOM nodes from states to render.
  */
 function createNodes(el, elements) {
@@ -260,17 +235,7 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
           createNodes(componentEl, children);
         }
 
-        containerEl.innerHTML = getStencilTemplate({
-          title,
-          description,
-          tag,
-          props,
-          args,
-          children,
-        });
-
-        containerEl.querySelector(`.placeholder`).appendChild(componentEl);
-        mainEl.appendChild(containerEl);
+        mainEl.appendChild(componentEl);
       });
 
       return mainEl;

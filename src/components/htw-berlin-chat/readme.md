@@ -1,7 +1,11 @@
 # htw-berlin-chat
 
-The chat component can wrap any number of htw-berlin-chat-bubble elements in the slot="messages".
-One htw-berlin-avatar can be slotted into slot="avatar".
+The chat component can wrap any number of [htw-berlin-chat-bubble](../?path=/docs/design-system-atoms-chatbubble--chatbubble) elements as well as one [htw-berlin-avatar](../?path=/docs/design-system-atoms-avatar--avatar) can be slotted optionally.
+
+#### Slotting Chat Bubbles and Avatar
+
+- The [htw-berlin-chat-bubble](../?path=/docs/design-system-atoms-chatbubble--chatbubble)s should be passed with the attribute `slot="messages"`.
+- The [htw-berlin-avatar](../?path=/docs/design-system-atoms-avatar--avatar) should be passed with the attribute `slot="avatar"`.
 
 <!-- Auto Generated Below -->
 
@@ -30,4 +34,5 @@ graph TD;
 
 ----------------------------------------------
 
-
+## Using Dark Styles 
+When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

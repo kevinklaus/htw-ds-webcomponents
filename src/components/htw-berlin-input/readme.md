@@ -1,19 +1,25 @@
 # htw-berlin-input
 
+Input fields are a form element to collect text input from users. They are used by the [htw-berlin-login](../?path=/docs/design-system-molecules-login--login) for instance.
+
+### Input + Label
+
+Add a label to your Input field by defining the `label` attribute.
+
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property      | Attribute     | Description                                  | Type                                 | Default                    |
-| ------------- | ------------- | -------------------------------------------- | ------------------------------------ | -------------------------- |
-| `altTitle`    | `alt-title`   | alternative title shown on hover             | `string`                             | `"Enter information here"` |
-| `color`       | `color`       | color applied to the input field             | `"blue" \| "green" \| "orange"`      | `'green'`                  |
-| `dark`        | `dark`        | use dark color theme if true                 | `boolean`                            | `undefined`                |
-| `label`       | `label`       | label text to be displayed above input field | `string`                             | `""`                       |
-| `placeholder` | `placeholder` | placeholder text to be displayed in input    | `string`                             | `"Type..."`                |
-| `state`       | `state`       | set the state of the input field             | `"active" \| "disabled" \| "normal"` | `'normal'`                 |
-| `type`        | `type`        | type of input                                | `string`                             | `"text"`                   |
+| Property      | Attribute     | Description                                                                                | Type                                 | Default                    |
+| ------------- | ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------- |
+| `altTitle`    | `alt-title`   | alternative title shown on hover                                                           | `string`                             | `"Enter information here"` |
+| `color`       | `color`       | color applied to the input field                                                           | `"blue" \| "green" \| "orange"`      | `'green'`                  |
+| `dark`        | `dark`        | use dark color theme if true                                                               | `boolean`                            | `undefined`                |
+| `label`       | `label`       | label text to be displayed above input field                                               | `string`                             | `""`                       |
+| `placeholder` | `placeholder` | placeholder text to be displayed in input                                                  | `string`                             | `"Type..."`                |
+| `state`       | `state`       | set the state of the input field                                                           | `"active" \| "disabled" \| "normal"` | `'normal'`                 |
+| `type`        | `type`        | set the input type [Input types](https://www.w3schools.com/html/html_form_input_types.asp) | `string`                             | `"text"`                   |
 
 
 ## Dependencies
@@ -31,4 +37,5 @@ graph TD;
 
 ----------------------------------------------
 
-
+## Using Dark Styles 
+When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

@@ -1,5 +1,10 @@
 # htw-berlin-avatar
 
+Circular image component to display a user picture. The href of the anker wrapper can be set by defining the `link` attribute.
+
+- When using the avatar in a [htw-berlin-chat](../?path=/docs/design-system-molecules-chat--chat) set `size="s"` and `slot="avatar"`.
+- When using the avatar in a [htw-berlin-top-menu](../?path=/docs/design-system-molecules-top-menu--standard) set `size="s"` and `slot="avatar"`.
+
 <!-- Auto Generated Below -->
 
 
@@ -15,4 +20,5 @@
 
 ----------------------------------------------
 
-
+## Using Dark Styles 
+When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

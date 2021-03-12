@@ -1,7 +1,10 @@
 # htw-berlin-logo
 
-<!-- Auto Generated Below -->
+The HTW Berlin logo can be used in three different `size`s
 
+It is used by the [htw-berlin-top-menu](../?path=/docs/design-system-molecules-top-menu--standard).
+
+<!-- Auto Generated Below -->
 
 ## Properties
 
@@ -12,20 +15,22 @@
 | `href`   | `href`    | href property                  | `string`                        | `"javascript:void(0)"` |
 | `size`   | `size`    | render logo in different sizes | `"l" \| "m" \| "s"`             | `'s'`                  |
 
-
 ## Dependencies
 
 ### Used by
 
- - [htw-berlin-top-menu](../htw-berlin-top-menu)
+- [htw-berlin-top-menu](../htw-berlin-top-menu)
 
 ### Graph
+
 ```mermaid
 graph TD;
   htw-berlin-top-menu --> htw-berlin-logo
   style htw-berlin-logo fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
+## Using Dark Styles
 
+When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

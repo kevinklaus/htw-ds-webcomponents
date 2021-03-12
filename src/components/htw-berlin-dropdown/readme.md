@@ -1,6 +1,15 @@
 # htw-berlin-dropdown
 
-The dropdown menu can wrap any number of htw-berlin-link elements.
+The dropdown menu can wrap any number of htw-berlin-link elements. The dropdown text can be adapted by providing a string to the `droptext` attribute.
+
+#### Dropdown Links
+
+- For wrapped [htw-berlin-link](../?path=/story/design-system-atoms-link--link)s set the link attribute `variant="dropdown"`
+- See the [htw-berlin-link docs](../?path=/docs/design-system-atoms-link--link) for setting link color and dark mode
+
+#### Usage in the Top Menu
+
+- The dropdwon can be slotted within [htw-berlin-top-menu](../?path=/docs/design-system-molecules-top-menu--standard) by setting the attributes `variant="topmenu"` and `slot="dropdown"`
 
 <!-- Auto Generated Below -->
 
@@ -17,4 +26,5 @@ The dropdown menu can wrap any number of htw-berlin-link elements.
 
 ----------------------------------------------
 
-
+## Using Dark Styles 
+When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

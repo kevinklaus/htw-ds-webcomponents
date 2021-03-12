@@ -9,13 +9,12 @@ export const config: Config = {
       esmLoaderPath: '../loader',
       copy: [
         { src: 'global/fonts', dest: './fonts', warn: true},
-        // { src: 'components/**/*readme.md', warn: true},
-        { src: 'global/350x150pxStorybookLogo.png', warn: true}
+        { src: 'global/350x150pxStorybookLogo.png', warn: true},
       ],
     },
        { 
       type: 'docs-readme',
-      footer: '',
+      footer: '## Using Dark Styles **When switiching to dark mode styles, make sure to select the dark background in the tool bar above for best viewing results.**',
     },
     {
       type: 'www',

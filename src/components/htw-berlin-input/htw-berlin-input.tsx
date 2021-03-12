@@ -41,7 +41,7 @@ export class Input {
   @Prop() label: string = "";
 
   /**
-   * type of input
+   * set the [Input type](https://www.w3schools.com/html/html_form_input_types.asp)
    */
   @Prop() type: string = "text";
 

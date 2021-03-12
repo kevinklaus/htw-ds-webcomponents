@@ -142,7 +142,7 @@ export namespace Components {
          */
         "state": 'normal' | 'active' | 'disabled';
         /**
-          * type of input
+          * set the input type [Input types](https://www.w3schools.com/html/html_form_input_types.asp)
          */
         "type": string;
     }
@@ -499,7 +499,7 @@ declare namespace LocalJSX {
          */
         "state"?: 'normal' | 'active' | 'disabled';
         /**
-          * type of input
+          * set the input type [Input types](https://www.w3schools.com/html/html_form_input_types.asp)
          */
         "type"?: string;
     }

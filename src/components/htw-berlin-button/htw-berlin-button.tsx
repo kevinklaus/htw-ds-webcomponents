@@ -34,11 +34,6 @@ export class Button {
   }
 
   /**
-   * text to be displayed in button
-   */
-  @Prop() text: string = "Button";
-
-  /**
    * set true to use dark mode styling
    */
   @Prop() dark: boolean = false; 
@@ -74,7 +69,7 @@ export class Button {
           title={this.altTitle} 
           href={this.color === "disabled" ? 'javascript:void(0)': this.href}
         >
-          {this.text}
+          <slot></slot>
         </a>;
     }
     else {
@@ -83,7 +78,7 @@ export class Button {
         title={this.altTitle} 
         type="submit"
       >
-        {this.text}
+        <slot></slot>
       </button>;
     }
   }

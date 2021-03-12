@@ -77,12 +77,12 @@ export class Login {
           >
           </htw-berlin-input>
           <htw-berlin-button 
-            text="Log in" 
             altTitle="Log in with your HTW user account" 
             dark={this.dark}
             color={this.color}
             type="submit"
           >
+            Log in
           </htw-berlin-button>
         </form>
       </div>

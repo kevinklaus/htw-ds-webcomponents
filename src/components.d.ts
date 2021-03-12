@@ -44,10 +44,6 @@ export namespace Components {
          */
         "href": string;
         /**
-          * text to be displayed in button
-         */
-        "text": string;
-        /**
           * button type, default is anker <a>
          */
         "type": 'default' | 'submit';
@@ -94,9 +90,13 @@ export namespace Components {
          */
         "color": 'green' | 'orange' | 'blue';
         /**
+          * set true to apply dark mode
+         */
+        "dark": boolean;
+        /**
           * set style to apply to the content box
          */
-        "variant": 'default' | 'color' | 'secondary' | 'dark';
+        "variant": 'default' | 'color' | 'secondary';
     }
     interface HtwBerlinDropdown {
         /**
@@ -401,10 +401,6 @@ declare namespace LocalJSX {
          */
         "href"?: string;
         /**
-          * text to be displayed in button
-         */
-        "text"?: string;
-        /**
           * button type, default is anker <a>
          */
         "type"?: 'default' | 'submit';
@@ -451,9 +447,13 @@ declare namespace LocalJSX {
          */
         "color"?: 'green' | 'orange' | 'blue';
         /**
+          * set true to apply dark mode
+         */
+        "dark"?: boolean;
+        /**
           * set style to apply to the content box
          */
-        "variant"?: 'default' | 'color' | 'secondary' | 'dark';
+        "variant"?: 'default' | 'color' | 'secondary';
     }
     interface HtwBerlinDropdown {
         /**

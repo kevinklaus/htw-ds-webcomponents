@@ -27,7 +27,9 @@ a.htw-berlin-link.blue:hover {
 }
 
 a.htw-berlin-link.disabled:hover {
-  border-bottom: 4px solid var(--secondary-grey);
+  color: var(--secondary-grey);
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 

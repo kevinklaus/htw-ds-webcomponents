@@ -59,6 +59,7 @@ div.htw-berlin-dropdown.top-menu {
   float: right;
   padding-right: 25px;
   position: relative;
+  padding-bottom: 0;
 }
 
 div.htw-berlin-dropdown.top-menu div.content {

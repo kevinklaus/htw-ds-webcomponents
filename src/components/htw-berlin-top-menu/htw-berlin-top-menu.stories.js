@@ -1,4 +1,5 @@
 import readme from './readme.md';
+import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
   title: 'Design System/Molecules/Top Menu',
@@ -100,9 +101,12 @@ const Template = ({ dark, color, logo, shouldscroll, avatar, dropdown }) => {
       </htw-berlin-link>`;
 
   if (avatar) {
-    const avatarHtml = `<htw-berlin-avatar slot="avatar" 
-      link="https://www.w3schools.com/css/paris.jpg" 
-      src="https://www.w3schools.com/css/paris.jpg" 
+    const avatarHtml =
+      `<htw-berlin-avatar slot="avatar" 
+      link="javascript:void(0)" 
+      src="` +
+      exampleImg +
+      `" 
       fullname="Example Student" 
       size="s">
     </htw-berlin-avatar>`;

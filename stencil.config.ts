@@ -10,6 +10,7 @@ export const config: Config = {
       copy: [
         { src: 'global/fonts', dest: './fonts', warn: true},
         { src: 'global/350x150pxStorybookLogo.png', warn: true},
+        { src: 'global/exampleUser.jpg', warn: true},
       ],
     },
        { 

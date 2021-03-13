@@ -1,4 +1,5 @@
 import readme from './readme.md';
+import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
   title: 'Design System/Molecules/Chat',
@@ -79,5 +80,5 @@ export const Chat = Template.bind({});
 Chat.args = {
   color: 'green',
   dark: false,
-  avatarSrc: 'undefined',
+  avatarSrc: exampleImg,
 };

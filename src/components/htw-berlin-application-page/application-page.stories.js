@@ -1,4 +1,5 @@
 import readme from './readme.md';
+import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
   title: 'Design System/Organisms/Application Page',
@@ -115,8 +116,10 @@ const Template = ({ dark, color }) => {
   </htw-berlin-dropdown>
 
   <htw-berlin-avatar slot="avatar" 
-    link="https://www.w3schools.com/css/paris.jpg" 
-    src="https://www.w3schools.com/css/paris.jpg" 
+    link="javascript:void(0)" 
+      src="` +
+    exampleImg +
+    `" 
     fullname="Example Student" 
     size="s">
   </htw-berlin-avatar>

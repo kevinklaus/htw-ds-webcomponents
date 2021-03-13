@@ -10,14 +10,15 @@ The Side Menu can wrap any number of [htw-berlin-link](../?path=/docs/design-sys
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property | Attribute | Description           | Type      | Default |
 | -------- | --------- | --------------------- | --------- | ------- |
 | `dark`   | `dark`    | use dark mode if true | `boolean` | `false` |
 
----
 
-## Using Dark Styles
+----------------------------------------------
 
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

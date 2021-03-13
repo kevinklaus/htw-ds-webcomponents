@@ -9,6 +9,7 @@ The chat component can wrap any number of [htw-berlin-chat-bubble](../?path=/doc
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description                     | Type                            | Default          |
@@ -17,6 +18,7 @@ The chat component can wrap any number of [htw-berlin-chat-bubble](../?path=/doc
 | `dark`     | `dark`     | use dark mode if true           | `boolean`                       | `false`          |
 | `fullname` | `fullname` | full name of user or group name | `string`                        | `"Example User"` |
 
+
 ## Dependencies
 
 ### Depends on
@@ -24,15 +26,13 @@ The chat component can wrap any number of [htw-berlin-chat-bubble](../?path=/doc
 - [htw-berlin-typography](../htw-berlin-typography)
 
 ### Graph
-
 ```mermaid
 graph TD;
   htw-berlin-chat --> htw-berlin-typography
   style htw-berlin-chat fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-## Using Dark Styles
-
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

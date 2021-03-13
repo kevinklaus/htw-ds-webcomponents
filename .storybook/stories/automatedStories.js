@@ -171,10 +171,10 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
 
   var componentName = Component.name;
   // list of stories with a custom built story
-  const customStory = ['DropdownMenu', 'Breadcrumb', 'TopMenu', 'SideMenu', 'Chat', 'ApplicationPage'];
+  const customStory = ['DropdownMenu', 'Breadcrumb', 'TopMenu', 'SideMenu', 'Chat', 'ApplicationPage', 'Avatar'];
   // group stories according to atomic design structure
   const particles = ['Typography'];
-  const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Avatar', 'Logo'];
+  const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Logo'];
   const molecules = ['Login'];
   const organisms = [];
 

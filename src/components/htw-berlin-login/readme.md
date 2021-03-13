@@ -10,12 +10,14 @@ It utilises the following components:
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property | Attribute | Description           | Type                            | Default   |
 | -------- | --------- | --------------------- | ------------------------------- | --------- |
 | `color`  | `color`   | color scheme of login | `"blue" \| "green" \| "orange"` | `'green'` |
 | `dark`   | `dark`    | use dark mode if true | `boolean`                       | `false`   |
+
 
 ## Dependencies
 
@@ -26,7 +28,6 @@ It utilises the following components:
 - [htw-berlin-button](../htw-berlin-button)
 
 ### Graph
-
 ```mermaid
 graph TD;
   htw-berlin-login --> htw-berlin-typography
@@ -35,8 +36,7 @@ graph TD;
   style htw-berlin-login fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-## Using Dark Styles
-
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

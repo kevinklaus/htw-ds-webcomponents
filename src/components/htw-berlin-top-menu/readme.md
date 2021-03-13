@@ -14,6 +14,7 @@ The top menu can include [htw-berlin-link](../?path=/docs/design-system-atoms-li
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property       | Attribute      | Description                                                   | Type                            | Default   |
@@ -23,6 +24,7 @@ The top menu can include [htw-berlin-link](../?path=/docs/design-system-atoms-li
 | `logo`         | `logo`         | set to false to hide htw logo                                 | `boolean`                       | `true`    |
 | `shouldscroll` | `shouldscroll` | Menu fixed at top by default. Set true to scroll with content | `boolean`                       | `false`   |
 
+
 ## Dependencies
 
 ### Depends on
@@ -30,15 +32,13 @@ The top menu can include [htw-berlin-link](../?path=/docs/design-system-atoms-li
 - [htw-berlin-logo](../htw-berlin-logo)
 
 ### Graph
-
 ```mermaid
 graph TD;
   htw-berlin-top-menu --> htw-berlin-logo
   style htw-berlin-top-menu fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-## Using Dark Styles
-
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

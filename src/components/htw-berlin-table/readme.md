@@ -4,6 +4,7 @@ Wrap standard html [tables](https://www.w3schools.com/html/html_tables.asp) in t
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property | Attribute | Description           | Type                            | Default   |
@@ -11,8 +12,8 @@ Wrap standard html [tables](https://www.w3schools.com/html/html_tables.asp) in t
 | `color`  | `color`   | color scheme of table | `"blue" \| "green" \| "orange"` | `'green'` |
 | `dark`   | `dark`    | use dark mode if true | `boolean`                       | `false`   |
 
----
 
-## Using Dark Styles
+----------------------------------------------
 
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

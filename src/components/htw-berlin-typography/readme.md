@@ -10,6 +10,7 @@ Component for HTW Berlin typography.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property    | Attribute   | Description                                          | Type                                                    | Default    |
@@ -19,15 +20,15 @@ Component for HTW Berlin typography.
 | `fontstyle` | `fontstyle` | specify the font-style of the typogrphy element      | `"bold" \| "bolditalic" \| "italic" \| "normal"`        | `'normal'` |
 | `tag`       | `tag`       | specify the html tag of the typogrphy element        | `"h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "p" \| "span"` | `'span'`   |
 
+
 ## Dependencies
 
 ### Used by
 
-- [htw-berlin-chat](../htw-berlin-chat)
-- [htw-berlin-login](../htw-berlin-login)
+ - [htw-berlin-chat](../htw-berlin-chat)
+ - [htw-berlin-login](../htw-berlin-login)
 
 ### Graph
-
 ```mermaid
 graph TD;
   htw-berlin-chat --> htw-berlin-typography
@@ -35,8 +36,7 @@ graph TD;
   style htw-berlin-typography fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-## Using Dark Styles
-
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

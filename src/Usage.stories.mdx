@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Usage"></Meta>
+
+<htw-berlin-logo size="m" color="blue"></htw-berlin-logo>
+
+# Using HTW Berlin Web Components
+
+Use the **npm package** `htw-berlin-ds-webcomponents` to implement HTW Berlin User Interfaces. The HTW Berlin Web Components are just Web Components, so they **work in any major framework or with no framework at all**.
+
+_There are three strategies recommended for using HTW Berlin web components:_
+
+### Script tag
+
+- Put a script tag similar to this `<script src='https://unpkg.com/htw-berlin-ds-webcomponents@1.2.0/dist/index.esm.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### Node Modules
+
+- Run `npm install my-component --save`
+- Put a script tag similar to this `<script src='node_modules/htw-berlin-ds-webcomponents/dist/index.esm.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
+### In a [stencil](https://stenciljs.com/)-starter app
+
+- Run `npm install htw-berlin-ds-webcomponents --save`
+- Add an import to the npm packages `import htw-berlin-component;`
+- Then you can use the element(s) anywhere in your template, JSX, html etc

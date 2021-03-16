@@ -1,11 +1,11 @@
 # HTW Berlin Design System
 
-The HTW Berlin Design System is built using [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction) a User Interface explorer and development platform for stand-alone UI components.
+The [HTW Berlin Design System](https://kevinklaus.github.io/htw-ds-webcomponents) is built using [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction) a User Interface explorer and development platform for stand-alone UI components.
 It includes a range of User Interface elements that can be used to build Web Applications with a [HTW Berlin Corporate Identity](https://corporatedesign.htw-berlin.de/).
 
 ## Component Library
 
-**Browse example component stories by navigating to them in the sidebar.** The Canvas Tab can be used to view the components in isolation.
+Visit the [HTW Berlin Design System](https://kevinklaus.github.io/htw-ds-webcomponents) and **browse example component stories by navigating to them in the sidebar.** The Canvas Tab can be used to view the components in isolation.
 The components are grouped into Particles, Atoms, Molecules and Organisms following the [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/) approach by Brad Frost.
 
 #### Particles

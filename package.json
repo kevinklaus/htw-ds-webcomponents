@@ -26,7 +26,9 @@
     "storybook.run": "start-storybook -p 6006 -s dist --no-manager-cache"
   },
   "dependencies": {
-    "@stencil/core": "2.3.0"
+    "@stencil/core": "2.3.0",
+    "@storybook/addon-a11y": "^6.1.21",
+    "@storybook/addon-docs": "^6.1.21"
   },
   "license": "MIT",
   "devDependencies": {

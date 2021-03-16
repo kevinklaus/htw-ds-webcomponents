@@ -4,7 +4,6 @@ import htwStroybookImg from '../dist/collection/global/350x150pxStorybookLogo.pn
 export default create({
   base: 'light',
   brandTitle: 'HTW Berlin Design System',
-  brandUrl: './?path=/docs/introduction--page',
   brandImage: htwStroybookImg,
 
   colorPrimary: '#76B900',

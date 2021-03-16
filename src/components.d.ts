@@ -130,9 +130,17 @@ export namespace Components {
          */
         "dark": boolean;
         /**
+          * id of input field
+         */
+        "elementId": string;
+        /**
           * label text to be displayed above input field
          */
         "label": string;
+        /**
+          * name of input field
+         */
+        "name": string;
         /**
           * placeholder text to be displayed in input
          */
@@ -487,9 +495,17 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
         /**
+          * id of input field
+         */
+        "elementId"?: string;
+        /**
           * label text to be displayed above input field
          */
         "label"?: string;
+        /**
+          * name of input field
+         */
+        "name"?: string;
         /**
           * placeholder text to be displayed in input
          */

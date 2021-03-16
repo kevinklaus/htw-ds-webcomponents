@@ -2,6 +2,10 @@
 
 Component for HTW Berlin typography.
 
+#### [Licencse](https://corporatedesign.htw-berlin.de/schrift-farbe/schriften/eula/)
+
+The [HTW Berlin font](https://corporatedesign.htw-berlin.de/schrift-farbe/schriften/eula/) was created by _Jürgen Huber/Malte Herokcan_ and can freely be used, but not adapted by HTW Berlin's students for internal and public facing use cases that stand in realtion to HTW Berlin.
+
 #### Usage suggestion
 
 - Use `color="copy"` for long texts

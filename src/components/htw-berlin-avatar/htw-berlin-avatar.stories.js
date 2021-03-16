@@ -44,7 +44,7 @@ const Template = ({ link, size, src, fullname }) => {
 export const Avatar = Template.bind({});
 
 Avatar.args = {
-  size: 's',
+  size: 'l',
   src: exampleImg,
   link: 'javascript:void(0)',
   fullname: 'Example User',

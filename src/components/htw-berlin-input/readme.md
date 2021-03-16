@@ -16,7 +16,9 @@ Add a label to your Input field by defining the `label` attribute.
 | `altTitle`    | `alt-title`   | alternative title shown on hover                                               | `string`                             | `"Enter information here"` |
 | `color`       | `color`       | color applied to the input field                                               | `"blue" \| "green" \| "orange"`      | `'green'`                  |
 | `dark`        | `dark`        | use dark color theme if true                                                   | `boolean`                            | `undefined`                |
+| `elementId`   | `element-id`  | id of input field                                                              | `string`                             | `undefined`                |
 | `label`       | `label`       | label text to be displayed above input field                                   | `string`                             | `""`                       |
+| `name`        | `name`        | name of input field                                                            | `string`                             | `undefined`                |
 | `placeholder` | `placeholder` | placeholder text to be displayed in input                                      | `string`                             | `"Type..."`                |
 | `state`       | `state`       | set the state of the input field                                               | `"active" \| "disabled" \| "normal"` | `'normal'`                 |
 | `type`        | `type`        | set the [Input type](https://www.w3schools.com/html/html_form_input_types.asp) | `string`                             | `"text"`                   |

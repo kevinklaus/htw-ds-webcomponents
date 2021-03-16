@@ -41,6 +41,16 @@ export class Input {
   @Prop() label: string = "";
 
   /**
+   * name of input field
+   */
+  @Prop() name: string;
+
+  /**
+   * id of input field
+   */
+  @Prop() elementId: string;
+
+  /**
    * set the [Input type](https://www.w3schools.com/html/html_form_input_types.asp)
    */
   @Prop() type: string = "text";
@@ -79,8 +89,13 @@ export class Input {
     }
     else { 
       return <div>
-        <label class={this.dark? "dark" : ""}>{this.label}</label> 
+        <label 
+          class={this.dark? "dark" : ""} 
+          htmlFor={this.elementId}>
+            {this.label}
+        </label> 
         <input
+          name={this.name} id={this.elementId}
           class={"htw-berlin-input " + classes}
           title={this.altTitle} 
           value={this.value} 

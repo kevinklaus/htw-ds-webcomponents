@@ -1,73 +1,56 @@
-![Built With Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d&style=flat-square)
+# HTW Berlin Design System
 
-# HTW Berlin Design System Web Components
+The HTW Berlin Design System is built using [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction) a User Interface explorer and development platform for stand-alone UI components.
+It includes a range of User Interface elements that can be used to build Web Applications with a [HTW Berlin Corporate Identity](https://corporatedesign.htw-berlin.de/).
 
-This is a project for building standalone Web Components for the HTW Berlin Design System using Stencil.
+## Component Library
 
-# Stencil
+**Browse example component stories by navigating to them in the sidebar.** The Canvas Tab can be used to view the components in isolation.
+The components are grouped into Particles, Atoms, Molecules and Organisms following the [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/) approach by Brad Frost.
 
-Stencil is a compiler for building fast web apps using Web Components.
+#### Particles
 
-Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool. Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
+Particles are the least complex components like the most basic building blocks or variables of user interfaces. This could be things like [Typography](../?path=/story/design-system-particles-typography--typography) and [Colors](../?path=/story/design-system-particles-colors--page).
 
-Stencil components are just Web Components, so they work in any major framework or with no framework at all.
+#### Atoms
 
-## Getting Started
+Atoms are simple stand alone user interface elements like [Avatars](../?path=/story/design-system-atoms-avatar--avatar), [Buttons](../?path=/story/design-system-atoms-button--button), [Links](../?path=/story/design-system-atoms-link--link) etc.
 
-To start building a new web component using Stencil, clone this repo to a new directory:
+#### Molecules
 
-```bash
-git clone https://github.com/ionic-team/stencil-component-starter.git my-component
-cd my-component
-git remote rm origin
-```
+Molecules are component combinations that offer over more complex funtionality to users. This could be Navigation elments like Menus or other common features. For example [Top Menu](../?path=/story/design-system-molecules-top-menu--extended-standard) and [Chat](../?path=/story/design-system-molecules-chat--chat)
 
-and run:
+#### Organisms
 
-```bash
-npm install
-npm start
-```
+Organisms are the most complex components. They inlcude full user interfaces composed of many individual components e.g. an entire [Application Page](../?path=/story/design-system-organisms-application-page--application-page).
 
-To build the component for production, run:
+## Viewing different States, Variants & Colors
 
-```bash
-npm run build
-```
+Use the fields below the Canvas to edit the properties of components to dynamically update their values.
 
-To run the unit tests for the components, run:
+## Documentation
 
-```bash
-npm test
-```
+Each component's documentation can be viewed in its **Docs tab**. You will find information on how they work along with **best practices** for their usage.
 
-Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-component).
+# Using HTW Berlin Web Components
 
-## Naming Components
+Use the **npm package** `htw-berlin-ds-webcomponents` to implement HTW Berlin User Interfaces. The HTW Berlin Web Components are just Web Components, so they **work in any major framework or with no framework at all**.
 
-When creating new component tags, we recommend _not_ using `stencil` in the component name (ex: `<stencil-datepicker>`). This is because the generated component has little to nothing to do with Stencil; it's just a web component!
-
-Instead, use the prefix `htw-berlin-`.
-
-## Using this component
-
-There are three strategies we recommend for using web components built with Stencil.
-
-The first step for all three of these strategies is to [publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages).
+_There are three strategies recommended for using HTW Berlin web components:_
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/my-component@0.0.1/dist/my-component.esm.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/htw-berlin-ds-webcomponents@1.2.0/dist/index.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
 
 - Run `npm install my-component --save`
-- Put a script tag similar to this `<script src='node_modules/my-component/dist/my-component.esm.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='node_modules/htw-berlin-ds-webcomponents/dist/index.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
-### In a stencil-starter app
+### In a [stencil](https://stenciljs.com/)-starter app
 
-- Run `npm install my-component --save`
-- Add an import to the npm packages `import my-component;`
-- Then you can use the element anywhere in your template, JSX, html etc
+- Run `npm install htw-berlin-ds-webcomponents --save`
+- Add an import to the npm packages `import htw-berlin-component;`
+- Then you can use the element(s) anywhere in your template, JSX, html etc

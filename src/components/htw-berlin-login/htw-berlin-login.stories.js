@@ -1,7 +1,7 @@
 import readme from './readme.md';
 
 export default {
-  title: 'Design System/Molecules/Login',
+  title: 'Design System/Organisms/Login',
   notes: readme,
   design: {
     type: 'figma',

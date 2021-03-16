@@ -175,8 +175,8 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
   // group stories according to atomic design structure
   const particles = ['Typography'];
   const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Logo'];
-  const molecules = ['Login'];
-  const organisms = [];
+  const molecules = [];
+  const organisms = ['Login'];
 
   // set story name according to atomic design structure
   var storyName = '';

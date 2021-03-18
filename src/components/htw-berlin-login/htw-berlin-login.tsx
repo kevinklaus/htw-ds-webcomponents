@@ -58,7 +58,9 @@ export class Login {
         </div>
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <htw-berlin-input 
-            label="HTW email" 
+            label="HTW email"
+            name="email"
+            elementId="email"
             altTitle="Enter your HTW Berlin email" 
             dark={this.dark}
             color={this.color}
@@ -69,6 +71,8 @@ export class Login {
           </htw-berlin-input>
           <htw-berlin-input 
             label="Password" 
+            name="password"
+            elementId="password"
             altTitle="Enter your password" 
             dark={this.dark}
             color={this.color}

@@ -38,7 +38,13 @@ export class Logo {
   /**
    * href property
    */
-  @Prop() href: string = "javascript:void(0)";;
+  @Prop() href: string = "javascript:void(0)";
+  
+
+  /**
+   * alternative title for the link wrapper
+   */
+  @Prop() altTitle: string = "Alternative Link Title";
   
 
   @Function()  getStyleClasses() {
@@ -55,6 +61,7 @@ export class Logo {
     return <a 
       class={"htw-berlin-logo " + this.getStyleClasses() }
       href={this.href}
+      title={this.altTitle}
       >
         <svg width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M40.8976 3.75026H44.6152V11.2503H40.8976V3.75026ZM48.3333 11.2503V15H44.6152V11.2503H48.3333ZM14.8715 0H18.5897V3.75026H22.3078V7.5H18.5897V11.2503H22.3078V15H18.5897C18.1014 15.0001 17.618 14.9031 17.1669 14.7147C16.7157 14.5263 16.3059 14.2501 15.9606 13.9019C15.6153 13.5537 15.3414 13.1403 15.1546 12.6853C14.9677 12.2304 14.8715 11.7427 14.8715 11.2503C14.8862 11.2519 14.8715 0 14.8715 0Z" fill="#76B900"/>

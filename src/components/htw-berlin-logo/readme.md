@@ -9,12 +9,13 @@ It is used by the [htw-berlin-top-menu](../?path=/docs/design-system-molecules-t
 
 ## Properties
 
-| Property | Attribute | Description                    | Type                            | Default                |
-| -------- | --------- | ------------------------------ | ------------------------------- | ---------------------- |
-| `color`  | `color`   | color scheme                   | `"blue" \| "green" \| "orange"` | `'green'`              |
-| `dark`   | `dark`    | use dark mode if true          | `boolean`                       | `false`                |
-| `href`   | `href`    | href property                  | `string`                        | `"javascript:void(0)"` |
-| `size`   | `size`    | render logo in different sizes | `"l" \| "m" \| "s"`             | `'s'`                  |
+| Property   | Attribute   | Description                                         | Type                            | Default                    |
+| ---------- | ----------- | --------------------------------------------------- | ------------------------------- | -------------------------- |
+| `altTitle` | `alt-title` | alternative title for the link wrapper              | `string`                        | `"Alternative Link Title"` |
+| `color`    | `color`     | color scheme                                        | `"blue" \| "green" \| "orange"` | `'green'`                  |
+| `dark`     | `dark`      | use dark mode if true                               | `boolean`                       | `false`                    |
+| `href`     | `href`      | set href property to add a link wrapper to the logo | `string`                        | `""`                       |
+| `size`     | `size`      | render logo in different sizes                      | `"l" \| "m" \| "s"`             | `'s'`                      |
 
 
 ## Dependencies

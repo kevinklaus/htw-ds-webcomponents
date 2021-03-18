@@ -192,6 +192,10 @@ export namespace Components {
     }
     interface HtwBerlinLogo {
         /**
+          * alternative title for the link wrapper
+         */
+        "altTitle": string;
+        /**
           * color scheme
          */
         "color": 'green' | 'orange' | 'blue';
@@ -200,7 +204,7 @@ export namespace Components {
          */
         "dark": boolean;
         /**
-          * href property
+          * set href property to add a link wrapper to the logo
          */
         "href": string;
         /**
@@ -557,6 +561,10 @@ declare namespace LocalJSX {
     }
     interface HtwBerlinLogo {
         /**
+          * alternative title for the link wrapper
+         */
+        "altTitle"?: string;
+        /**
           * color scheme
          */
         "color"?: 'green' | 'orange' | 'blue';
@@ -565,7 +573,7 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
         /**
-          * href property
+          * set href property to add a link wrapper to the logo
          */
         "href"?: string;
         /**

@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Build"></Meta>
+
+<htw-berlin-logo size="m" color="blue" href="https://github.com/kevinklaus/htw-ds-webcomponents" alt-title="See repo on GitHub"></htw-berlin-logo>
+
+# Building HTW Berlin Web Components
+
+The [**npm package** `htw-berlin-ds-webcomponents`](https://www.npmjs.com/package/htw-berlin-ds-webcomponents) distributes the HTW Berlin Web Components to developers.
+The Web Components have been built using a small compiler called [stencil.js](https://stenciljs.com/).
+
+## Stencil
+
+_Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec._
+
+_Stencil components are just Web Components, so they work in any major framework or with no framework at all. In many cases, Stencil can be used as a drop in replacement for traditional frontend frameworks given the capabilities now available in the browser, though using it as such is not required._
+
+## Adding a new HTW Berlin Web Component
+
+If you wish to extend the package with your own htw-berlin-component start by cloning its [htw-ds-webcomponents development repo](https://github.com/kevinklaus/htw-ds-webcomponents).
+
+```bash
+git clone https://github.com/kevinklaus/htw-ds-webcomponents.git
+```
+
+then run:
+
+```bash
+npm install
+```
+
+To generate a new component template run:
+
+```bash
+npm run generate
+```
+
+**Name your component with the prefix `htw-berlin-`**
+
+To serve stecils index.html for component testing run
+
+```bash
+npm start
+```
+
+To build the components for production, run:
+
+```bash
+npm run build
+```
+
+## Adding components to the [Storybook](https://storybook.js.org/docs/web-components/get-started/introduction)
+
+Read the [Writing Stories section of the Storybook docs](https://storybook.js.org/docs/web-components/writing-stories/introduction) to learn how to create a new story for your web component.
+**You will not need to import the htw-berlin-webcomponents** since they are already globally availiable in your storybook after running `npm run build`.
+
+To serve the storybook with the web component stories locally run
+
+```bash
+npm run storybook
+```
+
+To build a static storybook for production, run:
+
+```bash
+npm run predeploy
+```

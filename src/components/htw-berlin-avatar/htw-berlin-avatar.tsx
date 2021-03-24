@@ -22,6 +22,11 @@ export class Avatar {
   }
 
   /**
+   * set true for squared avatar
+   */
+  @Prop() squared: boolean = false;
+
+  /**
    * set full name of user
    */
   @Prop() fullname: string = "Example User";
@@ -40,6 +45,7 @@ export class Avatar {
   @Function()  getStyleClasses() {
     var classList = []
     classList.push(this.size)
+    if (this.squared) classList.push("square")
     return classList.join(' ')
   }
 

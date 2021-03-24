@@ -27,6 +27,11 @@ a.htw-berlin-avatar img {
   object-fit: cover;
 }
 
+a.htw-berlin-avatar.square img,
+a.htw-berlin-avatar.square svg {
+  border-radius: 0;
+}
+
 a.htw-berlin-avatar svg {
   border-radius: 50%;
   width: 80%;

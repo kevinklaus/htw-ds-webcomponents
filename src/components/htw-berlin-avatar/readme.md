@@ -15,6 +15,7 @@ Circular image component to display a user picture. The href of the anker wrappe
 | `fullname` | `fullname` | set full name of user            | `string`            | `"Example User"`       |
 | `link`     | `link`     | set link for avatar              | `string`            | `"javascript:void(0)"` |
 | `size`     | `size`     | render avatar in different sizes | `"l" \| "m" \| "s"` | `'s'`                  |
+| `squared`  | `squared`  | set true for squared avatar      | `boolean`           | `false`                |
 | `src`      | `src`      | set source of image              | `string`            | `"undefined"`          |
 
 

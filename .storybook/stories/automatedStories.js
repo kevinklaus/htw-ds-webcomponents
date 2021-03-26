@@ -169,31 +169,32 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
     children: [{ tag: 'span', innerText: 'Lorem ipsum' }],
   });
 
-  var componentName = Component.name;
   // list of stories with a custom built story
   const customStory = ['DropdownMenu', 'Breadcrumb', 'TopMenu', 'SideMenu', 'Chat', 'ApplicationPage', 'Avatar'];
   // group stories according to atomic design structure
-  const particles = ['Typography'];
-  const atoms = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox', 'Logo'];
-  const molecules = [];
-  const organisms = ['Login'];
+  const atoms = ['Typography', 'Logo'];
+  const molecules = ['Button', 'Link', 'Input', 'ChatBubble', 'ContentBox'];
+  //const organisms = [];
+  const pages = ['Login'];
 
   // set story name according to atomic design structure
+  var componentName = Component.name;
   var storyName = '';
 
   if (customStory.includes(componentName)) {
     //console.log('Component is already listed with a custom story. Skipping automated story build.');
     return;
-  } else if (particles.includes(componentName)) {
-    storyName = 'Design System/Particles/';
   } else if (atoms.includes(componentName)) {
     storyName = 'Design System/Atoms/';
   } else if (molecules.includes(componentName)) {
     storyName = 'Design System/Molecules/';
-  } else if (organisms.includes(componentName)) {
-    storyName = 'Design System/Organisms/';
+    // } else if (molecules.includes(componentName)) {
+    //   storyName = 'Design System/Organisms/';
+  } else if (pages.includes(componentName)) {
+    storyName = 'Design System/Pages/';
   } else {
     console.log('Error grouping Component into Atomic category. List your component in the categories or custom story array.');
+    return;
   }
 
   storyName = storyName + componentName;

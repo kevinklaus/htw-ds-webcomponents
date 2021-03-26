@@ -1,11 +1,10 @@
 # htw-berlin-chat-bubble
 
-Chat Bubbles are used within the [htw-berlin-chat](../?path=/docs/design-system-molecules-chat--chat) to display sent and received messages.
+Chat Bubbles are used within the [htw-berlin-chat](../?path=/docs/design-system-organisms-chat--chat) to display sent and received messages.
 
 Set sent/received state via the `received` attribute.
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -16,8 +15,8 @@ Set sent/received state via the `received` attribute.
 | `fullname` | `fullname` | full name of user or group name        | `string`  | `"Example User"`      |
 | `received` | `received` | set true if this is a received message | `boolean` | `false`               |
 
+---
 
-----------------------------------------------
+## Using Dark Styles
 
-## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

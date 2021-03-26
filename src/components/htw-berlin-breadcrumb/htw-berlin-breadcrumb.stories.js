@@ -2,7 +2,7 @@ import readme from './readme.md';
 import { withDesign } from 'storybook-addon-designs';
 
 export default {
-  title: 'Design System/Molecules/Breadcrumb',
+  title: 'Design System/Organisms/Breadcrumb',
   parameters: {
     notes: readme,
     design: {

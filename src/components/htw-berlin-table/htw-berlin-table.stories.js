@@ -1,7 +1,7 @@
 import readme from './readme.md';
 
 export default {
-  title: 'Design System/Molecules/Table',
+  title: 'Design System/Organisms/Table',
   parameters: {
     notes: readme,
     design: {

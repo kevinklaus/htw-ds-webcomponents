@@ -2,7 +2,7 @@ import readme from './readme.md';
 import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
-  title: 'Design System/Molecules/Chat',
+  title: 'Design System/Organisms/Chat',
   parameters: {
     notes: readme,
     design: {

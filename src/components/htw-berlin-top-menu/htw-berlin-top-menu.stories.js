@@ -2,7 +2,7 @@ import readme from './readme.md';
 import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
-  title: 'Design System/Molecules/Top Menu',
+  title: 'Design System/Organisms/Top Menu',
   parameters: {
     notes: readme,
     backgrounds: { default: 'light' },

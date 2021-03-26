@@ -2,7 +2,7 @@ import readme from './readme.md';
 import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
-  title: 'Design System/Atoms 🟢/Avatar',
+  title: 'Design System/Molecules/Avatar',
   parameters: {
     notes: readme,
     backgrounds: { default: 'light' },

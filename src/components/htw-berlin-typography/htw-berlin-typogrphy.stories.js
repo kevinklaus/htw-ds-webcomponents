@@ -1,7 +1,7 @@
 import readme from './readme.md';
 
 export default {
-  title: 'Design System/Particles/Typography',
+  title: 'Design System/Atoms/Typography',
   notes: readme,
   design: {
     type: 'figma',

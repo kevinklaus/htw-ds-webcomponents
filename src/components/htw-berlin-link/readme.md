@@ -6,12 +6,11 @@ Links are used as part of a few other navigation components to refer users to an
 
 ### Links are part of the following other components
 
-- When using links in the [htw-berlin-top-menu](../?path=/docs/design-system-molecules-top-menu--standard) set `variant="topmenu"`.
-- When using links in the [htw-berlin-dropdown](../?path=/docs/design-system-molecules-dropdown-menu--dropdown-menu) set `variant="dropdown"`.
-- When using links in the [htw-berlin-breadcrumb](../?path=/docs/design-system-molecules-dropdown-menu--dropdown-menu) set `variant="breadcrumb"`.
+- When using links in the [htw-berlin-top-menu](../?path=/docs/design-system-organisms-top-menu--standard) set `variant="topmenu"`.
+- When using links in the [htw-berlin-dropdown](../?path=/docs/design-system-organisms-dropdown-menu--dropdown-menu) set `variant="dropdown"`.
+- When using links in the [htw-berlin-breadcrumb](../?path=/docs/design-system-organisms-dropdown-menu--dropdown-menu) set `variant="breadcrumb"`.
 
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -24,8 +23,8 @@ Links are used as part of a few other navigation components to refer users to an
 | `state`    | `state`     | set link state if neccessary                                | `"active" \| "default" \| "visited"`                     | `'default'`                |
 | `variant`  | `variant`   | use breadcrumb, dropdown or side-menu styling if neccessary | `"breadcrumb" \| "default" \| "dropdown" \| "side-menu"` | `'default'`                |
 
+---
 
-----------------------------------------------
+## Using Dark Styles
 
-## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

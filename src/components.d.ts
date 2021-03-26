@@ -20,6 +20,10 @@ export namespace Components {
          */
         "size": 's' | 'm' | 'l';
         /**
+          * set true for squared avatar
+         */
+        "squared": boolean;
+        /**
           * set source of image
          */
         "src": string;
@@ -388,6 +392,10 @@ declare namespace LocalJSX {
           * render avatar in different sizes
          */
         "size"?: 's' | 'm' | 'l';
+        /**
+          * set true for squared avatar
+         */
+        "squared"?: boolean;
         /**
           * set source of image
          */

@@ -6,6 +6,7 @@ Set sent/received state via the `received` attribute.
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description                            | Type      | Default               |
@@ -15,8 +16,8 @@ Set sent/received state via the `received` attribute.
 | `fullname` | `fullname` | full name of user or group name        | `string`  | `"Example User"`      |
 | `received` | `received` | set true if this is a received message | `boolean` | `false`               |
 
----
 
-## Using Dark Styles
+----------------------------------------------
 
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

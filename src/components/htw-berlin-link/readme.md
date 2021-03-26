@@ -12,6 +12,7 @@ Links are used as part of a few other navigation components to refer users to an
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute   | Description                                                 | Type                                                     | Default                    |
@@ -23,8 +24,8 @@ Links are used as part of a few other navigation components to refer users to an
 | `state`    | `state`     | set link state if neccessary                                | `"active" \| "default" \| "visited"`                     | `'default'`                |
 | `variant`  | `variant`   | use breadcrumb, dropdown or side-menu styling if neccessary | `"breadcrumb" \| "default" \| "dropdown" \| "side-menu"` | `'default'`                |
 
----
 
-## Using Dark Styles
+----------------------------------------------
 
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

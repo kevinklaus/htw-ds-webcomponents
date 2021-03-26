@@ -13,6 +13,7 @@ The dropdown menu can wrap any number of [htw-berlin-link](../?path=/story/desig
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description                  | Type                                          | Default      |
@@ -22,8 +23,8 @@ The dropdown menu can wrap any number of [htw-berlin-link](../?path=/story/desig
 | `droptext` | `droptext` | set the dropdown link text   | `string`                                      | `"Dropdown"` |
 | `topmenu`  | `topmenu`  | use top-menu styling if true | `boolean`                                     | `false`      |
 
----
 
-## Using Dark Styles
+----------------------------------------------
 
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

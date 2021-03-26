@@ -7,6 +7,7 @@ Circular or squared image component to display a user picture. The href of the a
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property   | Attribute  | Description                      | Type                | Default                |
@@ -17,8 +18,8 @@ Circular or squared image component to display a user picture. The href of the a
 | `squared`  | `squared`  | set true for squared avatar      | `boolean`           | `false`                |
 | `src`      | `src`      | set source of image              | `string`            | `"undefined"`          |
 
----
 
-## Using Dark Styles
+----------------------------------------------
 
+## Using Dark Styles 
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

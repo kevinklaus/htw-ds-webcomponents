@@ -222,6 +222,20 @@ export namespace Components {
          */
         "dark": boolean;
     }
+    interface HtwBerlinSlider {
+        /**
+          * color scheme of wizard
+         */
+        "color": 'green' | 'orange' | 'blue';
+        /**
+          * use dark mode if true
+         */
+        "dark": boolean;
+        /**
+          * display the slide status/numbers (e.g. Slide 2/5)
+         */
+        "showStatus": boolean;
+    }
     interface HtwBerlinTable {
         /**
           * color scheme of table
@@ -342,6 +356,12 @@ declare global {
         prototype: HTMLHtwBerlinSideMenuElement;
         new (): HTMLHtwBerlinSideMenuElement;
     };
+    interface HTMLHtwBerlinSliderElement extends Components.HtwBerlinSlider, HTMLStencilElement {
+    }
+    var HTMLHtwBerlinSliderElement: {
+        prototype: HTMLHtwBerlinSliderElement;
+        new (): HTMLHtwBerlinSliderElement;
+    };
     interface HTMLHtwBerlinTableElement extends Components.HtwBerlinTable, HTMLStencilElement {
     }
     var HTMLHtwBerlinTableElement: {
@@ -373,6 +393,7 @@ declare global {
         "htw-berlin-login": HTMLHtwBerlinLoginElement;
         "htw-berlin-logo": HTMLHtwBerlinLogoElement;
         "htw-berlin-side-menu": HTMLHtwBerlinSideMenuElement;
+        "htw-berlin-slider": HTMLHtwBerlinSliderElement;
         "htw-berlin-table": HTMLHtwBerlinTableElement;
         "htw-berlin-top-menu": HTMLHtwBerlinTopMenuElement;
         "htw-berlin-typography": HTMLHtwBerlinTypographyElement;
@@ -595,6 +616,20 @@ declare namespace LocalJSX {
          */
         "dark"?: boolean;
     }
+    interface HtwBerlinSlider {
+        /**
+          * color scheme of wizard
+         */
+        "color"?: 'green' | 'orange' | 'blue';
+        /**
+          * use dark mode if true
+         */
+        "dark"?: boolean;
+        /**
+          * display the slide status/numbers (e.g. Slide 2/5)
+         */
+        "showStatus"?: boolean;
+    }
     interface HtwBerlinTable {
         /**
           * color scheme of table
@@ -654,6 +689,7 @@ declare namespace LocalJSX {
         "htw-berlin-login": HtwBerlinLogin;
         "htw-berlin-logo": HtwBerlinLogo;
         "htw-berlin-side-menu": HtwBerlinSideMenu;
+        "htw-berlin-slider": HtwBerlinSlider;
         "htw-berlin-table": HtwBerlinTable;
         "htw-berlin-top-menu": HtwBerlinTopMenu;
         "htw-berlin-typography": HtwBerlinTypography;
@@ -675,6 +711,7 @@ declare module "@stencil/core" {
             "htw-berlin-login": LocalJSX.HtwBerlinLogin & JSXBase.HTMLAttributes<HTMLHtwBerlinLoginElement>;
             "htw-berlin-logo": LocalJSX.HtwBerlinLogo & JSXBase.HTMLAttributes<HTMLHtwBerlinLogoElement>;
             "htw-berlin-side-menu": LocalJSX.HtwBerlinSideMenu & JSXBase.HTMLAttributes<HTMLHtwBerlinSideMenuElement>;
+            "htw-berlin-slider": LocalJSX.HtwBerlinSlider & JSXBase.HTMLAttributes<HTMLHtwBerlinSliderElement>;
             "htw-berlin-table": LocalJSX.HtwBerlinTable & JSXBase.HTMLAttributes<HTMLHtwBerlinTableElement>;
             "htw-berlin-top-menu": LocalJSX.HtwBerlinTopMenu & JSXBase.HTMLAttributes<HTMLHtwBerlinTopMenuElement>;
             "htw-berlin-typography": LocalJSX.HtwBerlinTypography & JSXBase.HTMLAttributes<HTMLHtwBerlinTypographyElement>;

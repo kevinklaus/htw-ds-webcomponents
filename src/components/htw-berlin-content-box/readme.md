@@ -21,6 +21,19 @@ Content Boxes can be used to visually group elements in the user interface or ca
 | `variant` | `variant` | set style to apply to the content box               | `"color" \| "default" \| "secondary"` | `'default'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [htw-berlin-slider](../htw-berlin-slider)
+
+### Graph
+```mermaid
+graph TD;
+  htw-berlin-slider --> htw-berlin-content-box
+  style htw-berlin-content-box fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 ## Using Dark Styles 

@@ -2,7 +2,7 @@
   "name": "htw-berlin-ds-webcomponents",
   "homepage": "http://kevinklaus.github.io/htw-berlin-ds-webcomponents",
   "repository": "https://github.com/kevinklaus/htw-berlin-ds-webcomponents",
-  "version": "1.2.3",
+  "version": "1.4.0",
   "description": "HTW Berlin Design System - Web Components",
   "keywords": [
     "Design System",
@@ -35,8 +35,8 @@
     "storybook": "npm-run-all --parallel build storybook.run",
     "build-storybook": "build-storybook -c ./.storybook -o ../public",
     "storybook.run": "start-storybook -p 6006 -s dist --no-manager-cache",
-    "predeploy": "npm run build-storybook",    
-    "deploy-storybook": "gh-pages -d ../public"  
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d ../public"
   },
   "dependencies": {
     "@stencil/core": "2.3.0",

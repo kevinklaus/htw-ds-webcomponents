@@ -2,7 +2,7 @@ import readme from './readme.md';
 import exampleImg from '../../../dist/collection/global/exampleUser.jpg';
 
 export default {
-  title: 'Design System/Pages/Application Page',
+  title: 'Design System/Templates/Application Page',
   parameters: {
     notes: readme,
     layout: 'fullscreen',

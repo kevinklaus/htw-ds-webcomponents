@@ -191,7 +191,7 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
     // } else if (molecules.includes(componentName)) {
     //   storyName = 'Design System/Organisms/';
   } else if (pages.includes(componentName)) {
-    storyName = 'Design System/Pages/';
+    storyName = 'Design System/Templates/';
   } else {
     console.log('Error grouping Component into Atomic category. List your component in the categories or custom story array.');
     return;

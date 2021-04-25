@@ -6,8 +6,11 @@ Input fields are a form element to collect text input from users. They are used 
 
 Add a label to your Input field by defining the `label` attribute.
 
-<!-- Auto Generated Below -->
+### Accessibility and Usability
 
+Please set `alt-title`, `element-id`, `label` as well as `name` attributes to meet WCAG. In addition to that setting `placeholder` can improve the usability.
+
+<!-- Auto Generated Below -->
 
 ## Properties
 
@@ -23,21 +26,22 @@ Add a label to your Input field by defining the `label` attribute.
 | `state`       | `state`       | set the state of the input field                                               | `"active" \| "disabled" \| "normal"` | `'normal'`                 |
 | `type`        | `type`        | set the [Input type](https://www.w3schools.com/html/html_form_input_types.asp) | `string`                             | `"text"`                   |
 
-
 ## Dependencies
 
 ### Used by
 
- - [htw-berlin-login](../htw-berlin-login)
+- [htw-berlin-login](../htw-berlin-login)
 
 ### Graph
+
 ```mermaid
 graph TD;
   htw-berlin-login --> htw-berlin-input
   style htw-berlin-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-## Using Dark Styles 
+## Using Dark Styles
+
 When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

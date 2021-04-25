@@ -21,4 +21,4 @@ The Side Menu can wrap any number of [htw-berlin-link](../?path=/docs/design-sys
 ----------------------------------------------
 
 ## Using Dark Styles 
-When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.
+When switching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

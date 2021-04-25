@@ -12,6 +12,7 @@ Please set `alt-title`, `element-id`, `label` as well as `name` attributes to me
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute     | Description                                                                    | Type                                 | Default                    |
@@ -26,22 +27,21 @@ Please set `alt-title`, `element-id`, `label` as well as `name` attributes to me
 | `state`       | `state`       | set the state of the input field                                               | `"active" \| "disabled" \| "normal"` | `'normal'`                 |
 | `type`        | `type`        | set the [Input type](https://www.w3schools.com/html/html_form_input_types.asp) | `string`                             | `"text"`                   |
 
+
 ## Dependencies
 
 ### Used by
 
-- [htw-berlin-login](../htw-berlin-login)
+ - [htw-berlin-login](../htw-berlin-login)
 
 ### Graph
-
 ```mermaid
 graph TD;
   htw-berlin-login --> htw-berlin-input
   style htw-berlin-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-## Using Dark Styles
-
-When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.
+## Using Dark Styles 
+When switching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.

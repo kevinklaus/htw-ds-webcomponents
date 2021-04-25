@@ -22,4 +22,4 @@ Circular or squared image component to display a user picture. The href of the a
 ----------------------------------------------
 
 ## Using Dark Styles 
-When switiching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.
+When switching to dark mode styles, make sure to **select the dark background in the tool bar above** for best viewing results.
